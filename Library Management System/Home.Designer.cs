@@ -81,6 +81,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label3.Location = new System.Drawing.Point(978, 610);
@@ -199,7 +200,7 @@
             this.label10.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(518, 199);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(499, 60);
+            this.label10.Size = new System.Drawing.Size(399, 48);
             this.label10.TabIndex = 14;
             this.label10.Text = "To create an accessible library management system\r\nthat connects readers\r\nwith bo" +
     "oks effortlessly.";
@@ -210,7 +211,7 @@
             this.label11.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(37, 541);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(865, 58);
+            this.label11.Size = new System.Drawing.Size(692, 46);
             this.label11.TabIndex = 15;
             this.label11.Text = "____________________________";
             // 
