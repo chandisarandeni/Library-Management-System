@@ -23,5 +23,29 @@ namespace Library_Management_System
             home.Show();
             this.Hide();
         }
+
+        private void lbl_adminForgotPassword_Click(object sender, EventArgs e)
+        {
+            Admin_Forgot_Password admin_Forgot_Password = new Admin_Forgot_Password();
+            admin_Forgot_Password.Show();
+            this.Hide();
+        }
+
+        private void AdminLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox_showPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_showPassword.Checked)
+            {
+                txt_adminPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txt_adminPassword.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

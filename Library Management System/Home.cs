@@ -16,5 +16,39 @@ namespace Library_Management_System
         {
             InitializeComponent();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_showPassword.Checked)
+            {
+                txt_memberPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txt_memberPassword.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            txt_memberUsername.Text = "";
+            txt_memberPassword.Text = "";
+        }
+
+        private void lbl_forgotPassword_Click(object sender, EventArgs e)
+        {
+            Member_Forgot_Password member_Forgot_Password = new Member_Forgot_Password();
+            member_Forgot_Password.Show();
+            this.Hide();
+        }
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            if (txt_memberUsername.Text == "./admin") { 
+                AdminLogin adminLogin = new AdminLogin();
+                adminLogin.Show();
+                this.Hide();
+            }
+        }
     }
 }

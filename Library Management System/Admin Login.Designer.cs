@@ -37,7 +37,6 @@
             this.btn_adminLogin = new System.Windows.Forms.Button();
             this.lbl_adminForgotPassword = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt_adminPassword = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_adminUsername = new System.Windows.Forms.TextBox();
@@ -45,6 +44,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.checkBox_showPassword = new System.Windows.Forms.CheckBox();
+            this.txt_adminPassword = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,6 +128,7 @@
             this.lbl_adminForgotPassword.Size = new System.Drawing.Size(95, 16);
             this.lbl_adminForgotPassword.TabIndex = 25;
             this.lbl_adminForgotPassword.Text = "Click here.";
+            this.lbl_adminForgotPassword.Click += new System.EventHandler(this.lbl_adminForgotPassword_Click);
             // 
             // label8
             // 
@@ -137,14 +139,6 @@
             this.label8.Size = new System.Drawing.Size(135, 16);
             this.label8.TabIndex = 24;
             this.label8.Text = "Forgot Password?";
-            // 
-            // txt_adminPassword
-            // 
-            this.txt_adminPassword.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_adminPassword.Location = new System.Drawing.Point(663, 399);
-            this.txt_adminPassword.Name = "txt_adminPassword";
-            this.txt_adminPassword.Size = new System.Drawing.Size(312, 30);
-            this.txt_adminPassword.TabIndex = 23;
             // 
             // label6
             // 
@@ -214,18 +208,40 @@
             this.label11.TabIndex = 29;
             this.label11.Text = "____________________________";
             // 
+            // checkBox_showPassword
+            // 
+            this.checkBox_showPassword.AutoSize = true;
+            this.checkBox_showPassword.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_showPassword.Location = new System.Drawing.Point(981, 408);
+            this.checkBox_showPassword.Name = "checkBox_showPassword";
+            this.checkBox_showPassword.Size = new System.Drawing.Size(61, 20);
+            this.checkBox_showPassword.TabIndex = 31;
+            this.checkBox_showPassword.Text = "Show";
+            this.checkBox_showPassword.UseVisualStyleBackColor = true;
+            this.checkBox_showPassword.CheckedChanged += new System.EventHandler(this.checkBox_showPassword_CheckedChanged);
+            // 
+            // txt_adminPassword
+            // 
+            this.txt_adminPassword.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_adminPassword.Location = new System.Drawing.Point(663, 401);
+            this.txt_adminPassword.Name = "txt_adminPassword";
+            this.txt_adminPassword.Size = new System.Drawing.Size(312, 30);
+            this.txt_adminPassword.TabIndex = 30;
+            this.txt_adminPassword.UseSystemPasswordChar = true;
+            // 
             // AdminLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1102, 653);
+            this.Controls.Add(this.checkBox_showPassword);
+            this.Controls.Add(this.txt_adminPassword);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_adminCancel);
             this.Controls.Add(this.btn_adminLogin);
             this.Controls.Add(this.lbl_adminForgotPassword);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txt_adminPassword);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txt_adminUsername);
@@ -241,6 +257,7 @@
             this.Name = "AdminLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Management System";
+            this.Load += new System.EventHandler(this.AdminLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -257,7 +274,6 @@
         private System.Windows.Forms.Button btn_adminLogin;
         private System.Windows.Forms.Label lbl_adminForgotPassword;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_adminPassword;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_adminUsername;
@@ -265,5 +281,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox checkBox_showPassword;
+        private System.Windows.Forms.TextBox txt_adminPassword;
     }
 }

@@ -32,19 +32,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_getHelp = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_memberUsername = new System.Windows.Forms.TextBox();
+            this.txt_memberPassword = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lbl_forgotPassword = new System.Windows.Forms.Label();
+            this.btn_Login = new System.Windows.Forms.Button();
+            this.btn_Cancel = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.checkBox_showPassword = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,17 +79,17 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "___________";
             // 
-            // label3
+            // lbl_getHelp
             // 
-            this.label3.AutoSize = true;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(978, 610);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Get Help?";
+            this.lbl_getHelp.AutoSize = true;
+            this.lbl_getHelp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_getHelp.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_getHelp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lbl_getHelp.Location = new System.Drawing.Point(978, 610);
+            this.lbl_getHelp.Name = "lbl_getHelp";
+            this.lbl_getHelp.Size = new System.Drawing.Size(99, 20);
+            this.lbl_getHelp.TabIndex = 3;
+            this.lbl_getHelp.Text = "Get Help?";
             // 
             // label4
             // 
@@ -110,21 +111,22 @@
             this.label5.TabIndex = 5;
             this.label5.Text = ":";
             // 
-            // textBox1
+            // txt_memberUsername
             // 
-            this.textBox1.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(663, 301);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(312, 30);
-            this.textBox1.TabIndex = 6;
+            this.txt_memberUsername.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_memberUsername.Location = new System.Drawing.Point(663, 301);
+            this.txt_memberUsername.Name = "txt_memberUsername";
+            this.txt_memberUsername.Size = new System.Drawing.Size(312, 30);
+            this.txt_memberUsername.TabIndex = 6;
             // 
-            // textBox2
+            // txt_memberPassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(663, 359);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(312, 30);
-            this.textBox2.TabIndex = 9;
+            this.txt_memberPassword.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_memberPassword.Location = new System.Drawing.Point(663, 359);
+            this.txt_memberPassword.Name = "txt_memberPassword";
+            this.txt_memberPassword.Size = new System.Drawing.Size(312, 30);
+            this.txt_memberPassword.TabIndex = 9;
+            this.txt_memberPassword.UseSystemPasswordChar = true;
             // 
             // label6
             // 
@@ -156,43 +158,46 @@
             this.label8.TabIndex = 10;
             this.label8.Text = "Forgot Password?";
             // 
-            // label9
+            // lbl_forgotPassword
             // 
-            this.label9.AutoSize = true;
-            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label9.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label9.Location = new System.Drawing.Point(822, 414);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 16);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Click here.";
+            this.lbl_forgotPassword.AutoSize = true;
+            this.lbl_forgotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_forgotPassword.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_forgotPassword.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbl_forgotPassword.Location = new System.Drawing.Point(822, 414);
+            this.lbl_forgotPassword.Name = "lbl_forgotPassword";
+            this.lbl_forgotPassword.Size = new System.Drawing.Size(95, 16);
+            this.lbl_forgotPassword.TabIndex = 11;
+            this.lbl_forgotPassword.Text = "Click here.";
+            this.lbl_forgotPassword.Click += new System.EventHandler(this.lbl_forgotPassword_Click);
             // 
-            // button1
+            // btn_Login
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(686, 457);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 41);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Login";
-            this.button1.UseCompatibleTextRendering = true;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Login.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Login.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Login.Location = new System.Drawing.Point(686, 457);
+            this.btn_Login.Name = "btn_Login";
+            this.btn_Login.Size = new System.Drawing.Size(111, 41);
+            this.btn_Login.TabIndex = 12;
+            this.btn_Login.Text = "Login";
+            this.btn_Login.UseCompatibleTextRendering = true;
+            this.btn_Login.UseVisualStyleBackColor = false;
+            this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
-            // button2
+            // btn_Cancel
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(825, 457);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 41);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Cancel";
-            this.button2.UseCompatibleTextRendering = true;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Cancel.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Cancel.Location = new System.Drawing.Point(825, 457);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(111, 41);
+            this.btn_Cancel.TabIndex = 13;
+            this.btn_Cancel.Text = "Cancel";
+            this.btn_Cancel.UseCompatibleTextRendering = true;
+            this.btn_Cancel.UseVisualStyleBackColor = false;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // label10
             // 
@@ -215,24 +220,37 @@
             this.label11.TabIndex = 15;
             this.label11.Text = "____________________________";
             // 
+            // checkBox_showPassword
+            // 
+            this.checkBox_showPassword.AutoSize = true;
+            this.checkBox_showPassword.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_showPassword.Location = new System.Drawing.Point(981, 366);
+            this.checkBox_showPassword.Name = "checkBox_showPassword";
+            this.checkBox_showPassword.Size = new System.Drawing.Size(61, 20);
+            this.checkBox_showPassword.TabIndex = 16;
+            this.checkBox_showPassword.Text = "Show";
+            this.checkBox_showPassword.UseVisualStyleBackColor = true;
+            this.checkBox_showPassword.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1102, 653);
+            this.Controls.Add(this.checkBox_showPassword);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.btn_Cancel);
+            this.Controls.Add(this.btn_Login);
+            this.Controls.Add(this.lbl_forgotPassword);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_memberPassword);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_memberUsername);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbl_getHelp);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -254,18 +272,19 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_getHelp;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_memberUsername;
+        private System.Windows.Forms.TextBox txt_memberPassword;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lbl_forgotPassword;
+        private System.Windows.Forms.Button btn_Login;
+        private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox checkBox_showPassword;
     }
 }
