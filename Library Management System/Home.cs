@@ -50,5 +50,12 @@ namespace Library_Management_System
                 this.Hide();
             }
         }
+
+        private void lbl_getHelp_Click(object sender, EventArgs e)
+        {
+            Member_FAQ member_FAQ = new Member_FAQ();
+            member_FAQ.Show();
+            this.Hide();
+        }
     }
 }

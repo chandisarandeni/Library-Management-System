@@ -90,6 +90,7 @@
             this.lbl_getHelp.Size = new System.Drawing.Size(99, 20);
             this.lbl_getHelp.TabIndex = 3;
             this.lbl_getHelp.Text = "Get Help?";
+            this.lbl_getHelp.Click += new System.EventHandler(this.lbl_getHelp_Click);
             // 
             // label4
             // 

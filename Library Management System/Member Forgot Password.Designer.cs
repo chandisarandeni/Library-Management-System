@@ -54,6 +54,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_passwordResetInstructions = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,7 +154,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(472, 97);
+            this.label2.Location = new System.Drawing.Point(466, 97);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(284, 46);
             this.label2.TabIndex = 44;
@@ -314,7 +315,7 @@
             // 
             this.lbl_passwordResetInstructions.AutoSize = true;
             this.lbl_passwordResetInstructions.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_passwordResetInstructions.Location = new System.Drawing.Point(599, 449);
+            this.lbl_passwordResetInstructions.Location = new System.Drawing.Point(600, 449);
             this.lbl_passwordResetInstructions.Name = "lbl_passwordResetInstructions";
             this.lbl_passwordResetInstructions.Size = new System.Drawing.Size(391, 48);
             this.lbl_passwordResetInstructions.TabIndex = 66;
@@ -322,11 +323,22 @@
     "ty Card (NIC) number";
             this.lbl_passwordResetInstructions.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Courier New", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(474, 157);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(116, 31);
+            this.label6.TabIndex = 67;
+            this.label6.Text = "Member";
+            // 
             // Member_Forgot_Password
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1102, 653);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txt_confirmPassword);
             this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.btn_Cancel);
@@ -392,5 +404,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_passwordResetInstructions;
+        private System.Windows.Forms.Label label6;
     }
 }

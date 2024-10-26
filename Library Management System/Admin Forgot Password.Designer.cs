@@ -54,13 +54,14 @@
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Back = new System.Windows.Forms.Button();
             this.lbl_passwordResetInstructions = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 79);
+            this.pictureBox1.Location = new System.Drawing.Point(35, 79);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(480, 477);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -323,11 +324,22 @@
     "ty Card (NIC) number";
             this.lbl_passwordResetInstructions.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Courier New", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(477, 156);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(124, 39);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "Admin";
+            // 
             // Admin_Forgot_Password
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1102, 653);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txt_confirmPassword);
             this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.btn_Cancel);
@@ -393,5 +405,6 @@
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_Back;
         private System.Windows.Forms.Label lbl_passwordResetInstructions;
+        private System.Windows.Forms.Label label6;
     }
 }

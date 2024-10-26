@@ -64,6 +64,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Member FAQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member FAQ.Designer.cs">
+      <DependentUpon>Member FAQ.cs</DependentUpon>
+    </Compile>
     <Compile Include="Member Forgot Password.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member FAQ.resx">
+      <DependentUpon>Member FAQ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Member Forgot Password.resx">
       <DependentUpon>Member Forgot Password.cs</DependentUpon>
