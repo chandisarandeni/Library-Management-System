@@ -116,6 +116,7 @@
             this.btn_adminLogin.Text = "Login";
             this.btn_adminLogin.UseCompatibleTextRendering = true;
             this.btn_adminLogin.UseVisualStyleBackColor = false;
+            this.btn_adminLogin.Click += new System.EventHandler(this.btn_adminLogin_Click);
             // 
             // lbl_adminForgotPassword
             // 

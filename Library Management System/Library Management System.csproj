@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Dashboard.Designer.cs">
+      <DependentUpon>Admin Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin Forgot Password.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin Dashboard.resx">
+      <DependentUpon>Admin Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin Forgot Password.resx">
       <DependentUpon>Admin Forgot Password.cs</DependentUpon>
     </EmbeddedResource>

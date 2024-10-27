@@ -47,5 +47,12 @@ namespace Library_Management_System
                 txt_adminPassword.UseSystemPasswordChar = true;
             }
         }
+
+        private void btn_adminLogin_Click(object sender, EventArgs e)
+        {
+            Admin_Dashboard admin_Dashboard = new Admin_Dashboard();
+            admin_Dashboard.Show();
+            this.Hide();
+        }
     }
 }
