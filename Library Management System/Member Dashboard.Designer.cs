@@ -1,6 +1,6 @@
 ﻿namespace Library_Management_System
 {
-    partial class Admin_Dashboard
+    partial class Member_Dashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Dashboard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Member_Dashboard));
             this.slidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -74,8 +74,8 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(281, 662);
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(281, 653);
-            this.slidebar.TabIndex = 0;
+            this.slidebar.Size = new System.Drawing.Size(281, 662);
+            this.slidebar.TabIndex = 1;
             // 
             // panel1
             // 
@@ -246,21 +246,21 @@
             // 
             // slidebarTimer
             // 
-            this.slidebarTimer.Tick += new System.EventHandler(this.sliderbarTimber_Tick);
+            this.slidebarTimer.Tick += new System.EventHandler(this.slidebarTimer_Tick);
             // 
-            // Admin_Dashboard
+            // Member_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 653);
+            this.ClientSize = new System.Drawing.Size(1105, 662);
             this.Controls.Add(this.slidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Admin_Dashboard";
+            this.Name = "Member_Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Management System";
-            this.Load += new System.EventHandler(this.Admin_Dashboard_Load);
+            this.Load += new System.EventHandler(this.Member_Dashboard_Load);
             this.slidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -280,11 +280,10 @@
 
         private System.Windows.Forms.FlowLayoutPanel slidebar;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox btn_Menu;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_Dashboard;
-        private System.Windows.Forms.PictureBox btn_Menu;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Timer slidebarTimer;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_Books;
         private System.Windows.Forms.Panel panel4;
@@ -295,5 +294,6 @@
         private System.Windows.Forms.Button btn_Refer;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox btn_Logout;
+        private System.Windows.Forms.Timer slidebarTimer;
     }
 }

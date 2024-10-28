@@ -10,33 +10,48 @@ using System.Windows.Forms;
 
 namespace Library_Management_System
 {
-    public partial class Admin_Dashboard : Form
+    public partial class Member_Dashboard : Form
     {
         bool slidebarExpand;
-        public Admin_Dashboard()
+        public Member_Dashboard()
         {
             InitializeComponent();
         }
 
-        //private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        //{
-        //}
-
-        private void Admin_Dashboard_Load(object sender, EventArgs e)
+        private void Member_Dashboard_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void sliderbarTimber_Tick(object sender, EventArgs e)
+        private void btn_Logout_Click(object sender, EventArgs e)
         {
-            //set the minimum
+            Home home = new Home();
+            home.Show();
+            this.Hide();
+        }
+
+        private void btn_Dashboard_Click(object sender, EventArgs e)
+        {
+            Member_Dashboard member_Dashboard = new Member_Dashboard();
+            member_Dashboard.Show();
+            this.Hide();
+        }
+
+        private void btn_Menu_Click(object sender, EventArgs e)
+        {
+            slidebarTimer.Start();
+        }
+
+        private void slidebarTimer_Tick(object sender, EventArgs e)
+        {
+            // set the minimum
 
             if (slidebarExpand)
             {
                 //if the slidebar is expanded
                 slidebar.Width -= 60;
                 if (slidebar.Width == slidebar.MinimumSize.Width)
-                { 
+                {
                     slidebarExpand = false;
                     slidebarTimer.Stop();
                 }
@@ -51,25 +66,6 @@ namespace Library_Management_System
                     slidebarTimer.Stop();
                 }
             }
-        }
-
-        private void btn_Menu_Click(object sender, EventArgs e)
-        {
-            slidebarTimer.Start();
-        }
-
-        private void btn_Dashboard_Click(object sender, EventArgs e)
-        {
-            Admin_Dashboard admin_Dashboard = new Admin_Dashboard();
-            admin_Dashboard.Show();
-            this.Hide();
-        }
-
-        private void btn_Logout_Click(object sender, EventArgs e)
-        {
-            Home home = new Home();
-            home.Show();
-            this.Hide();
         }
     }
 }

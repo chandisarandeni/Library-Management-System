@@ -49,6 +49,12 @@ namespace Library_Management_System
                 adminLogin.Show();
                 this.Hide();
             }
+            else
+            {
+                Member_Dashboard member_Dashboard = new Member_Dashboard();
+                member_Dashboard.Show();
+                this.Hide();
+            }
         }
 
         private void lbl_getHelp_Click(object sender, EventArgs e)
