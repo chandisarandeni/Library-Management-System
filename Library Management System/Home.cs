@@ -15,6 +15,11 @@ namespace Library_Management_System
         public Home()
         {
             InitializeComponent();
+
+            txt_memberUsername.TabIndex = 0;
+            txt_memberPassword.TabIndex = 1;
+            
+            btn_Login.TabIndex = 2;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -62,6 +67,34 @@ namespace Library_Management_System
             Member_FAQ member_FAQ = new Member_FAQ();
             member_FAQ.Show();
             this.Hide();
+        }
+
+        private void btn_Login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_Login.PerformClick();
+            }
+        }
+
+        private void txt_memberUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;          // Prevents the sound
+                e.SuppressKeyPress = true;  // Prevents the default key press action
+                btn_Login.PerformClick();
+            }
+        }
+
+        private void txt_memberPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;          // Prevents the sound
+                e.SuppressKeyPress = true;  // Prevents the default key press action
+                btn_Login.PerformClick();
+            }
         }
     }
 }

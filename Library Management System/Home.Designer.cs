@@ -119,6 +119,7 @@
             this.txt_memberUsername.Name = "txt_memberUsername";
             this.txt_memberUsername.Size = new System.Drawing.Size(312, 30);
             this.txt_memberUsername.TabIndex = 6;
+            this.txt_memberUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_memberUsername_KeyDown);
             // 
             // txt_memberPassword
             // 
@@ -128,6 +129,7 @@
             this.txt_memberPassword.Size = new System.Drawing.Size(312, 30);
             this.txt_memberPassword.TabIndex = 9;
             this.txt_memberPassword.UseSystemPasswordChar = true;
+            this.txt_memberPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_memberPassword_KeyDown);
             // 
             // label6
             // 
@@ -185,6 +187,7 @@
             this.btn_Login.UseCompatibleTextRendering = true;
             this.btn_Login.UseVisualStyleBackColor = false;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
+            this.btn_Login.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btn_Login_KeyDown);
             // 
             // btn_Cancel
             // 

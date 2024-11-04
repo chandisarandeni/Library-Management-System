@@ -15,6 +15,11 @@ namespace Library_Management_System
         public AdminLogin()
         {
             InitializeComponent();
+
+            txt_adminUsername.TabIndex = 0;
+            txt_adminPassword.TabIndex = 1;
+
+            btn_adminLogin.TabIndex = 2;
         }
 
         private void btn_adminCancel_Click(object sender, EventArgs e)
@@ -53,6 +58,16 @@ namespace Library_Management_System
             Admin_Dashboard admin_Dashboard = new Admin_Dashboard();
             admin_Dashboard.Show();
             this.Hide();
+        }
+
+        private void txt_adminPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;          // Prevents the sound
+                e.SuppressKeyPress = true;  // Prevents the default key press action
+                btn_adminLogin.PerformClick();
+            }
         }
     }
 }

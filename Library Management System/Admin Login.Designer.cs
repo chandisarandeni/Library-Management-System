@@ -229,6 +229,7 @@
             this.txt_adminPassword.Size = new System.Drawing.Size(312, 30);
             this.txt_adminPassword.TabIndex = 30;
             this.txt_adminPassword.UseSystemPasswordChar = true;
+            this.txt_adminPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_adminPassword_KeyDown);
             // 
             // AdminLogin
             // 
