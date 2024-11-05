@@ -18,8 +18,12 @@ namespace Library_Management_System
 
             txt_adminUsername.TabIndex = 0;
             txt_adminPassword.TabIndex = 1;
-
             btn_adminLogin.TabIndex = 2;
+
+            btn_adminCancel.TabStop = false;
+            lbl_adminForgotPassword.TabStop = false;
+            checkBox_showPassword.TabStop = false;
+            btn_adminLogin.TabStop = false;
         }
 
         private void btn_adminCancel_Click(object sender, EventArgs e)

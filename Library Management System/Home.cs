@@ -18,8 +18,13 @@ namespace Library_Management_System
 
             txt_memberUsername.TabIndex = 0;
             txt_memberPassword.TabIndex = 1;
-            
             btn_Login.TabIndex = 2;
+
+            btn_Cancel.TabStop = false;
+            lbl_forgotPassword.TabStop = false;
+            lbl_getHelp.TabStop = false;
+            checkBox_showPassword.TabStop = false;
+            btn_Login.TabStop = false;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -95,6 +100,11 @@ namespace Library_Management_System
                 e.SuppressKeyPress = true;  // Prevents the default key press action
                 btn_Login.PerformClick();
             }
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
