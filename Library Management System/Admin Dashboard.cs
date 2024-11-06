@@ -16,6 +16,12 @@ namespace Library_Management_System
         public Admin_Dashboard()
         {
             InitializeComponent();
+
+            btn_Dashboard.TabIndex = 0;
+            btn_Books.TabIndex = 1;
+            btn_Members.TabIndex = 2;
+            btn_Borrow.TabIndex = 3;
+            btn_Refer.TabIndex = 4;
         }
 
         //private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

@@ -18,7 +18,6 @@ namespace Library_Management_System
 
             txt_memberUsername.TabIndex = 0;
             txt_memberPassword.TabIndex = 1;
-            btn_Login.TabIndex = 2;
 
             btn_Cancel.TabStop = false;
             lbl_forgotPassword.TabStop = false;
