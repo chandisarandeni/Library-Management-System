@@ -61,7 +61,7 @@
             // 
             // slidebar
             // 
-            this.slidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(53)))), ((int)(((byte)(6)))));
+            this.slidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(85)))), ((int)(((byte)(44)))));
             this.slidebar.Controls.Add(this.panel1);
             this.slidebar.Controls.Add(this.panel2);
             this.slidebar.Controls.Add(this.panel3);
