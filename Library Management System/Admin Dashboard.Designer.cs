@@ -74,7 +74,7 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(281, 662);
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(281, 653);
+            this.slidebar.Size = new System.Drawing.Size(73, 653);
             this.slidebar.TabIndex = 0;
             // 
             // panel1
