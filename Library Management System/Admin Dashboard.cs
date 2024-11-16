@@ -17,20 +17,28 @@ namespace Library_Management_System
         {
             InitializeComponent();
 
-            btn_Dashboard.TabIndex = 0;
-            btn_Books.TabIndex = 1;
-            btn_Members.TabIndex = 2;
-            btn_Borrow.TabIndex = 3;
-            btn_Refer.TabIndex = 4;
+            btn_Dashboard.TabStop = false;
+            btn_Books.TabStop = false;
+            btn_Members.TabStop = false;
+            btn_Borrow.TabStop = false;
+            btn_Refer.TabStop = false;
+            btn_Reservation.TabStop = false;
+            btn_Inventory.TabStop = false;
+            btn_Inquiries.TabStop = false;
         }
-
-        //private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        //{
-        //}
 
         private void Admin_Dashboard_Load(object sender, EventArgs e)
         {
+            // Ensure the state is consistent with the collapsed slide bar
+            slidebar.Width = slidebar.MinimumSize.Width;
+            slidebarExpand = false;
 
+            lbl_adminID.Hide();
+            lbl_adminName.Hide();
+            lbl_dot1.Hide();
+            lbl_dot2.Hide();
+            lbl_showAdminID.Hide();
+            lbl_showAdminName.Hide();
         }
 
         private void sliderbarTimber_Tick(object sender, EventArgs e)
@@ -45,6 +53,13 @@ namespace Library_Management_System
                 { 
                     slidebarExpand = false;
                     slidebarTimer.Stop();
+
+                    lbl_adminID.Hide();
+                    lbl_adminName.Hide();
+                    lbl_dot1.Hide();
+                    lbl_dot2.Hide();
+                    lbl_showAdminID.Hide();
+                    lbl_showAdminName.Hide();
                 }
             }
             else
@@ -55,6 +70,13 @@ namespace Library_Management_System
                 {
                     slidebarExpand = true;
                     slidebarTimer.Stop();
+
+                    lbl_adminID.Show();
+                    lbl_adminName.Show();
+                    lbl_dot1.Show();
+                    lbl_dot2.Show();
+                    lbl_showAdminID.Show();
+                    lbl_showAdminName.Show();
                 }
             }
         }
