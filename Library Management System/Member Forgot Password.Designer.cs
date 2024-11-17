@@ -38,7 +38,7 @@
             this.lbl_confirmPassword = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbl_Star = new System.Windows.Forms.Label();
+            this.lbl_redStar = new System.Windows.Forms.Label();
             this.lbl_verifiedSuccessfully = new System.Windows.Forms.Label();
             this.btn_Verify = new System.Windows.Forms.Button();
             this.txt_memberNIC = new System.Windows.Forms.TextBox();
@@ -160,16 +160,16 @@
             this.label2.TabIndex = 44;
             this.label2.Text = "___________";
             // 
-            // lbl_Star
+            // lbl_redStar
             // 
-            this.lbl_Star.AutoSize = true;
-            this.lbl_Star.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Star.ForeColor = System.Drawing.Color.Red;
-            this.lbl_Star.Location = new System.Drawing.Point(685, 402);
-            this.lbl_Star.Name = "lbl_Star";
-            this.lbl_Star.Size = new System.Drawing.Size(15, 16);
-            this.lbl_Star.TabIndex = 58;
-            this.lbl_Star.Text = "*";
+            this.lbl_redStar.AutoSize = true;
+            this.lbl_redStar.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_redStar.ForeColor = System.Drawing.Color.Red;
+            this.lbl_redStar.Location = new System.Drawing.Point(685, 402);
+            this.lbl_redStar.Name = "lbl_redStar";
+            this.lbl_redStar.Size = new System.Drawing.Size(15, 16);
+            this.lbl_redStar.TabIndex = 58;
+            this.lbl_redStar.Text = "*";
             // 
             // lbl_verifiedSuccessfully
             // 
@@ -193,6 +193,7 @@
             this.btn_Verify.Text = "Verify";
             this.btn_Verify.UseCompatibleTextRendering = true;
             this.btn_Verify.UseVisualStyleBackColor = false;
+            this.btn_Verify.Click += new System.EventHandler(this.btn_Verify_Click);
             // 
             // txt_memberNIC
             // 
@@ -348,7 +349,7 @@
             this.Controls.Add(this.lbl_confirmPassword);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lbl_Star);
+            this.Controls.Add(this.lbl_redStar);
             this.Controls.Add(this.lbl_verifiedSuccessfully);
             this.Controls.Add(this.btn_Verify);
             this.Controls.Add(this.txt_memberNIC);
@@ -388,7 +389,7 @@
         private System.Windows.Forms.Label lbl_confirmPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbl_Star;
+        private System.Windows.Forms.Label lbl_redStar;
         private System.Windows.Forms.Label lbl_verifiedSuccessfully;
         private System.Windows.Forms.Button btn_Verify;
         private System.Windows.Forms.TextBox txt_memberNIC;

@@ -40,6 +40,19 @@ namespace Library_Management_System
         private void button1_Click(object sender, EventArgs e)
         {
             lbl_passwordResetInstructions.Hide();
+
+            lbl_Star.Show();
+            lbl_verifiedSuccessfully.Show();
+            lbl_newPassword.Show();
+            lbl_confirmPassword.Show();
+            lbl_dot1.Show();
+            lbl_dot2.Show();
+            txt_newPassword.Show();
+            txt_confirmPassword.Show();
+            checkBox_newPassword.Show();
+            checkBox_condirmPassword.Show();
+            btn_resetPassword.Show();
+            btn_Cancel.Show();
         }
 
         private void checkBox_newPassword_CheckedChanged(object sender, EventArgs e)

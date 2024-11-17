@@ -15,6 +15,9 @@ namespace Library_Management_System
         public Member_Forgot_Password()
         {
             InitializeComponent();
+
+            btn_Verify.TabStop = false;
+            btn_Back.TabStop = false;
         }
 
         private void Member_Forgot_Password_Load(object sender, EventArgs e)
@@ -23,7 +26,7 @@ namespace Library_Management_System
             lbl_passwordResetInstructions.Show();
 
             //Hiding feilds
-            lbl_Star.Hide();
+            lbl_redStar.Hide();
             lbl_verifiedSuccessfully.Hide();
             lbl_newPassword.Hide();
             lbl_confirmPassword.Hide();
@@ -73,6 +76,25 @@ namespace Library_Management_System
             Home home = new Home();
             home.Show();
             this.Hide();
+        }
+
+        private void btn_Verify_Click(object sender, EventArgs e)
+        {
+            lbl_passwordResetInstructions.Hide();
+
+            lbl_verifiedSuccessfully.Show();
+            lbl_newPassword.Show();
+            lbl_confirmPassword.Show();
+            lbl_dot1.Show();
+            lbl_dot2.Show();
+            txt_newPassword.Show();
+            txt_confirmPassword.Show();
+            checkBox_newPassword.Show();
+            checkBox_condirmPassword.Show();
+            lbl_redStar.Show();
+
+            btn_resetPassword.Show();
+            btn_Cancel.Show();
         }
     }
 }
