@@ -20,7 +20,16 @@ namespace Library_Management_System
 
         private void Member_Dashboard_Load(object sender, EventArgs e)
         {
+            // Ensure the state is consistent with the collapsed slide bar
+            slidebar.Width = slidebar.MinimumSize.Width;
+            slidebarExpand = false;
 
+            lbl_memberID.Hide();
+            lbl_memberName.Hide();
+            lbl_dot1.Hide();
+            lbl_dot2.Hide();
+            lbl_showMemberID.Hide();
+            lbl_showMemberName.Hide();
         }
 
         private void btn_Logout_Click(object sender, EventArgs e)
@@ -55,6 +64,13 @@ namespace Library_Management_System
                     slidebarExpand = false;
                     slidebarTimer.Stop();
                 }
+
+                lbl_memberID.Hide();
+                lbl_memberName.Hide();
+                lbl_dot1.Hide();
+                lbl_dot2.Hide();
+                lbl_showMemberID.Hide();
+                lbl_showMemberName.Hide();
             }
             else
             {
@@ -65,6 +81,13 @@ namespace Library_Management_System
                     slidebarExpand = true;
                     slidebarTimer.Stop();
                 }
+
+                lbl_memberID.Show();
+                lbl_memberName.Show();
+                lbl_dot1.Show();
+                lbl_dot2.Show();
+                lbl_showMemberID.Show();
+                lbl_showMemberName.Show();
             }
         }
     }
