@@ -32,37 +32,37 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Member_Dashboard));
             this.slidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_dot2 = new System.Windows.Forms.Label();
+            this.btn_Logout = new System.Windows.Forms.PictureBox();
+            this.lbl_dot1 = new System.Windows.Forms.Label();
+            this.lbl_showMemberName = new System.Windows.Forms.Label();
             this.btn_Menu = new System.Windows.Forms.PictureBox();
+            this.lbl_showMemberID = new System.Windows.Forms.Label();
+            this.lbl_memberID = new System.Windows.Forms.Label();
+            this.lbl_memberName = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Dashboard = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_Books = new System.Windows.Forms.Button();
+            this.btn_myBooks = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_Members = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.btn_Borrow = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_searchBook = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btn_Refer = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.btn_Logout = new System.Windows.Forms.PictureBox();
-            this.slidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.btn_Reservation = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lbl_dot2 = new System.Windows.Forms.Label();
-            this.lbl_dot1 = new System.Windows.Forms.Label();
-            this.lbl_showMemberName = new System.Windows.Forms.Label();
-            this.lbl_showMemberID = new System.Windows.Forms.Label();
-            this.lbl_memberName = new System.Windows.Forms.Label();
-            this.lbl_memberID = new System.Windows.Forms.Label();
+            this.btn_Inquiries = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.slidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.slidebar.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Logout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Logout)).BeginInit();
             this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,6 +100,51 @@
             this.panel1.Size = new System.Drawing.Size(278, 138);
             this.panel1.TabIndex = 1;
             // 
+            // lbl_dot2
+            // 
+            this.lbl_dot2.AutoSize = true;
+            this.lbl_dot2.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_dot2.Location = new System.Drawing.Point(68, 93);
+            this.lbl_dot2.Name = "lbl_dot2";
+            this.lbl_dot2.Size = new System.Drawing.Size(19, 20);
+            this.lbl_dot2.TabIndex = 6;
+            this.lbl_dot2.Text = ":";
+            this.lbl_dot2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btn_Logout
+            // 
+            this.btn_Logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_Logout.Image")));
+            this.btn_Logout.Location = new System.Drawing.Point(235, 11);
+            this.btn_Logout.Name = "btn_Logout";
+            this.btn_Logout.Size = new System.Drawing.Size(33, 33);
+            this.btn_Logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_Logout.TabIndex = 1;
+            this.btn_Logout.TabStop = false;
+            this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
+            // 
+            // lbl_dot1
+            // 
+            this.lbl_dot1.AutoSize = true;
+            this.lbl_dot1.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_dot1.Location = new System.Drawing.Point(158, 48);
+            this.lbl_dot1.Name = "lbl_dot1";
+            this.lbl_dot1.Size = new System.Drawing.Size(19, 20);
+            this.lbl_dot1.TabIndex = 7;
+            this.lbl_dot1.Text = ":";
+            this.lbl_dot1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_showMemberName
+            // 
+            this.lbl_showMemberName.AutoSize = true;
+            this.lbl_showMemberName.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showMemberName.Location = new System.Drawing.Point(93, 93);
+            this.lbl_showMemberName.Name = "lbl_showMemberName";
+            this.lbl_showMemberName.Size = new System.Drawing.Size(169, 20);
+            this.lbl_showMemberName.TabIndex = 8;
+            this.lbl_showMemberName.Text = "Saman Gunasekara";
+            this.lbl_showMemberName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // btn_Menu
             // 
             this.btn_Menu.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -111,6 +156,39 @@
             this.btn_Menu.TabIndex = 1;
             this.btn_Menu.TabStop = false;
             this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click);
+            // 
+            // lbl_showMemberID
+            // 
+            this.lbl_showMemberID.AutoSize = true;
+            this.lbl_showMemberID.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showMemberID.Location = new System.Drawing.Point(93, 68);
+            this.lbl_showMemberID.Name = "lbl_showMemberID";
+            this.lbl_showMemberID.Size = new System.Drawing.Size(109, 20);
+            this.lbl_showMemberID.TabIndex = 9;
+            this.lbl_showMemberID.Text = "M-00-12351";
+            this.lbl_showMemberID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_memberID
+            // 
+            this.lbl_memberID.AutoSize = true;
+            this.lbl_memberID.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_memberID.Location = new System.Drawing.Point(13, 48);
+            this.lbl_memberID.Name = "lbl_memberID";
+            this.lbl_memberID.Size = new System.Drawing.Size(139, 20);
+            this.lbl_memberID.TabIndex = 11;
+            this.lbl_memberID.Text = "Membership ID";
+            this.lbl_memberID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_memberName
+            // 
+            this.lbl_memberName.AutoSize = true;
+            this.lbl_memberName.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_memberName.Location = new System.Drawing.Point(13, 93);
+            this.lbl_memberName.Name = "lbl_memberName";
+            this.lbl_memberName.Size = new System.Drawing.Size(49, 20);
+            this.lbl_memberName.TabIndex = 10;
+            this.lbl_memberName.Text = "Name";
+            this.lbl_memberName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2
             // 
@@ -138,57 +216,34 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btn_Books);
+            this.panel3.Controls.Add(this.btn_myBooks);
             this.panel3.Location = new System.Drawing.Point(3, 213);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(278, 60);
             this.panel3.TabIndex = 3;
             // 
-            // btn_Books
+            // btn_myBooks
             // 
-            this.btn_Books.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(93)))), ((int)(((byte)(16)))));
-            this.btn_Books.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Books.Image = ((System.Drawing.Image)(resources.GetObject("btn_Books.Image")));
-            this.btn_Books.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Books.Location = new System.Drawing.Point(3, 0);
-            this.btn_Books.Name = "btn_Books";
-            this.btn_Books.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
-            this.btn_Books.Size = new System.Drawing.Size(336, 60);
-            this.btn_Books.TabIndex = 2;
-            this.btn_Books.Text = "    My Books";
-            this.btn_Books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Books.UseVisualStyleBackColor = false;
+            this.btn_myBooks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(93)))), ((int)(((byte)(16)))));
+            this.btn_myBooks.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_myBooks.Image = ((System.Drawing.Image)(resources.GetObject("btn_myBooks.Image")));
+            this.btn_myBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_myBooks.Location = new System.Drawing.Point(3, 0);
+            this.btn_myBooks.Name = "btn_myBooks";
+            this.btn_myBooks.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
+            this.btn_myBooks.Size = new System.Drawing.Size(336, 60);
+            this.btn_myBooks.TabIndex = 2;
+            this.btn_myBooks.Text = "    My Books";
+            this.btn_myBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_myBooks.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btn_Members);
+            this.panel4.Controls.Add(this.btn_Borrow);
             this.panel4.Location = new System.Drawing.Point(3, 279);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(278, 60);
             this.panel4.TabIndex = 4;
-            // 
-            // btn_Members
-            // 
-            this.btn_Members.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(93)))), ((int)(((byte)(16)))));
-            this.btn_Members.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Members.Image = ((System.Drawing.Image)(resources.GetObject("btn_Members.Image")));
-            this.btn_Members.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Members.Location = new System.Drawing.Point(3, 0);
-            this.btn_Members.Name = "btn_Members";
-            this.btn_Members.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
-            this.btn_Members.Size = new System.Drawing.Size(336, 60);
-            this.btn_Members.TabIndex = 2;
-            this.btn_Members.Text = "    Borrow";
-            this.btn_Members.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Members.UseVisualStyleBackColor = false;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.btn_Borrow);
-            this.panel5.Location = new System.Drawing.Point(3, 345);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(278, 60);
-            this.panel5.TabIndex = 5;
             // 
             // btn_Borrow
             // 
@@ -201,32 +256,78 @@
             this.btn_Borrow.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
             this.btn_Borrow.Size = new System.Drawing.Size(336, 60);
             this.btn_Borrow.TabIndex = 2;
-            this.btn_Borrow.Text = "    Search Book";
+            this.btn_Borrow.Text = "    Borrow";
             this.btn_Borrow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Borrow.UseVisualStyleBackColor = false;
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btn_searchBook);
+            this.panel5.Location = new System.Drawing.Point(3, 345);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(278, 60);
+            this.panel5.TabIndex = 5;
+            // 
+            // btn_searchBook
+            // 
+            this.btn_searchBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(93)))), ((int)(((byte)(16)))));
+            this.btn_searchBook.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_searchBook.Image = ((System.Drawing.Image)(resources.GetObject("btn_searchBook.Image")));
+            this.btn_searchBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_searchBook.Location = new System.Drawing.Point(3, 0);
+            this.btn_searchBook.Name = "btn_searchBook";
+            this.btn_searchBook.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
+            this.btn_searchBook.Size = new System.Drawing.Size(336, 60);
+            this.btn_searchBook.TabIndex = 2;
+            this.btn_searchBook.Text = "    Search Book";
+            this.btn_searchBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_searchBook.UseVisualStyleBackColor = false;
+            // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.btn_Refer);
+            this.panel6.Controls.Add(this.btn_Reservation);
             this.panel6.Location = new System.Drawing.Point(3, 411);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(278, 60);
             this.panel6.TabIndex = 6;
             // 
-            // btn_Refer
+            // btn_Reservation
             // 
-            this.btn_Refer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(93)))), ((int)(((byte)(16)))));
-            this.btn_Refer.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Refer.Image = ((System.Drawing.Image)(resources.GetObject("btn_Refer.Image")));
-            this.btn_Refer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Refer.Location = new System.Drawing.Point(3, 0);
-            this.btn_Refer.Name = "btn_Refer";
-            this.btn_Refer.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
-            this.btn_Refer.Size = new System.Drawing.Size(336, 60);
-            this.btn_Refer.TabIndex = 2;
-            this.btn_Refer.Text = "    Reservation";
-            this.btn_Refer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Refer.UseVisualStyleBackColor = false;
+            this.btn_Reservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(93)))), ((int)(((byte)(16)))));
+            this.btn_Reservation.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Reservation.Image = ((System.Drawing.Image)(resources.GetObject("btn_Reservation.Image")));
+            this.btn_Reservation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Reservation.Location = new System.Drawing.Point(3, 0);
+            this.btn_Reservation.Name = "btn_Reservation";
+            this.btn_Reservation.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
+            this.btn_Reservation.Size = new System.Drawing.Size(336, 60);
+            this.btn_Reservation.TabIndex = 2;
+            this.btn_Reservation.Text = "    Reservation";
+            this.btn_Reservation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Reservation.UseVisualStyleBackColor = false;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.btn_Inquiries);
+            this.panel8.Location = new System.Drawing.Point(3, 477);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(278, 60);
+            this.panel8.TabIndex = 6;
+            // 
+            // btn_Inquiries
+            // 
+            this.btn_Inquiries.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(93)))), ((int)(((byte)(16)))));
+            this.btn_Inquiries.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Inquiries.Image = ((System.Drawing.Image)(resources.GetObject("btn_Inquiries.Image")));
+            this.btn_Inquiries.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Inquiries.Location = new System.Drawing.Point(3, 0);
+            this.btn_Inquiries.Name = "btn_Inquiries";
+            this.btn_Inquiries.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
+            this.btn_Inquiries.Size = new System.Drawing.Size(336, 60);
+            this.btn_Inquiries.TabIndex = 2;
+            this.btn_Inquiries.Text = "    Inquiries";
+            this.btn_Inquiries.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Inquiries.UseVisualStyleBackColor = false;
             // 
             // panel7
             // 
@@ -235,110 +336,9 @@
             this.panel7.Size = new System.Drawing.Size(278, 119);
             this.panel7.TabIndex = 2;
             // 
-            // btn_Logout
-            // 
-            this.btn_Logout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_Logout.Image")));
-            this.btn_Logout.Location = new System.Drawing.Point(235, 11);
-            this.btn_Logout.Name = "btn_Logout";
-            this.btn_Logout.Size = new System.Drawing.Size(33, 33);
-            this.btn_Logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_Logout.TabIndex = 1;
-            this.btn_Logout.TabStop = false;
-            this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
-            // 
             // slidebarTimer
             // 
             this.slidebarTimer.Tick += new System.EventHandler(this.slidebarTimer_Tick);
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.button1);
-            this.panel8.Location = new System.Drawing.Point(3, 477);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(278, 60);
-            this.panel8.TabIndex = 6;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(93)))), ((int)(((byte)(16)))));
-            this.button1.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(336, 60);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "    Inquiries";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // lbl_dot2
-            // 
-            this.lbl_dot2.AutoSize = true;
-            this.lbl_dot2.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_dot2.Location = new System.Drawing.Point(68, 93);
-            this.lbl_dot2.Name = "lbl_dot2";
-            this.lbl_dot2.Size = new System.Drawing.Size(19, 20);
-            this.lbl_dot2.TabIndex = 6;
-            this.lbl_dot2.Text = ":";
-            this.lbl_dot2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbl_dot1
-            // 
-            this.lbl_dot1.AutoSize = true;
-            this.lbl_dot1.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_dot1.Location = new System.Drawing.Point(158, 48);
-            this.lbl_dot1.Name = "lbl_dot1";
-            this.lbl_dot1.Size = new System.Drawing.Size(19, 20);
-            this.lbl_dot1.TabIndex = 7;
-            this.lbl_dot1.Text = ":";
-            this.lbl_dot1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbl_showMemberName
-            // 
-            this.lbl_showMemberName.AutoSize = true;
-            this.lbl_showMemberName.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_showMemberName.Location = new System.Drawing.Point(93, 93);
-            this.lbl_showMemberName.Name = "lbl_showMemberName";
-            this.lbl_showMemberName.Size = new System.Drawing.Size(169, 20);
-            this.lbl_showMemberName.TabIndex = 8;
-            this.lbl_showMemberName.Text = "Saman Gunasekara";
-            this.lbl_showMemberName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbl_showMemberID
-            // 
-            this.lbl_showMemberID.AutoSize = true;
-            this.lbl_showMemberID.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_showMemberID.Location = new System.Drawing.Point(93, 68);
-            this.lbl_showMemberID.Name = "lbl_showMemberID";
-            this.lbl_showMemberID.Size = new System.Drawing.Size(109, 20);
-            this.lbl_showMemberID.TabIndex = 9;
-            this.lbl_showMemberID.Text = "M-00-12351";
-            this.lbl_showMemberID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbl_memberName
-            // 
-            this.lbl_memberName.AutoSize = true;
-            this.lbl_memberName.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_memberName.Location = new System.Drawing.Point(13, 93);
-            this.lbl_memberName.Name = "lbl_memberName";
-            this.lbl_memberName.Size = new System.Drawing.Size(49, 20);
-            this.lbl_memberName.TabIndex = 10;
-            this.lbl_memberName.Text = "Name";
-            this.lbl_memberName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbl_memberID
-            // 
-            this.lbl_memberID.AutoSize = true;
-            this.lbl_memberID.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_memberID.Location = new System.Drawing.Point(13, 48);
-            this.lbl_memberID.Name = "lbl_memberID";
-            this.lbl_memberID.Size = new System.Drawing.Size(139, 20);
-            this.lbl_memberID.TabIndex = 11;
-            this.lbl_memberID.Text = "Membership ID";
-            this.lbl_memberID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Member_Dashboard
             // 
@@ -356,13 +356,13 @@
             this.slidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Logout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Logout)).EndInit();
             this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -376,18 +376,18 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_Dashboard;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btn_Books;
+        private System.Windows.Forms.Button btn_myBooks;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btn_Members;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btn_Borrow;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btn_searchBook;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button btn_Refer;
+        private System.Windows.Forms.Button btn_Reservation;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox btn_Logout;
         private System.Windows.Forms.Timer slidebarTimer;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Inquiries;
         private System.Windows.Forms.Label lbl_dot2;
         private System.Windows.Forms.Label lbl_dot1;
         private System.Windows.Forms.Label lbl_showMemberName;

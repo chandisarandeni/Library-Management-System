@@ -16,6 +16,13 @@ namespace Library_Management_System
         public Member_Dashboard()
         {
             InitializeComponent();
+
+            btn_Dashboard.TabStop = false;
+            btn_myBooks.TabStop = false;
+            btn_Borrow.TabStop = false;
+            btn_searchBook.TabStop = false;
+            btn_Reservation.TabStop = false;
+            btn_Inquiries.TabStop = false;
         }
 
         private void Member_Dashboard_Load(object sender, EventArgs e)
