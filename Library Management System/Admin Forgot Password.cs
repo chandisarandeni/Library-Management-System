@@ -15,6 +15,11 @@ namespace Library_Management_System
         public Admin_Forgot_Password()
         {
             InitializeComponent();
+            btn_Verify.TabStop = false;
+            btn_Back.TabStop = false;
+
+            txt_adminUsername.TabIndex = 0;
+            txt_adminNIC.TabIndex = 1;
         }
 
         private void Admin_Forgot_Password_Load(object sender, EventArgs e)

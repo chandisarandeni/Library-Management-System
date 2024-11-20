@@ -18,6 +18,9 @@ namespace Library_Management_System
 
             btn_Verify.TabStop = false;
             btn_Back.TabStop = false;
+
+            txt_memberUsername.TabIndex = 0;
+            txt_memberNIC.TabIndex = 1;
         }
 
         private void Member_Forgot_Password_Load(object sender, EventArgs e)
