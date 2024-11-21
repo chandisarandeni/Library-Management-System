@@ -60,41 +60,44 @@ namespace Library_Management_System
 
         private void slidebarTimer_Tick(object sender, EventArgs e)
         {
-            // set the minimum
+            // Adjust slide speed with timer's interval
+            slidebarTimer.Interval = 10; // Faster update rate for smoother animation
 
             if (slidebarExpand)
             {
-                //if the slidebar is expanded
-                slidebar.Width -= 60;
-                if (slidebar.Width == slidebar.MinimumSize.Width)
+                // If the slidebar is expanded
+                slidebar.Width -= 10; // Small step for smoother effect
+                if (slidebar.Width <= slidebar.MinimumSize.Width)
                 {
+                    slidebar.Width = slidebar.MinimumSize.Width;
                     slidebarExpand = false;
                     slidebarTimer.Stop();
-                }
 
-                lbl_memberID.Hide();
-                lbl_memberName.Hide();
-                lbl_dot1.Hide();
-                lbl_dot2.Hide();
-                lbl_showMemberID.Hide();
-                lbl_showMemberName.Hide();
+                    lbl_memberID.Hide();
+                    lbl_memberName.Hide();
+                    lbl_dot1.Hide();
+                    lbl_dot2.Hide();
+                    lbl_showMemberID.Hide();
+                    lbl_showMemberName.Hide();
+                }
             }
             else
             {
-                //if the slidebar is collapsed
-                slidebar.Width += 60;
-                if (slidebar.Width == slidebar.MaximumSize.Width)
+                // If the slidebar is collapsed
+                slidebar.Width += 10; // Small step for smoother effect
+                if (slidebar.Width >= slidebar.MaximumSize.Width)
                 {
+                    slidebar.Width = slidebar.MaximumSize.Width;
                     slidebarExpand = true;
                     slidebarTimer.Stop();
-                }
 
-                lbl_memberID.Show();
-                lbl_memberName.Show();
-                lbl_dot1.Show();
-                lbl_dot2.Show();
-                lbl_showMemberID.Show();
-                lbl_showMemberName.Show();
+                    lbl_memberID.Show();
+                    lbl_memberName.Show();
+                    lbl_dot1.Show();
+                    lbl_dot2.Show();
+                    lbl_showMemberID.Show();
+                    lbl_showMemberName.Show();
+                }
             }
         }
     }

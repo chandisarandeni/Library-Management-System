@@ -10,10 +10,9 @@ using System.Windows.Forms;
 
 namespace Library_Management_System
 {
-    public partial class Admin_Dashboard : Form
+    public partial class Admin_View_Book_Management : Form
     {
-        bool slidebarExpand;
-        public Admin_Dashboard()
+        public Admin_View_Book_Management()
         {
             InitializeComponent();
 
@@ -26,22 +25,9 @@ namespace Library_Management_System
             btn_Inventory.TabStop = false;
             btn_Inquiries.TabStop = false;
         }
+        bool slidebarExpand;
 
-        private void Admin_Dashboard_Load(object sender, EventArgs e)
-        {
-            // Ensure the state is consistent with the collapsed slide bar
-            slidebar.Width = slidebar.MinimumSize.Width;
-            slidebarExpand = false;
-
-            lbl_adminID.Hide();
-            lbl_adminName.Hide();
-            lbl_dot1.Hide();
-            lbl_dot2.Hide();
-            lbl_showAdminID.Hide();
-            lbl_showAdminName.Hide();
-        }
-
-        private void sliderbarTimber_Tick(object sender, EventArgs e)
+        private void slidebarTimer_Tick(object sender, EventArgs e)
         {
             // Adjust slide speed with timer's interval
             slidebarTimer.Interval = 10; // Faster update rate for smoother animation
@@ -84,15 +70,36 @@ namespace Library_Management_System
             }
         }
 
+        private void Admin_View_Book_Management_Load(object sender, EventArgs e)
+        {
+            // Ensure the state is consistent with the collapsed slide bar
+            slidebar.Width = slidebar.MinimumSize.Width;
+            slidebarExpand = false;
+
+            lbl_adminID.Hide();
+            lbl_adminName.Hide();
+            lbl_dot1.Hide();
+            lbl_dot2.Hide();
+            lbl_showAdminID.Hide();
+            lbl_showAdminName.Hide();
+        }
+
         private void btn_Menu_Click(object sender, EventArgs e)
         {
             slidebarTimer.Start();
         }
 
+        private void btn_Books_Click(object sender, EventArgs e)
+        {
+            Admin_View_Book_Management adminViewBookManagement = new Admin_View_Book_Management();
+            adminViewBookManagement.Show();
+            this.Hide();
+        }
+
         private void btn_Dashboard_Click(object sender, EventArgs e)
         {
-            Admin_Dashboard admin_Dashboard = new Admin_Dashboard();
-            admin_Dashboard.Show();
+            Admin_Dashboard adminDashboard = new Admin_Dashboard();
+            adminDashboard.Show();
             this.Hide();
         }
 
@@ -100,14 +107,12 @@ namespace Library_Management_System
         {
             Home home = new Home();
             home.Show();
-            this.Hide();
+            this.Close();
         }
 
-        private void btn_Books_Click(object sender, EventArgs e)
+        private void btn_Borrow_Click(object sender, EventArgs e)
         {
-            Admin_View_Book_Management admin_View_Book_Management = new Admin_View_Book_Management();
-            admin_View_Book_Management.Show();
-            this.Hide();
+
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Library_Management_System
 {
-    partial class Admin_Dashboard
+    partial class Admin_View_Book_Management
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Dashboard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_View_Book_Management));
             this.slidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Logout = new System.Windows.Forms.PictureBox();
@@ -89,7 +89,7 @@
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
             this.slidebar.Size = new System.Drawing.Size(300, 653);
-            this.slidebar.TabIndex = 0;
+            this.slidebar.TabIndex = 1;
             // 
             // panel1
             // 
@@ -266,7 +266,6 @@
             this.btn_Members.Text = "    Members";
             this.btn_Members.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Members.UseVisualStyleBackColor = false;
-            this.btn_Members.Click += new System.EventHandler(this.btn_Dashboard_Click);
             // 
             // panel5
             // 
@@ -290,7 +289,7 @@
             this.btn_Borrow.Text = "    Borrow";
             this.btn_Borrow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Borrow.UseVisualStyleBackColor = false;
-            this.btn_Borrow.Click += new System.EventHandler(this.btn_Dashboard_Click);
+            this.btn_Borrow.Click += new System.EventHandler(this.btn_Borrow_Click);
             // 
             // panel6
             // 
@@ -314,7 +313,6 @@
             this.btn_Refer.Text = "    Refer";
             this.btn_Refer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Refer.UseVisualStyleBackColor = false;
-            this.btn_Refer.Click += new System.EventHandler(this.btn_Dashboard_Click);
             // 
             // panel8
             // 
@@ -338,7 +336,6 @@
             this.btn_Reservation.Text = "    Reservations";
             this.btn_Reservation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reservation.UseVisualStyleBackColor = false;
-            this.btn_Reservation.Click += new System.EventHandler(this.btn_Dashboard_Click);
             // 
             // panel9
             // 
@@ -362,7 +359,6 @@
             this.btn_Inventory.Text = "    Inventory";
             this.btn_Inventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inventory.UseVisualStyleBackColor = false;
-            this.btn_Inventory.Click += new System.EventHandler(this.btn_Dashboard_Click);
             // 
             // panel10
             // 
@@ -386,25 +382,24 @@
             this.btn_Inquiries.Text = "    Inquiries";
             this.btn_Inquiries.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inquiries.UseVisualStyleBackColor = false;
-            this.btn_Inquiries.Click += new System.EventHandler(this.btn_Dashboard_Click);
             // 
             // slidebarTimer
             // 
-            this.slidebarTimer.Tick += new System.EventHandler(this.sliderbarTimber_Tick);
+            this.slidebarTimer.Tick += new System.EventHandler(this.slidebarTimer_Tick);
             // 
-            // Admin_Dashboard
+            // Admin_View_Book_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1102, 653);
             this.Controls.Add(this.slidebar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Admin_Dashboard";
+            this.MinimizeBox = false;
+            this.Name = "Admin_View_Book_Management";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Management System";
-            this.Load += new System.EventHandler(this.Admin_Dashboard_Load);
+            this.Load += new System.EventHandler(this.Admin_View_Book_Management_Load);
             this.slidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -426,30 +421,30 @@
 
         private System.Windows.Forms.FlowLayoutPanel slidebar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn_Dashboard;
-        private System.Windows.Forms.PictureBox btn_Menu;
-        private System.Windows.Forms.Label lbl_adminID;
-        private System.Windows.Forms.Timer slidebarTimer;
         private System.Windows.Forms.PictureBox btn_Logout;
-        private System.Windows.Forms.Button btn_Members;
-        private System.Windows.Forms.Button btn_Borrow;
-        private System.Windows.Forms.Button btn_Refer;
-        private System.Windows.Forms.Button btn_Reservation;
-        private System.Windows.Forms.Button btn_Inventory;
-        private System.Windows.Forms.Button btn_Inquiries;
-        private System.Windows.Forms.Button btn_Books;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label lbl_dot2;
         private System.Windows.Forms.Label lbl_dot1;
         private System.Windows.Forms.Label lbl_showAdminName;
         private System.Windows.Forms.Label lbl_showAdminID;
         private System.Windows.Forms.Label lbl_adminName;
+        private System.Windows.Forms.Label lbl_adminID;
+        private System.Windows.Forms.PictureBox btn_Menu;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btn_Dashboard;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btn_Books;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btn_Members;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btn_Borrow;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button btn_Refer;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button btn_Reservation;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button btn_Inventory;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Button btn_Inquiries;
+        private System.Windows.Forms.Timer slidebarTimer;
     }
 }

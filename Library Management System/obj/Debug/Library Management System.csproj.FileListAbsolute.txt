@@ -36,3 +36,7 @@ C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Lib
 C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Member_Dashboard.resources
 C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\bin\Debug\Guna.UI2.dll
 C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library .F7D87690.Up2Date
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\bin\Debug\aa-DJ\Library Management System.resources.dll
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_View_Book_Management.resources
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_View_Book_Management.aa-DJ.resources
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\aa-DJ\Library Management System.resources.dll
