@@ -100,5 +100,16 @@ namespace Library_Management_System
                 }
             }
         }
+        private void Member_Dashboard_MouseClick(object sender, MouseEventArgs e)
+        {
+            // Check if the click is outside the slidebar area
+            if (!slidebar.ClientRectangle.Contains(e.Location))
+            {
+                if (slidebarExpand)
+                {
+                    slidebarTimer.Start(); // Start the timer to collapse the slidebar
+                }
+            }
+        }
     }
 }

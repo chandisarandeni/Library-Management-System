@@ -109,5 +109,17 @@ namespace Library_Management_System
             admin_View_Book_Management.Show();
             this.Hide();
         }
+
+        private void Admin_Dashboard_MouseClick(object sender, MouseEventArgs e)
+        {
+            // Check if the click is outside the slidebar area
+            if (!slidebar.ClientRectangle.Contains(e.Location))
+            {
+                if (slidebarExpand)
+                {
+                    slidebarTimer.Start(); // Start the timer to collapse the slidebar
+                }
+            }
+        }
     }
 }

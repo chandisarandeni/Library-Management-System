@@ -400,6 +400,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Management System";
             this.Load += new System.EventHandler(this.Admin_View_Book_Management_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Admin_View_Book_Management_MouseClick);
             this.slidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

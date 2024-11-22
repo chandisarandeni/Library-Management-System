@@ -405,6 +405,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Management System";
             this.Load += new System.EventHandler(this.Admin_Dashboard_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Admin_Dashboard_MouseClick);
             this.slidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
