@@ -54,6 +54,7 @@
             this.btn_Inquiries = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.slidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.slidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Logout)).BeginInit();
@@ -340,11 +341,23 @@
             // 
             this.slidebarTimer.Tick += new System.EventHandler(this.slidebarTimer_Tick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(354, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(404, 46);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Member Dashboard";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Member_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 662);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.slidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -366,6 +379,7 @@
             this.panel6.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -395,5 +409,6 @@
         private System.Windows.Forms.Label lbl_showMemberID;
         private System.Windows.Forms.Label lbl_memberID;
         private System.Windows.Forms.Label lbl_memberName;
+        private System.Windows.Forms.Label label1;
     }
 }
