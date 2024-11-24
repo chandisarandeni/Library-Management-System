@@ -32,12 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Dashboard));
             this.slidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_adminName = new System.Windows.Forms.Label();
             this.btn_Logout = new System.Windows.Forms.PictureBox();
             this.lbl_dot2 = new System.Windows.Forms.Label();
             this.lbl_dot1 = new System.Windows.Forms.Label();
             this.lbl_showAdminName = new System.Windows.Forms.Label();
             this.lbl_showAdminID = new System.Windows.Forms.Label();
-            this.lbl_adminName = new System.Windows.Forms.Label();
             this.lbl_adminID = new System.Windows.Forms.Label();
             this.btn_Menu = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -61,12 +61,12 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -85,8 +85,8 @@
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
-            this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,6 +124,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(297, 115);
             this.panel1.TabIndex = 1;
+            // 
+            // lbl_adminName
+            // 
+            this.lbl_adminName.AutoSize = true;
+            this.lbl_adminName.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_adminName.Location = new System.Drawing.Point(13, 80);
+            this.lbl_adminName.Name = "lbl_adminName";
+            this.lbl_adminName.Size = new System.Drawing.Size(49, 20);
+            this.lbl_adminName.TabIndex = 5;
+            this.lbl_adminName.Text = "Name";
+            this.lbl_adminName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btn_Logout
             // 
@@ -180,17 +191,6 @@
             this.lbl_showAdminID.TabIndex = 5;
             this.lbl_showAdminID.Text = "A-00-003";
             this.lbl_showAdminID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbl_adminName
-            // 
-            this.lbl_adminName.AutoSize = true;
-            this.lbl_adminName.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_adminName.Location = new System.Drawing.Point(13, 80);
-            this.lbl_adminName.Name = "lbl_adminName";
-            this.lbl_adminName.Size = new System.Drawing.Size(49, 20);
-            this.lbl_adminName.TabIndex = 5;
-            this.lbl_adminName.Text = "Name";
-            this.lbl_adminName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_adminID
             // 
@@ -458,6 +458,17 @@
             this.label2.Text = "Recently Borrowed";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(5, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(499, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "_________________________________________________";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // guna2Panel2
             // 
             this.guna2Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -472,32 +483,6 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(709, 250);
             this.guna2Panel2.TabIndex = 4;
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.guna2Panel3.BorderColor = System.Drawing.Color.Black;
-            this.guna2Panel3.BorderRadius = 6;
-            this.guna2Panel3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2Panel3.BorderThickness = 1;
-            this.guna2Panel3.Controls.Add(this.pictureBox3);
-            this.guna2Panel3.Controls.Add(this.label6);
-            this.guna2Panel3.Controls.Add(this.label7);
-            this.guna2Panel3.Location = new System.Drawing.Point(834, 124);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(241, 506);
-            this.guna2Panel3.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(5, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(499, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "_________________________________________________";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
@@ -530,6 +515,21 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "_________________________________________________";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2Panel3.BorderColor = System.Drawing.Color.Black;
+            this.guna2Panel3.BorderRadius = 6;
+            this.guna2Panel3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.guna2Panel3.BorderThickness = 1;
+            this.guna2Panel3.Controls.Add(this.pictureBox3);
+            this.guna2Panel3.Controls.Add(this.label6);
+            this.guna2Panel3.Controls.Add(this.label7);
+            this.guna2Panel3.Location = new System.Drawing.Point(834, 124);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(241, 506);
+            this.guna2Panel3.TabIndex = 4;
             // 
             // pictureBox3
             // 
@@ -599,9 +599,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
