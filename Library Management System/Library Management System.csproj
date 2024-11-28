@@ -94,6 +94,30 @@
     <Compile Include="Admin View Book Registration.Designer.cs">
       <DependentUpon>Admin View Book Registration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin View Member Delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View Member Delete.Designer.cs">
+      <DependentUpon>Admin View Member Delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin View Member Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View Member Edit.Designer.cs">
+      <DependentUpon>Admin View Member Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin View Member Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View Member Management.Designer.cs">
+      <DependentUpon>Admin View Member Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin View Member Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View Member Registration.Designer.cs">
+      <DependentUpon>Admin View Member Registration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +167,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin View Book Registration.resx">
       <DependentUpon>Admin View Book Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin View Member Delete.resx">
+      <DependentUpon>Admin View Member Delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin View Member Edit.resx">
+      <DependentUpon>Admin View Member Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin View Member Management.resx">
+      <DependentUpon>Admin View Member Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin View Member Registration.resx">
+      <DependentUpon>Admin View Member Registration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

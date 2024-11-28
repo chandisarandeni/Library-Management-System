@@ -121,5 +121,12 @@ namespace Library_Management_System
                 }
             }
         }
+
+        private void btn_Members_Click(object sender, EventArgs e)
+        {
+            Admin_View_Member_Management adminViewMemberManagement = new Admin_View_Member_Management();
+            adminViewMemberManagement.Show();
+            this.Hide();
+        }
     }
 }
