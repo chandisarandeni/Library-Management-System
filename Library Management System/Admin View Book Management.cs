@@ -214,5 +214,22 @@ namespace Library_Management_System
             lbl_deleteBookHover.Text = "";
             textTimer.Stop();
         }
+
+        private void btn_editBook_Click(object sender, EventArgs e)
+        {
+            if (txt_bookID.Text == "")
+            {
+                MessageBox.Show("Please Search Book Before Edit!");
+            }
+
+            
+        }
+
+        private void btn_addBook_Click(object sender, EventArgs e)
+        {
+            Admin_View_Book_Registration adminViewBookRegistration = new Admin_View_Book_Registration();
+            adminViewBookRegistration.Show();
+            this.Hide();
+        }
     }
 }

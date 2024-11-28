@@ -70,11 +70,29 @@
     <Compile Include="Admin Login.Designer.cs">
       <DependentUpon>Admin Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin View Book Delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View Book Delete.Designer.cs">
+      <DependentUpon>Admin View Book Delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin View Book Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View Book Edit.Designer.cs">
+      <DependentUpon>Admin View Book Edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin View Book Management.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin View Book Management.Designer.cs">
       <DependentUpon>Admin View Book Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin View Book Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View Book Registration.Designer.cs">
+      <DependentUpon>Admin View Book Registration.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -111,11 +129,20 @@
     <EmbeddedResource Include="Admin Login.resx">
       <DependentUpon>Admin Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin View Book Delete.resx">
+      <DependentUpon>Admin View Book Delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin View Book Edit.resx">
+      <DependentUpon>Admin View Book Edit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin View Book Management.aa-DJ.resx">
       <DependentUpon>Admin View Book Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin View Book Management.resx">
       <DependentUpon>Admin View Book Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin View Book Registration.resx">
+      <DependentUpon>Admin View Book Registration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

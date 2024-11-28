@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Library_Management_System
+{
+    public partial class Admin_View_Book_Edit : Form
+    {
+        public Admin_View_Book_Edit()
+        {
+            InitializeComponent();
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            Admin_View_Book_Management adminViewBookManagement = new Admin_View_Book_Management();
+            adminViewBookManagement.Show();
+            this.Hide();
+        }
+    }
+}
