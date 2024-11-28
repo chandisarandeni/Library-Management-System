@@ -82,6 +82,13 @@ namespace Library_Management_System
             lbl_dot2.Hide();
             lbl_showAdminID.Hide();
             lbl_showAdminName.Hide();
+
+            lbl_addBookHover.Text = "";
+            lbl_editBookHover.Text = "";
+            lbl_deleteBookHover.Text = "";
+
+            pnl_instructions.Show();
+            pnl_bookDetails.Hide();
         }
 
         private void btn_Menu_Click(object sender, EventArgs e)
@@ -117,14 +124,95 @@ namespace Library_Management_System
 
         private void Admin_View_Book_Management_MouseClick(object sender, MouseEventArgs e)
         {
-            // Check if the click is outside the slidebar area
             if (!slidebar.ClientRectangle.Contains(e.Location))
             {
                 if (slidebarExpand)
                 {
-                    slidebarTimer.Start(); // Start the timer to collapse the slidebar
+                    slidebarTimer.Start();
                 }
             }
+        }
+
+        /// <summary>
+        /// This is hover area for the txt btns
+        /// </summary>
+        /// 
+        Timer textTimer = new Timer { Interval = 30 };
+        int textPosition = 0;
+        string hoverText = "";
+
+        private void btn_addBook_MouseHover(object sender, EventArgs e)
+        {
+            textTimer.Tick += (s, args) =>
+            {
+                if (textPosition < hoverText.Length)
+                {
+                    lbl_addBookHover.Text += hoverText[textPosition];
+                    textPosition++;
+                }
+                else
+                {
+                    textTimer.Stop();
+                }
+            };
+            textPosition = 0;
+            lbl_addBookHover.Text = "Add Book";
+            textTimer.Start();
+        }
+        private void btn_addBook_MouseLeave(object sender, EventArgs e)
+        {
+            lbl_addBookHover.Text = "";
+            textTimer.Stop(); // Stop if the cursor leaves
+        }
+
+        private void btn_editBook_MouseHover(object sender, EventArgs e)
+        {
+            textTimer.Tick += (s, args) =>
+            {
+                if (textPosition < hoverText.Length)
+                {
+                    lbl_editBookHover.Text += hoverText[textPosition];
+                    textPosition++;
+                }
+                else
+                {
+                    textTimer.Stop();
+                }
+            };
+            textPosition = 0;
+            lbl_editBookHover.Text = "Edit Book";
+            textTimer.Start();
+        }
+
+        private void btn_editBook_MouseLeave(object sender, EventArgs e)
+        {
+            lbl_editBookHover.Text = "";
+            textTimer.Stop();
+        }
+
+        private void btn_deleteBook_MouseHover(object sender, EventArgs e)
+        {
+            textTimer.Tick += (s, args) =>
+            {
+                if (textPosition < hoverText.Length)
+                {
+                    lbl_deleteBookHover.Text += hoverText[textPosition];
+                    textPosition++;
+                }
+                else
+                {
+                    textTimer.Stop();
+                }
+            };
+            textPosition = 0;
+            lbl_deleteBookHover.Text = "Delete Book";
+            textTimer.Start();
+        }
+
+        private void btn_deleteBook_MouseLeave(object sender, EventArgs e)
+        {
+            lbl_deleteBookHover.Text = "";
+            textTimer.Stop();
         }
     }
 }
