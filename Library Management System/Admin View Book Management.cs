@@ -12,6 +12,7 @@ namespace Library_Management_System
 {
     public partial class Admin_View_Book_Management : Form
     {
+        bool slidebarExpand;
         public Admin_View_Book_Management()
         {
             InitializeComponent();
@@ -25,8 +26,7 @@ namespace Library_Management_System
             btn_Inventory.TabStop = false;
             btn_Inquiries.TabStop = false;
         }
-        bool slidebarExpand;
-
+        
         private void slidebarTimer_Tick(object sender, EventArgs e)
         {
             // Adjust slide speed with timer's interval

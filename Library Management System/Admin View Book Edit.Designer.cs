@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_View_Book_Edit));
             this.pnl_bookDetails = new System.Windows.Forms.Panel();
             this.txt_bookAdditional = new System.Windows.Forms.RichTextBox();
@@ -88,6 +89,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.btn_Inquiries = new System.Windows.Forms.Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.slidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.pnl_bookDetails.SuspendLayout();
             this.slidebar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -568,6 +570,7 @@
             this.btn_Menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Menu.TabIndex = 1;
             this.btn_Menu.TabStop = false;
+            this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click);
             // 
             // panel2
             // 
@@ -591,6 +594,7 @@
             this.btn_Dashboard.Text = "    Dashboard";
             this.btn_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Dashboard.UseVisualStyleBackColor = false;
+            this.btn_Dashboard.Click += new System.EventHandler(this.btn_Dashboard_Click);
             // 
             // panel3
             // 
@@ -768,6 +772,10 @@
             this.guna2Panel1.Size = new System.Drawing.Size(780, 496);
             this.guna2Panel1.TabIndex = 35;
             // 
+            // slidebarTimer
+            // 
+            this.slidebarTimer.Tick += new System.EventHandler(this.slidebarTimer_Tick);
+            // 
             // Admin_View_Book_Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -782,6 +790,8 @@
             this.Name = "Admin_View_Book_Edit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Management System";
+            this.Load += new System.EventHandler(this.Admin_View_Book_Edit_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Admin_View_Book_Edit_MouseClick);
             this.pnl_bookDetails.ResumeLayout(false);
             this.pnl_bookDetails.PerformLayout();
             this.slidebar.ResumeLayout(false);
@@ -865,5 +875,6 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button btn_Inquiries;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.Timer slidebarTimer;
     }
 }

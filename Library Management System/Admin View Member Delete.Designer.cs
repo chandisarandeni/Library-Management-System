@@ -306,6 +306,7 @@
             this.btn_Menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Menu.TabIndex = 1;
             this.btn_Menu.TabStop = false;
+            this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click);
             // 
             // panel4
             // 
@@ -468,6 +469,10 @@
             this.btn_registerBook.Text = "Delete";
             this.btn_registerBook.UseCompatibleTextRendering = true;
             this.btn_registerBook.UseVisualStyleBackColor = false;
+            // 
+            // slidebarTimer
+            // 
+            this.slidebarTimer.Tick += new System.EventHandler(this.slidebarTimer_Tick);
             // 
             // guna2Panel1
             // 
@@ -759,6 +764,8 @@
             this.Name = "Admin_View_Member_Delete";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Management System";
+            this.Load += new System.EventHandler(this.Admin_View_Member_Delete_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Admin_View_Member_Delete_MouseClick);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.slidebar.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_View_Member_Edit));
             this.btn_Inquiries = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,13 +61,6 @@
             this.btn_editBook = new System.Windows.Forms.Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnl_bookDetails = new System.Windows.Forms.Panel();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.txt_memberEmail = new System.Windows.Forms.TextBox();
             this.txt_memberGender = new System.Windows.Forms.ComboBox();
             this.txt_memberContact = new System.Windows.Forms.TextBox();
@@ -85,6 +79,14 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.slidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.slidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Logout)).BeginInit();
@@ -249,6 +251,7 @@
             this.btn_Menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Menu.TabIndex = 1;
             this.btn_Menu.TabStop = false;
+            this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click);
             // 
             // panel2
             // 
@@ -491,79 +494,6 @@
             this.pnl_bookDetails.Size = new System.Drawing.Size(717, 404);
             this.pnl_bookDetails.TabIndex = 35;
             // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(541, -2);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(19, 280);
-            this.label25.TabIndex = 35;
-            this.label25.Text = "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(572, 118);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(119, 20);
-            this.label29.TabIndex = 24;
-            this.label29.Text = "Sample Data";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(572, 42);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(119, 20);
-            this.label27.TabIndex = 24;
-            this.label27.Text = "Sample Data";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(566, 86);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(130, 23);
-            this.label28.TabIndex = 24;
-            this.label28.Text = "Reg. Date:";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(566, 10);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(106, 23);
-            this.label26.TabIndex = 24;
-            this.label26.Text = "Book ID:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(306, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Edit Member Info";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(100, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(619, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "_____________________________________________________________";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // txt_memberEmail
             // 
             this.txt_memberEmail.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -737,6 +667,83 @@
             this.label7.TabIndex = 50;
             this.label7.Text = "Full Name";
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(541, -2);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(19, 280);
+            this.label25.TabIndex = 35;
+            this.label25.Text = "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(572, 118);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(119, 20);
+            this.label29.TabIndex = 24;
+            this.label29.Text = "Sample Data";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(572, 42);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(119, 20);
+            this.label27.TabIndex = 24;
+            this.label27.Text = "Sample Data";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(566, 86);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(130, 23);
+            this.label28.TabIndex = 24;
+            this.label28.Text = "Reg. Date:";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(566, 10);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(106, 23);
+            this.label26.TabIndex = 24;
+            this.label26.Text = "Book ID:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(306, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(169, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Edit Member Info";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(100, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(619, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "_____________________________________________________________";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // slidebarTimer
+            // 
+            this.slidebarTimer.Tick += new System.EventHandler(this.slidebarTimer_Tick);
+            // 
             // Admin_View_Member_Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -751,6 +758,8 @@
             this.Name = "Admin_View_Member_Edit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Management System";
+            this.Load += new System.EventHandler(this.Admin_View_Member_Edit_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Admin_View_Member_Edit_MouseClick);
             this.slidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -831,5 +840,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Timer slidebarTimer;
     }
 }

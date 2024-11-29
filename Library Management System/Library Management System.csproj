@@ -94,6 +94,18 @@
     <Compile Include="Admin View Book Registration.Designer.cs">
       <DependentUpon>Admin View Book Registration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin View Borrow Assign Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View Borrow Assign Book.Designer.cs">
+      <DependentUpon>Admin View Borrow Assign Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin View Borrow Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View Borrow Management.Designer.cs">
+      <DependentUpon>Admin View Borrow Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin View Member Delete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +129,12 @@
     </Compile>
     <Compile Include="Admin View Member Registration.Designer.cs">
       <DependentUpon>Admin View Member Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin View Return Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View Return Book.Designer.cs">
+      <DependentUpon>Admin View Return Book.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -168,6 +186,12 @@
     <EmbeddedResource Include="Admin View Book Registration.resx">
       <DependentUpon>Admin View Book Registration.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin View Borrow Assign Book.resx">
+      <DependentUpon>Admin View Borrow Assign Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin View Borrow Management.resx">
+      <DependentUpon>Admin View Borrow Management.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin View Member Delete.resx">
       <DependentUpon>Admin View Member Delete.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin View Member Registration.resx">
       <DependentUpon>Admin View Member Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin View Return Book.resx">
+      <DependentUpon>Admin View Return Book.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

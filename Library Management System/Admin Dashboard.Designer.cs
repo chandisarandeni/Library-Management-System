@@ -311,7 +311,7 @@
             this.btn_Borrow.Text = "    Borrow";
             this.btn_Borrow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Borrow.UseVisualStyleBackColor = false;
-            this.btn_Borrow.Click += new System.EventHandler(this.btn_Dashboard_Click);
+            this.btn_Borrow.Click += new System.EventHandler(this.btn_Borrow_Click);
             // 
             // panel6
             // 

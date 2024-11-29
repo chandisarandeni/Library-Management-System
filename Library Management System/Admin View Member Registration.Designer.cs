@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_View_Member_Registration));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnl_bookDetails = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txt_bookCategory = new System.Windows.Forms.ComboBox();
             this.txt_bookPublisher = new System.Windows.Forms.TextBox();
             this.txt_bookISBN = new System.Windows.Forms.TextBox();
@@ -82,8 +85,7 @@
             this.btn_Inventory = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btn_Inquiries = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.slidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel1.SuspendLayout();
             this.pnl_bookDetails.SuspendLayout();
             this.slidebar.SuspendLayout();
@@ -143,6 +145,22 @@
             this.pnl_bookDetails.Name = "pnl_bookDetails";
             this.pnl_bookDetails.Size = new System.Drawing.Size(717, 404);
             this.pnl_bookDetails.TabIndex = 35;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(216, 258);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(319, 28);
+            this.textBox2.TabIndex = 39;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(214, 306);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(319, 28);
+            this.textBox1.TabIndex = 38;
             // 
             // txt_bookCategory
             // 
@@ -521,6 +539,7 @@
             this.btn_Menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Menu.TabIndex = 1;
             this.btn_Menu.TabStop = false;
+            this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click);
             // 
             // panel2
             // 
@@ -706,21 +725,9 @@
             this.btn_Inquiries.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inquiries.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // slidebarTimer
             // 
-            this.textBox1.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(214, 306);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(319, 28);
-            this.textBox1.TabIndex = 38;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(216, 258);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(319, 28);
-            this.textBox2.TabIndex = 39;
+            this.slidebarTimer.Tick += new System.EventHandler(this.slidebarTimer_Tick);
             // 
             // Admin_View_Member_Registration
             // 
@@ -736,6 +743,8 @@
             this.Name = "Admin_View_Member_Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Management System";
+            this.Load += new System.EventHandler(this.Admin_View_Member_Registration_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Admin_View_Member_Registration_MouseClick);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.pnl_bookDetails.ResumeLayout(false);
@@ -815,5 +824,6 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button btn_Inquiries;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Timer slidebarTimer;
     }
 }

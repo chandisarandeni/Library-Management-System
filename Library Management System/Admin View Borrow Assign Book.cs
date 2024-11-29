@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Library_Management_System
 {
-    public partial class Admin_View_Member_Delete : Form
+    public partial class Admin_View_Borrow_Assign_Book : Form
     {
         bool slidebarExpand;
-        public Admin_View_Member_Delete()
+        public Admin_View_Borrow_Assign_Book()
         {
             InitializeComponent();
 
@@ -27,8 +27,17 @@ namespace Library_Management_System
             btn_Inquiries.TabStop = false;
         }
 
-        private void Admin_View_Member_Delete_Load(object sender, EventArgs e)
+        private void btn_Cancel_Click(object sender, EventArgs e)
         {
+            Admin_View_Borrow_Management adminViewBorrowManagement = new Admin_View_Borrow_Management();
+            adminViewBorrowManagement.Show();
+            this.Hide();
+        }
+
+        private void Admin_View_Borrow_Assign_Book_Load(object sender, EventArgs e)
+        {
+            pnl_Instructions.Visible = true;
+
             btn_Dashboard.TabStop = false;
             btn_Books.TabStop = false;
             btn_Members.TabStop = false;
@@ -87,7 +96,7 @@ namespace Library_Management_System
             slidebarTimer.Start();
         }
 
-        private void Admin_View_Member_Delete_MouseClick(object sender, MouseEventArgs e)
+        private void Admin_View_Borrow_Assign_Book_MouseClick(object sender, MouseEventArgs e)
         {
             // Check if the click is outside the slidebar area
             if (!slidebar.ClientRectangle.Contains(e.Location))

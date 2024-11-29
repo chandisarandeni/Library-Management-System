@@ -44,3 +44,9 @@ C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Lib
 C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_View_Book_Delete.resources
 C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_View_Book_Edit.resources
 C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_View_Member_Management.resources
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_View_Borrow_Management.resources
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_View_Member_Delete.resources
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_View_Member_Edit.resources
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_View_Member_Registration.resources
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_View_Borrow_Assign_Book.resources
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_View_Return_Book.resources

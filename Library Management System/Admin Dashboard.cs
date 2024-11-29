@@ -128,5 +128,12 @@ namespace Library_Management_System
             adminViewMemberManagement.Show();
             this.Hide();
         }
+
+        private void btn_Borrow_Click(object sender, EventArgs e)
+        {
+            Admin_View_Borrow_Management adminViewBorrowManagement = new Admin_View_Borrow_Management();
+            adminViewBorrowManagement.Show();
+            this.Hide();
+        }
     }
 }
