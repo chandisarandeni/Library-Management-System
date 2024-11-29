@@ -270,6 +270,10 @@
             this.panel8.Size = new System.Drawing.Size(297, 58);
             this.panel8.TabIndex = 3;
             // 
+            // slidebarTimer
+            // 
+            this.slidebarTimer.Tick += new System.EventHandler(this.slidebarTimer_Tick);
+            // 
             // btn_Refer
             // 
             this.btn_Refer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(93)))), ((int)(((byte)(16)))));
@@ -574,6 +578,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Management System";
             this.Load += new System.EventHandler(this.Admin_View_Inquiry_Management_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Admin_View_Inquiry_Management_MouseClick);
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);

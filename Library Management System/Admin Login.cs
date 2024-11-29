@@ -8,11 +8,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace Library_Management_System
 {
     public partial class AdminLogin : Form
     {
+        public class LoginState
+        {
+            public bool IsLoggedIn { get; set; }
+            public string AdminUsername { get; set; }
+        }
+
+        public static class LoginStateManager
+        {
+            private static string filePath = "loginState.json";
+
+            // Save the login state to a JSON file
+            public static void SaveLoginState(LoginState state)
+            {
+                string json = JsonConvert.SerializeObject(state, Formatting.Indented);
+                File.WriteAllText(filePath, json);
+            }
+
+            // Load the login state from the JSON file
+            public static LoginState LoadLoginState()
+            {
+                if (File.Exists(filePath))
+                {
+                    string json = File.ReadAllText(filePath);
+                    return JsonConvert.DeserializeObject<LoginState>(json);
+                }
+                return new LoginState(); // Return default state if file doesn't exist
+            }
+        }
+
         public AdminLogin()
         {
             InitializeComponent();
@@ -78,6 +109,15 @@ namespace Library_Management_System
 
                     if (result > 0)
                     {
+                        // Create and save the login state to JSON
+                        LoginState loginState = new LoginState
+                        {
+                            IsLoggedIn = true,
+                            AdminUsername = adminUsername
+                        };
+
+                        LoginStateManager.SaveLoginState(loginState);
+
                         Admin_Dashboard adminDashboard = new Admin_Dashboard();
                         adminDashboard.Show();
                         this.Hide();

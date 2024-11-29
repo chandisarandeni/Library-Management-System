@@ -32,7 +32,6 @@ C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Lib
 C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.AdminLogin.resources
 C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Member_Forgot_Password.resources
 C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Member_FAQ.resources
-C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_Dashboard.resources
 C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Member_Dashboard.resources
 C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\bin\Debug\Guna.UI2.dll
 C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library .F7D87690.Up2Date
@@ -60,3 +59,6 @@ C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Lib
 C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Member_View_My_Books.resources
 C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Member_View_Reservation.resources
 C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Member_View_Search_Book.resources
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\bin\Debug\Newtonsoft.Json.dll
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\bin\Debug\Newtonsoft.Json.xml
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_Dashboard.resources
