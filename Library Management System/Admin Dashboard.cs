@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +40,15 @@ namespace Library_Management_System
             lbl_dot2.Hide();
             lbl_showAdminID.Hide();
             lbl_showAdminName.Hide();
+
+            using (StreamReader reader = new StreamReader("loginState.txt"))
+            {
+                string savedUsername = reader.ReadLine();  // Read the first line (admin username)
+                string savedNIC = reader.ReadLine();       // Read the second line (admin NIC)
+
+                // Use savedUsername and savedNIC for logged-in user information
+            }
+
         }
 
         private void sliderbarTimber_Tick(object sender, EventArgs e)

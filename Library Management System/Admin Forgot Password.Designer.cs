@@ -130,7 +130,7 @@
             // 
             this.lbl_dot1.AutoSize = true;
             this.lbl_dot1.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_dot1.Location = new System.Drawing.Point(635, 444);
+            this.lbl_dot1.Location = new System.Drawing.Point(636, 444);
             this.lbl_dot1.Name = "lbl_dot1";
             this.lbl_dot1.Size = new System.Drawing.Size(22, 23);
             this.lbl_dot1.TabIndex = 25;
@@ -140,7 +140,7 @@
             // 
             this.lbl_newPassword.AutoSize = true;
             this.lbl_newPassword.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_newPassword.Location = new System.Drawing.Point(475, 444);
+            this.lbl_newPassword.Location = new System.Drawing.Point(474, 444);
             this.lbl_newPassword.Name = "lbl_newPassword";
             this.lbl_newPassword.Size = new System.Drawing.Size(154, 23);
             this.lbl_newPassword.TabIndex = 24;
@@ -255,7 +255,7 @@
             // 
             this.lbl_dot2.AutoSize = true;
             this.lbl_dot2.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_dot2.Location = new System.Drawing.Point(639, 497);
+            this.lbl_dot2.Location = new System.Drawing.Point(640, 497);
             this.lbl_dot2.Name = "lbl_dot2";
             this.lbl_dot2.Size = new System.Drawing.Size(22, 23);
             this.lbl_dot2.TabIndex = 35;
@@ -265,7 +265,7 @@
             // 
             this.lbl_confirmPassword.AutoSize = true;
             this.lbl_confirmPassword.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_confirmPassword.Location = new System.Drawing.Point(479, 497);
+            this.lbl_confirmPassword.Location = new System.Drawing.Point(478, 497);
             this.lbl_confirmPassword.Name = "lbl_confirmPassword";
             this.lbl_confirmPassword.Size = new System.Drawing.Size(94, 23);
             this.lbl_confirmPassword.TabIndex = 34;
@@ -283,6 +283,7 @@
             this.btn_resetPassword.Text = "Reset";
             this.btn_resetPassword.UseCompatibleTextRendering = true;
             this.btn_resetPassword.UseVisualStyleBackColor = false;
+            this.btn_resetPassword.Click += new System.EventHandler(this.btn_resetPassword_Click);
             // 
             // btn_Cancel
             // 
@@ -330,7 +331,7 @@
             this.label6.Font = new System.Drawing.Font("Courier New", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(477, 156);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 39);
+            this.label6.Size = new System.Drawing.Size(99, 31);
             this.label6.TabIndex = 42;
             this.label6.Text = "Admin";
             // 

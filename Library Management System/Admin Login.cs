@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -58,9 +59,45 @@ namespace Library_Management_System
 
         private void btn_adminLogin_Click(object sender, EventArgs e)
         {
-            Admin_Dashboard admin_Dashboard = new Admin_Dashboard();
-            admin_Dashboard.Show();
-            this.Hide();
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string adminUsername = txt_adminUsername.Text;
+            string adminPassword = txt_adminPassword.Text;
+
+            string query = "SELECT COUNT(*) FROM adminData WHERE adminUsername = @adminUsername AND adminPassword = @password";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.Add("@adminUsername", SqlDbType.NVarChar).Value = adminUsername;
+                    cmd.Parameters.Add("@password", SqlDbType.NVarChar).Value = adminPassword;
+
+                    connection.Open();
+                    int result = (int)cmd.ExecuteScalar();
+
+                    if (result > 0)
+                    {
+                        Admin_Dashboard adminDashboard = new Admin_Dashboard();
+                        adminDashboard.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password.");
+                        txt_adminUsername.Clear();
+                        txt_adminPassword.Clear();
+                    }
+                }
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show("SQL Error: " + sqlEx.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void txt_adminPassword_KeyDown(object sender, KeyEventArgs e)

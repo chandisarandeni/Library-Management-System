@@ -129,6 +129,7 @@
             this.txt_memberPassword.Size = new System.Drawing.Size(312, 30);
             this.txt_memberPassword.TabIndex = 9;
             this.txt_memberPassword.UseSystemPasswordChar = true;
+            this.txt_memberPassword.TextChanged += new System.EventHandler(this.txt_memberPassword_TextChanged);
             this.txt_memberPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_memberPassword_KeyDown);
             // 
             // label6

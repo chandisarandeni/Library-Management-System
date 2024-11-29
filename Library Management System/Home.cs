@@ -105,5 +105,10 @@ namespace Library_Management_System
         {
 
         }
+
+        private void txt_memberPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
