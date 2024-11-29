@@ -119,7 +119,9 @@ namespace Library_Management_System
 
         private void btn_Borrow_Click(object sender, EventArgs e)
         {
-
+            Admin_View_Borrow_Management adminViewBorrowManagement = new Admin_View_Borrow_Management();
+            adminViewBorrowManagement.Show();
+            this.Hide();
         }
 
         private void Admin_View_Book_Management_MouseClick(object sender, MouseEventArgs e)
@@ -217,18 +219,62 @@ namespace Library_Management_System
 
         private void btn_editBook_Click(object sender, EventArgs e)
         {
-            if (txt_bookID.Text == "")
-            {
-                MessageBox.Show("Please Search Book Before Edit!");
-            }
 
-            
         }
 
         private void btn_addBook_Click(object sender, EventArgs e)
         {
             Admin_View_Book_Registration adminViewBookRegistration = new Admin_View_Book_Registration();
             adminViewBookRegistration.Show();
+            this.Hide();
+        }
+
+        private void btn_editBook_Click_1(object sender, EventArgs e)
+        {
+            Admin_View_Book_Edit adminViewBookEdit = new Admin_View_Book_Edit();
+            adminViewBookEdit.Show();
+            this.Hide();
+        }
+
+        private void btn_deleteBook_Click(object sender, EventArgs e)
+        {
+            Admin_View_Book_Delete adminViewBookDelete = new Admin_View_Book_Delete();
+            adminViewBookDelete.Show();
+            this.Hide();
+        }
+
+        private void btn_Members_Click(object sender, EventArgs e)
+        {
+            Admin_View_Member_Management adminViewMemberManagement = new Admin_View_Member_Management();
+            adminViewMemberManagement.Show();
+            this.Hide();
+        }
+
+        private void btn_Refer_Click(object sender, EventArgs e)
+        {
+            Admin_View_Refer_Management adminViewReferManagement = new Admin_View_Refer_Management();
+            adminViewReferManagement.Show();
+            this.Hide();
+        }
+
+        private void btn_Reservation_Click(object sender, EventArgs e)
+        {
+            Admin_View_Reservation_Management adminViewReservationManagement = new Admin_View_Reservation_Management(); 
+            adminViewReservationManagement.Show();
+            this.Hide();
+        }
+
+        private void btn_Inventory_Click(object sender, EventArgs e)
+        {
+            Admin_View_Inventory_Management adminViewInventoryManagement = new Admin_View_Inventory_Management();
+            adminViewInventoryManagement.Show();
+            this.Hide();
+        }
+
+        private void btn_Inquiries_Click(object sender, EventArgs e)
+        {
+            Admin_View_Inquiry_Management adminViewInquiryManagement  = new Admin_View_Inquiry_Management();
+            adminViewInquiryManagement.Show();
             this.Hide();
         }
     }

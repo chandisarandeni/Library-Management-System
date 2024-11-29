@@ -115,6 +115,7 @@
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseCompatibleTextRendering = true;
             this.btn_Cancel.UseVisualStyleBackColor = false;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // label3
             // 
@@ -152,6 +153,7 @@
             this.btn_Books.Text = "    Books";
             this.btn_Books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Books.UseVisualStyleBackColor = false;
+            this.btn_Books.Click += new System.EventHandler(this.btn_Books_Click);
             // 
             // btn_Dashboard
             // 
@@ -167,6 +169,7 @@
             this.btn_Dashboard.Text = "    Dashboard";
             this.btn_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Dashboard.UseVisualStyleBackColor = false;
+            this.btn_Dashboard.Click += new System.EventHandler(this.btn_Dashboard_Click);
             // 
             // panel2
             // 
@@ -330,6 +333,7 @@
             this.btn_Members.Text = "    Members";
             this.btn_Members.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Members.UseVisualStyleBackColor = false;
+            this.btn_Members.Click += new System.EventHandler(this.btn_Members_Click);
             // 
             // panel5
             // 
@@ -353,6 +357,7 @@
             this.btn_Borrow.Text = "    Borrow";
             this.btn_Borrow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Borrow.UseVisualStyleBackColor = false;
+            this.btn_Borrow.Click += new System.EventHandler(this.btn_Borrow_Click);
             // 
             // panel6
             // 
@@ -376,6 +381,7 @@
             this.btn_Refer.Text = "    Refer";
             this.btn_Refer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Refer.UseVisualStyleBackColor = false;
+            this.btn_Refer.Click += new System.EventHandler(this.btn_Refer_Click);
             // 
             // panel8
             // 
@@ -399,6 +405,7 @@
             this.btn_Reservation.Text = "    Reservations";
             this.btn_Reservation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reservation.UseVisualStyleBackColor = false;
+            this.btn_Reservation.Click += new System.EventHandler(this.btn_Reservation_Click);
             // 
             // panel9
             // 
@@ -422,6 +429,7 @@
             this.btn_Inventory.Text = "    Inventory";
             this.btn_Inventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inventory.UseVisualStyleBackColor = false;
+            this.btn_Inventory.Click += new System.EventHandler(this.btn_Inventory_Click);
             // 
             // panel10
             // 
@@ -445,6 +453,7 @@
             this.btn_Inquiries.Text = "    Inquiries";
             this.btn_Inquiries.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inquiries.UseVisualStyleBackColor = false;
+            this.btn_Inquiries.Click += new System.EventHandler(this.btn_Inquiries_Click);
             // 
             // label2
             // 

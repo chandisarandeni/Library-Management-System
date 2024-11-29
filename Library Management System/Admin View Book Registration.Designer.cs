@@ -59,6 +59,7 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnl_bookDetails = new System.Windows.Forms.Panel();
             this.txt_bookAdditional = new System.Windows.Forms.RichTextBox();
+            this.txt_bookLanguage = new System.Windows.Forms.ComboBox();
             this.txt_bookType = new System.Windows.Forms.ComboBox();
             this.txt_bookCategory = new System.Windows.Forms.ComboBox();
             this.txt_bookPublisher = new System.Windows.Forms.TextBox();
@@ -67,6 +68,7 @@
             this.txt_bookTitle = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -74,6 +76,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -86,9 +89,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.slidebarTimer = new System.Windows.Forms.Timer(this.components);
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.slidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Logout)).BeginInit();
@@ -300,6 +300,7 @@
             this.btn_Members.Text = "    Members";
             this.btn_Members.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Members.UseVisualStyleBackColor = false;
+            this.btn_Members.Click += new System.EventHandler(this.btn_Members_Click);
             // 
             // panel5
             // 
@@ -323,6 +324,7 @@
             this.btn_Borrow.Text = "    Borrow";
             this.btn_Borrow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Borrow.UseVisualStyleBackColor = false;
+            this.btn_Borrow.Click += new System.EventHandler(this.btn_Borrow_Click);
             // 
             // panel6
             // 
@@ -346,6 +348,7 @@
             this.btn_Refer.Text = "    Refer";
             this.btn_Refer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Refer.UseVisualStyleBackColor = false;
+            this.btn_Refer.Click += new System.EventHandler(this.btn_Refer_Click);
             // 
             // panel8
             // 
@@ -369,6 +372,7 @@
             this.btn_Reservation.Text = "    Reservations";
             this.btn_Reservation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reservation.UseVisualStyleBackColor = false;
+            this.btn_Reservation.Click += new System.EventHandler(this.btn_Reservation_Click);
             // 
             // panel9
             // 
@@ -392,6 +396,7 @@
             this.btn_Inventory.Text = "    Inventory";
             this.btn_Inventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inventory.UseVisualStyleBackColor = false;
+            this.btn_Inventory.Click += new System.EventHandler(this.btn_Inventory_Click);
             // 
             // panel10
             // 
@@ -415,6 +420,7 @@
             this.btn_Inquiries.Text = "    Inquiries";
             this.btn_Inquiries.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inquiries.UseVisualStyleBackColor = false;
+            this.btn_Inquiries.Click += new System.EventHandler(this.btn_Inquiries_Click);
             // 
             // guna2Panel1
             // 
@@ -434,7 +440,7 @@
             // pnl_bookDetails
             // 
             this.pnl_bookDetails.Controls.Add(this.txt_bookAdditional);
-            this.pnl_bookDetails.Controls.Add(this.comboBox1);
+            this.pnl_bookDetails.Controls.Add(this.txt_bookLanguage);
             this.pnl_bookDetails.Controls.Add(this.txt_bookType);
             this.pnl_bookDetails.Controls.Add(this.txt_bookCategory);
             this.pnl_bookDetails.Controls.Add(this.txt_bookPublisher);
@@ -470,6 +476,19 @@
             this.txt_bookAdditional.Size = new System.Drawing.Size(319, 69);
             this.txt_bookAdditional.TabIndex = 38;
             this.txt_bookAdditional.Text = "";
+            // 
+            // txt_bookLanguage
+            // 
+            this.txt_bookLanguage.AutoCompleteCustomSource.AddRange(new string[] {
+            "Sinhala",
+            "Tamil",
+            "English"});
+            this.txt_bookLanguage.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_bookLanguage.FormattingEnabled = true;
+            this.txt_bookLanguage.Location = new System.Drawing.Point(217, 281);
+            this.txt_bookLanguage.Name = "txt_bookLanguage";
+            this.txt_bookLanguage.Size = new System.Drawing.Size(182, 28);
+            this.txt_bookLanguage.TabIndex = 37;
             // 
             // txt_bookType
             // 
@@ -547,6 +566,16 @@
             this.label24.TabIndex = 24;
             this.label24.Text = ":";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(189, 282);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(22, 23);
+            this.label9.TabIndex = 24;
+            this.label9.Text = ":";
+            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -616,6 +645,16 @@
             this.label22.Size = new System.Drawing.Size(130, 23);
             this.label22.TabIndex = 24;
             this.label22.Text = "Additional";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(26, 283);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 23);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Language";
             // 
             // label19
             // 
@@ -741,39 +780,6 @@
             // 
             this.slidebarTimer.Tick += new System.EventHandler(this.slidebarTimer_Tick);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(26, 283);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 29);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Language";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(189, 282);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(22, 23);
-            this.label9.TabIndex = 24;
-            this.label9.Text = ":";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
-            "Sinhala",
-            "Tamil",
-            "English"});
-            this.comboBox1.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(217, 281);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(182, 28);
-            this.comboBox1.TabIndex = 37;
-            // 
             // Admin_View_Book_Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -870,7 +876,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Timer slidebarTimer;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox txt_bookLanguage;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
     }

@@ -80,8 +80,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
+            this.lbl_bookRegistrationDate = new System.Windows.Forms.Label();
+            this.lbl_showBookID = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -117,6 +117,7 @@
             this.btn_Inquiries.Text = "    Inquiries";
             this.btn_Inquiries.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inquiries.UseVisualStyleBackColor = false;
+            this.btn_Inquiries.Click += new System.EventHandler(this.btn_Inquiries_Click);
             // 
             // label1
             // 
@@ -275,6 +276,7 @@
             this.btn_Dashboard.Text = "    Dashboard";
             this.btn_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Dashboard.UseVisualStyleBackColor = false;
+            this.btn_Dashboard.Click += new System.EventHandler(this.btn_Dashboard_Click);
             // 
             // panel3
             // 
@@ -298,6 +300,7 @@
             this.btn_Books.Text = "    Books";
             this.btn_Books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Books.UseVisualStyleBackColor = false;
+            this.btn_Books.Click += new System.EventHandler(this.btn_Books_Click);
             // 
             // panel4
             // 
@@ -321,6 +324,7 @@
             this.btn_Members.Text = "    Members";
             this.btn_Members.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Members.UseVisualStyleBackColor = false;
+            this.btn_Members.Click += new System.EventHandler(this.btn_Members_Click);
             // 
             // panel5
             // 
@@ -344,6 +348,7 @@
             this.btn_Borrow.Text = "    Borrow";
             this.btn_Borrow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Borrow.UseVisualStyleBackColor = false;
+            this.btn_Borrow.Click += new System.EventHandler(this.btn_Borrow_Click);
             // 
             // panel6
             // 
@@ -367,6 +372,7 @@
             this.btn_Refer.Text = "    Refer";
             this.btn_Refer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Refer.UseVisualStyleBackColor = false;
+            this.btn_Refer.Click += new System.EventHandler(this.btn_Refer_Click);
             // 
             // panel8
             // 
@@ -390,6 +396,7 @@
             this.btn_Reservation.Text = "    Reservations";
             this.btn_Reservation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reservation.UseVisualStyleBackColor = false;
+            this.btn_Reservation.Click += new System.EventHandler(this.btn_Reservation_Click);
             // 
             // panel9
             // 
@@ -413,6 +420,7 @@
             this.btn_Inventory.Text = "    Inventory";
             this.btn_Inventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inventory.UseVisualStyleBackColor = false;
+            this.btn_Inventory.Click += new System.EventHandler(this.btn_Inventory_Click);
             // 
             // panel10
             // 
@@ -485,8 +493,8 @@
             this.pnl_bookDetails.Controls.Add(this.label10);
             this.pnl_bookDetails.Controls.Add(this.label7);
             this.pnl_bookDetails.Controls.Add(this.label25);
-            this.pnl_bookDetails.Controls.Add(this.label29);
-            this.pnl_bookDetails.Controls.Add(this.label27);
+            this.pnl_bookDetails.Controls.Add(this.lbl_bookRegistrationDate);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookID);
             this.pnl_bookDetails.Controls.Add(this.label28);
             this.pnl_bookDetails.Controls.Add(this.label26);
             this.pnl_bookDetails.Location = new System.Drawing.Point(49, 70);
@@ -678,25 +686,25 @@
             this.label25.Text = "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label29
+            // lbl_bookRegistrationDate
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(572, 118);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(119, 20);
-            this.label29.TabIndex = 24;
-            this.label29.Text = "Sample Data";
+            this.lbl_bookRegistrationDate.AutoSize = true;
+            this.lbl_bookRegistrationDate.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_bookRegistrationDate.Location = new System.Drawing.Point(572, 118);
+            this.lbl_bookRegistrationDate.Name = "lbl_bookRegistrationDate";
+            this.lbl_bookRegistrationDate.Size = new System.Drawing.Size(119, 20);
+            this.lbl_bookRegistrationDate.TabIndex = 24;
+            this.lbl_bookRegistrationDate.Text = "Sample Data";
             // 
-            // label27
+            // lbl_showBookID
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(572, 42);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(119, 20);
-            this.label27.TabIndex = 24;
-            this.label27.Text = "Sample Data";
+            this.lbl_showBookID.AutoSize = true;
+            this.lbl_showBookID.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookID.Location = new System.Drawing.Point(572, 42);
+            this.lbl_showBookID.Name = "lbl_showBookID";
+            this.lbl_showBookID.Size = new System.Drawing.Size(119, 20);
+            this.lbl_showBookID.TabIndex = 24;
+            this.lbl_showBookID.Text = "Sample Data";
             // 
             // label28
             // 
@@ -816,8 +824,8 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Panel pnl_bookDetails;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label lbl_bookRegistrationDate;
+        private System.Windows.Forms.Label lbl_showBookID;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label2;

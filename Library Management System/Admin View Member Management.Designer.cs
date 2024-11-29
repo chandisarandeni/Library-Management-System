@@ -59,7 +59,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.lbl_showMemberRegisterDate = new System.Windows.Forms.Label();
+            this.lbl_showMemberRegistrationDate = new System.Windows.Forms.Label();
             this.lbl_showMemberID = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -141,6 +141,7 @@
             this.btn_Inquiries.Text = "    Inquiries";
             this.btn_Inquiries.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inquiries.UseVisualStyleBackColor = false;
+            this.btn_Inquiries.Click += new System.EventHandler(this.btn_Inquiries_Click);
             // 
             // slidebarTimer
             // 
@@ -249,7 +250,7 @@
             this.pnl_memberDetails.Controls.Add(this.label16);
             this.pnl_memberDetails.Controls.Add(this.label13);
             this.pnl_memberDetails.Controls.Add(this.label10);
-            this.pnl_memberDetails.Controls.Add(this.lbl_showMemberRegisterDate);
+            this.pnl_memberDetails.Controls.Add(this.lbl_showMemberRegistrationDate);
             this.pnl_memberDetails.Controls.Add(this.lbl_showMemberID);
             this.pnl_memberDetails.Controls.Add(this.label28);
             this.pnl_memberDetails.Controls.Add(this.label26);
@@ -440,15 +441,15 @@
             this.label10.TabIndex = 24;
             this.label10.Text = "NIC";
             // 
-            // lbl_showMemberRegisterDate
+            // lbl_showMemberRegistrationDate
             // 
-            this.lbl_showMemberRegisterDate.AutoSize = true;
-            this.lbl_showMemberRegisterDate.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_showMemberRegisterDate.Location = new System.Drawing.Point(487, 118);
-            this.lbl_showMemberRegisterDate.Name = "lbl_showMemberRegisterDate";
-            this.lbl_showMemberRegisterDate.Size = new System.Drawing.Size(119, 20);
-            this.lbl_showMemberRegisterDate.TabIndex = 24;
-            this.lbl_showMemberRegisterDate.Text = "Sample Data";
+            this.lbl_showMemberRegistrationDate.AutoSize = true;
+            this.lbl_showMemberRegistrationDate.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showMemberRegistrationDate.Location = new System.Drawing.Point(487, 118);
+            this.lbl_showMemberRegistrationDate.Name = "lbl_showMemberRegistrationDate";
+            this.lbl_showMemberRegistrationDate.Size = new System.Drawing.Size(119, 20);
+            this.lbl_showMemberRegistrationDate.TabIndex = 24;
+            this.lbl_showMemberRegistrationDate.Text = "Sample Data";
             // 
             // lbl_showMemberID
             // 
@@ -617,6 +618,7 @@
             this.btn_Books.Text = "    Books";
             this.btn_Books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Books.UseVisualStyleBackColor = false;
+            this.btn_Books.Click += new System.EventHandler(this.btn_Books_Click);
             // 
             // btn_Dashboard
             // 
@@ -632,6 +634,7 @@
             this.btn_Dashboard.Text = "    Dashboard";
             this.btn_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Dashboard.UseVisualStyleBackColor = false;
+            this.btn_Dashboard.Click += new System.EventHandler(this.btn_Dashboard_Click);
             // 
             // panel2
             // 
@@ -795,6 +798,7 @@
             this.btn_Members.Text = "    Members";
             this.btn_Members.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Members.UseVisualStyleBackColor = false;
+            this.btn_Members.Click += new System.EventHandler(this.btn_Members_Click);
             // 
             // panel5
             // 
@@ -818,6 +822,7 @@
             this.btn_Borrow.Text = "    Borrow";
             this.btn_Borrow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Borrow.UseVisualStyleBackColor = false;
+            this.btn_Borrow.Click += new System.EventHandler(this.btn_Borrow_Click);
             // 
             // panel6
             // 
@@ -841,6 +846,7 @@
             this.btn_Refer.Text = "    Refer";
             this.btn_Refer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Refer.UseVisualStyleBackColor = false;
+            this.btn_Refer.Click += new System.EventHandler(this.btn_Refer_Click);
             // 
             // panel8
             // 
@@ -864,6 +870,7 @@
             this.btn_Reservation.Text = "    Reservations";
             this.btn_Reservation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reservation.UseVisualStyleBackColor = false;
+            this.btn_Reservation.Click += new System.EventHandler(this.btn_Reservation_Click);
             // 
             // panel9
             // 
@@ -887,6 +894,7 @@
             this.btn_Inventory.Text = "    Inventory";
             this.btn_Inventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inventory.UseVisualStyleBackColor = false;
+            this.btn_Inventory.Click += new System.EventHandler(this.btn_Inventory_Click);
             // 
             // Admin_View_Member_Management
             // 
@@ -961,7 +969,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lbl_showMemberRegisterDate;
+        private System.Windows.Forms.Label lbl_showMemberRegistrationDate;
         private System.Windows.Forms.Label lbl_showMemberID;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label26;

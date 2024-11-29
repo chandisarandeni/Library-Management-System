@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_View_Inquiry_Management));
             this.btn_Reservation = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
-            this.txt_bookID = new System.Windows.Forms.TextBox();
+            this.txt_memberNIC = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -102,6 +102,7 @@
             this.btn_Reservation.Text = "    Reservations";
             this.btn_Reservation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reservation.UseVisualStyleBackColor = false;
+            this.btn_Reservation.Click += new System.EventHandler(this.btn_Reservation_Click);
             // 
             // btn_Search
             // 
@@ -116,13 +117,13 @@
             this.btn_Search.UseCompatibleTextRendering = true;
             this.btn_Search.UseVisualStyleBackColor = false;
             // 
-            // txt_bookID
+            // txt_memberNIC
             // 
-            this.txt_bookID.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_bookID.Location = new System.Drawing.Point(97, 52);
-            this.txt_bookID.Name = "txt_bookID";
-            this.txt_bookID.Size = new System.Drawing.Size(254, 30);
-            this.txt_bookID.TabIndex = 35;
+            this.txt_memberNIC.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_memberNIC.Location = new System.Drawing.Point(97, 52);
+            this.txt_memberNIC.Name = "txt_memberNIC";
+            this.txt_memberNIC.Size = new System.Drawing.Size(254, 30);
+            this.txt_memberNIC.TabIndex = 35;
             // 
             // label6
             // 
@@ -183,6 +184,7 @@
             this.btn_Inventory.Text = "    Inventory";
             this.btn_Inventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inventory.UseVisualStyleBackColor = false;
+            this.btn_Inventory.Click += new System.EventHandler(this.btn_Inventory_Click);
             // 
             // panel10
             // 
@@ -206,6 +208,7 @@
             this.btn_Inquiries.Text = "    Inquiries";
             this.btn_Inquiries.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inquiries.UseVisualStyleBackColor = false;
+            this.btn_Inquiries.Click += new System.EventHandler(this.btn_Inquiries_Click);
             // 
             // label2
             // 
@@ -213,7 +216,7 @@
             this.label2.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(140, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(211, 25);
+            this.label2.Size = new System.Drawing.Size(169, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Recent Inquiries";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -237,7 +240,7 @@
             this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.btn_Search);
-            this.guna2Panel1.Controls.Add(this.txt_bookID);
+            this.guna2Panel1.Controls.Add(this.txt_memberNIC);
             this.guna2Panel1.Controls.Add(this.label6);
             this.guna2Panel1.Controls.Add(this.label7);
             this.guna2Panel1.Controls.Add(this.listView1);
@@ -281,6 +284,7 @@
             this.btn_Refer.Text = "    Refer";
             this.btn_Refer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Refer.UseVisualStyleBackColor = false;
+            this.btn_Refer.Click += new System.EventHandler(this.btn_Refer_Click);
             // 
             // pictureBox2
             // 
@@ -474,6 +478,7 @@
             this.btn_Dashboard.Text = "    Dashboard";
             this.btn_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Dashboard.UseVisualStyleBackColor = false;
+            this.btn_Dashboard.Click += new System.EventHandler(this.btn_Dashboard_Click);
             // 
             // panel3
             // 
@@ -497,6 +502,7 @@
             this.btn_Books.Text = "    Books";
             this.btn_Books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Books.UseVisualStyleBackColor = false;
+            this.btn_Books.Click += new System.EventHandler(this.btn_Books_Click);
             // 
             // panel4
             // 
@@ -520,6 +526,7 @@
             this.btn_Members.Text = "    Members";
             this.btn_Members.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Members.UseVisualStyleBackColor = false;
+            this.btn_Members.Click += new System.EventHandler(this.btn_Members_Click);
             // 
             // panel5
             // 
@@ -543,6 +550,7 @@
             this.btn_Borrow.Text = "    Borrow";
             this.btn_Borrow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Borrow.UseVisualStyleBackColor = false;
+            this.btn_Borrow.Click += new System.EventHandler(this.btn_Borrow_Click);
             // 
             // panel6
             // 
@@ -565,6 +573,7 @@
             this.Name = "Admin_View_Inquiry_Management";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Management System";
+            this.Load += new System.EventHandler(this.Admin_View_Inquiry_Management_Load);
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
@@ -592,7 +601,7 @@
 
         private System.Windows.Forms.Button btn_Reservation;
         private System.Windows.Forms.Button btn_Search;
-        private System.Windows.Forms.TextBox txt_bookID;
+        private System.Windows.Forms.TextBox txt_memberNIC;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListView listView1;

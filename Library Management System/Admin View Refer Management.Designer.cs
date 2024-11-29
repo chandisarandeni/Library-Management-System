@@ -62,24 +62,24 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_searchMember = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_searchVisitorNIC = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pnl_memberDetails = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.txt_visitorNIC = new System.Windows.Forms.TextBox();
+            this.txt_visitorFullName = new System.Windows.Forms.TextBox();
+            this.pnl_bookDetails = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lbl_showBookType = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lbl_showBookAuthor = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_showBookTitle = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pnl_Instructions = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -92,11 +92,11 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_referBook = new System.Windows.Forms.Button();
+            this.btn_Cancel = new System.Windows.Forms.Button();
             this.lbl_addBookHover = new System.Windows.Forms.Label();
-            this.btn_addBook = new System.Windows.Forms.PictureBox();
-            this.label24 = new System.Windows.Forms.Label();
+            this.btn_returnBook = new System.Windows.Forms.PictureBox();
+            this.lbl_returnHover = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -112,10 +112,10 @@
             this.panel10.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.pnl_memberDetails.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.pnl_bookDetails.SuspendLayout();
             this.pnl_Instructions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_addBook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_returnBook)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Inventory
@@ -132,6 +132,7 @@
             this.btn_Inventory.Text = "    Inventory";
             this.btn_Inventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inventory.UseVisualStyleBackColor = false;
+            this.btn_Inventory.Click += new System.EventHandler(this.btn_Inventory_Click);
             // 
             // slidebarTimer
             // 
@@ -170,6 +171,7 @@
             this.btn_Refer.Text = "    Refer";
             this.btn_Refer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Refer.UseVisualStyleBackColor = false;
+            this.btn_Refer.Click += new System.EventHandler(this.btn_Refer_Click);
             // 
             // panel5
             // 
@@ -193,6 +195,7 @@
             this.btn_Borrow.Text = "    Borrow";
             this.btn_Borrow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Borrow.UseVisualStyleBackColor = false;
+            this.btn_Borrow.Click += new System.EventHandler(this.btn_Borrow_Click);
             // 
             // panel4
             // 
@@ -216,6 +219,7 @@
             this.btn_Members.Text = "    Members";
             this.btn_Members.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Members.UseVisualStyleBackColor = false;
+            this.btn_Members.Click += new System.EventHandler(this.btn_Members_Click);
             // 
             // panel3
             // 
@@ -239,6 +243,7 @@
             this.btn_Books.Text = "    Books";
             this.btn_Books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Books.UseVisualStyleBackColor = false;
+            this.btn_Books.Click += new System.EventHandler(this.btn_Books_Click);
             // 
             // btn_Inquiries
             // 
@@ -254,6 +259,7 @@
             this.btn_Inquiries.Text = "    Inquiries";
             this.btn_Inquiries.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inquiries.UseVisualStyleBackColor = false;
+            this.btn_Inquiries.Click += new System.EventHandler(this.btn_Inquiries_Click);
             // 
             // guna2Panel3
             // 
@@ -417,6 +423,7 @@
             this.btn_Dashboard.Text = "    Dashboard";
             this.btn_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Dashboard.UseVisualStyleBackColor = false;
+            this.btn_Dashboard.Click += new System.EventHandler(this.btn_Dashboard_Click);
             // 
             // panel8
             // 
@@ -440,6 +447,7 @@
             this.btn_Reservation.Text = "    Reservations";
             this.btn_Reservation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reservation.UseVisualStyleBackColor = false;
+            this.btn_Reservation.Click += new System.EventHandler(this.btn_Reservation_Click);
             // 
             // slidebar
             // 
@@ -484,11 +492,11 @@
             this.guna2Panel1.BorderRadius = 6;
             this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.button1);
+            this.guna2Panel1.Controls.Add(this.btn_searchMember);
             this.guna2Panel1.Controls.Add(this.label23);
             this.guna2Panel1.Controls.Add(this.label22);
             this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.textBox1);
+            this.guna2Panel1.Controls.Add(this.txt_searchVisitorNIC);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.pnl_memberDetails);
             this.guna2Panel1.Location = new System.Drawing.Point(156, 127);
@@ -496,18 +504,18 @@
             this.guna2Panel1.Size = new System.Drawing.Size(675, 460);
             this.guna2Panel1.TabIndex = 43;
             // 
-            // button1
+            // btn_searchMember
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(434, 64);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 34);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "Search";
-            this.button1.UseCompatibleTextRendering = true;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_searchMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_searchMember.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_searchMember.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_searchMember.Location = new System.Drawing.Point(434, 64);
+            this.btn_searchMember.Name = "btn_searchMember";
+            this.btn_searchMember.Size = new System.Drawing.Size(111, 34);
+            this.btn_searchMember.TabIndex = 48;
+            this.btn_searchMember.Text = "Search";
+            this.btn_searchMember.UseCompatibleTextRendering = true;
+            this.btn_searchMember.UseVisualStyleBackColor = false;
             // 
             // label23
             // 
@@ -542,13 +550,13 @@
             this.label2.Text = "Search Visitor Details";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // txt_searchVisitorNIC
             // 
-            this.textBox1.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(150, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(247, 30);
-            this.textBox1.TabIndex = 47;
+            this.txt_searchVisitorNIC.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_searchVisitorNIC.Location = new System.Drawing.Point(150, 66);
+            this.txt_searchVisitorNIC.Name = "txt_searchVisitorNIC";
+            this.txt_searchVisitorNIC.Size = new System.Drawing.Size(247, 30);
+            this.txt_searchVisitorNIC.TabIndex = 47;
             // 
             // label3
             // 
@@ -563,9 +571,9 @@
             // 
             // pnl_memberDetails
             // 
-            this.pnl_memberDetails.Controls.Add(this.textBox3);
-            this.pnl_memberDetails.Controls.Add(this.textBox2);
-            this.pnl_memberDetails.Controls.Add(this.panel7);
+            this.pnl_memberDetails.Controls.Add(this.pnl_bookDetails);
+            this.pnl_memberDetails.Controls.Add(this.txt_visitorNIC);
+            this.pnl_memberDetails.Controls.Add(this.txt_visitorFullName);
             this.pnl_memberDetails.Controls.Add(this.pnl_Instructions);
             this.pnl_memberDetails.Controls.Add(this.btn_searchBook);
             this.pnl_memberDetails.Controls.Add(this.txt_bookID);
@@ -580,37 +588,37 @@
             this.pnl_memberDetails.Size = new System.Drawing.Size(623, 336);
             this.pnl_memberDetails.TabIndex = 40;
             // 
-            // textBox3
+            // txt_visitorNIC
             // 
-            this.textBox3.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(205, 54);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(247, 30);
-            this.textBox3.TabIndex = 49;
+            this.txt_visitorNIC.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_visitorNIC.Location = new System.Drawing.Point(205, 54);
+            this.txt_visitorNIC.Name = "txt_visitorNIC";
+            this.txt_visitorNIC.Size = new System.Drawing.Size(247, 30);
+            this.txt_visitorNIC.TabIndex = 49;
             // 
-            // textBox2
+            // txt_visitorFullName
             // 
-            this.textBox2.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(205, 12);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(247, 30);
-            this.textBox2.TabIndex = 48;
+            this.txt_visitorFullName.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_visitorFullName.Location = new System.Drawing.Point(205, 12);
+            this.txt_visitorFullName.Name = "txt_visitorFullName";
+            this.txt_visitorFullName.Size = new System.Drawing.Size(247, 30);
+            this.txt_visitorFullName.TabIndex = 48;
             // 
-            // panel7
+            // pnl_bookDetails
             // 
-            this.panel7.Controls.Add(this.label17);
-            this.panel7.Controls.Add(this.label18);
-            this.panel7.Controls.Add(this.label19);
-            this.panel7.Controls.Add(this.label11);
-            this.panel7.Controls.Add(this.label14);
-            this.panel7.Controls.Add(this.label16);
-            this.panel7.Controls.Add(this.label5);
-            this.panel7.Controls.Add(this.label4);
-            this.panel7.Controls.Add(this.label9);
-            this.panel7.Location = new System.Drawing.Point(29, 169);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(410, 149);
-            this.panel7.TabIndex = 46;
+            this.pnl_bookDetails.Controls.Add(this.label17);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookType);
+            this.pnl_bookDetails.Controls.Add(this.label19);
+            this.pnl_bookDetails.Controls.Add(this.label11);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookAuthor);
+            this.pnl_bookDetails.Controls.Add(this.label16);
+            this.pnl_bookDetails.Controls.Add(this.label5);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookTitle);
+            this.pnl_bookDetails.Controls.Add(this.label9);
+            this.pnl_bookDetails.Location = new System.Drawing.Point(29, 169);
+            this.pnl_bookDetails.Name = "pnl_bookDetails";
+            this.pnl_bookDetails.Size = new System.Drawing.Size(410, 149);
+            this.pnl_bookDetails.TabIndex = 46;
             // 
             // label17
             // 
@@ -622,15 +630,15 @@
             this.label17.TabIndex = 31;
             this.label17.Text = ":";
             // 
-            // label18
+            // lbl_showBookType
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(203, 94);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(142, 22);
-            this.label18.TabIndex = 32;
-            this.label18.Text = "Sample Data";
+            this.lbl_showBookType.AutoSize = true;
+            this.lbl_showBookType.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookType.Location = new System.Drawing.Point(203, 94);
+            this.lbl_showBookType.Name = "lbl_showBookType";
+            this.lbl_showBookType.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookType.TabIndex = 32;
+            this.lbl_showBookType.Text = "Sample Data";
             // 
             // label19
             // 
@@ -652,15 +660,15 @@
             this.label11.TabIndex = 28;
             this.label11.Text = ":";
             // 
-            // label14
+            // lbl_showBookAuthor
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(203, 56);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(142, 22);
-            this.label14.TabIndex = 29;
-            this.label14.Text = "Sample Data";
+            this.lbl_showBookAuthor.AutoSize = true;
+            this.lbl_showBookAuthor.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookAuthor.Location = new System.Drawing.Point(203, 56);
+            this.lbl_showBookAuthor.Name = "lbl_showBookAuthor";
+            this.lbl_showBookAuthor.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookAuthor.TabIndex = 29;
+            this.lbl_showBookAuthor.Text = "Sample Data";
             // 
             // label16
             // 
@@ -682,15 +690,15 @@
             this.label5.TabIndex = 25;
             this.label5.Text = ":";
             // 
-            // label4
+            // lbl_showBookTitle
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(203, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 22);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Sample Data";
+            this.lbl_showBookTitle.AutoSize = true;
+            this.lbl_showBookTitle.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookTitle.Location = new System.Drawing.Point(203, 14);
+            this.lbl_showBookTitle.Name = "lbl_showBookTitle";
+            this.lbl_showBookTitle.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookTitle.TabIndex = 26;
+            this.lbl_showBookTitle.Text = "Sample Data";
             // 
             // label9
             // 
@@ -813,31 +821,32 @@
             this.label21.TabIndex = 24;
             this.label21.Text = "Full Name";
             // 
-            // button2
+            // btn_referBook
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(609, 596);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 34);
-            this.button2.TabIndex = 44;
-            this.button2.Text = "Refer";
-            this.button2.UseCompatibleTextRendering = true;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_referBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_referBook.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_referBook.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_referBook.Location = new System.Drawing.Point(609, 596);
+            this.btn_referBook.Name = "btn_referBook";
+            this.btn_referBook.Size = new System.Drawing.Size(91, 34);
+            this.btn_referBook.TabIndex = 44;
+            this.btn_referBook.Text = "Refer";
+            this.btn_referBook.UseCompatibleTextRendering = true;
+            this.btn_referBook.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btn_Cancel
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(715, 596);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(91, 34);
-            this.button3.TabIndex = 44;
-            this.button3.Text = "Cancel";
-            this.button3.UseCompatibleTextRendering = true;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Cancel.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Cancel.Location = new System.Drawing.Point(715, 596);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(91, 34);
+            this.btn_Cancel.TabIndex = 44;
+            this.btn_Cancel.Text = "Cancel";
+            this.btn_Cancel.UseCompatibleTextRendering = true;
+            this.btn_Cancel.UseVisualStyleBackColor = false;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // lbl_addBookHover
             // 
@@ -851,42 +860,45 @@
             this.lbl_addBookHover.Text = "Return";
             this.lbl_addBookHover.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btn_addBook
+            // btn_returnBook
             // 
-            this.btn_addBook.Image = ((System.Drawing.Image)(resources.GetObject("btn_addBook.Image")));
-            this.btn_addBook.Location = new System.Drawing.Point(849, 127);
-            this.btn_addBook.Name = "btn_addBook";
-            this.btn_addBook.Size = new System.Drawing.Size(44, 44);
-            this.btn_addBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_addBook.TabIndex = 46;
-            this.btn_addBook.TabStop = false;
+            this.btn_returnBook.Image = ((System.Drawing.Image)(resources.GetObject("btn_returnBook.Image")));
+            this.btn_returnBook.Location = new System.Drawing.Point(849, 127);
+            this.btn_returnBook.Name = "btn_returnBook";
+            this.btn_returnBook.Size = new System.Drawing.Size(44, 44);
+            this.btn_returnBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_returnBook.TabIndex = 46;
+            this.btn_returnBook.TabStop = false;
+            this.btn_returnBook.Click += new System.EventHandler(this.btn_returnBook_Click);
+            this.btn_returnBook.MouseLeave += new System.EventHandler(this.btn_returnBook_MouseLeave);
+            this.btn_returnBook.MouseHover += new System.EventHandler(this.btn_returnBook_MouseHover);
             // 
-            // label24
+            // lbl_returnHover
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label24.Location = new System.Drawing.Point(899, 138);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(69, 20);
-            this.label24.TabIndex = 47;
-            this.label24.Text = "Return";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_returnHover.AutoSize = true;
+            this.lbl_returnHover.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_returnHover.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_returnHover.Location = new System.Drawing.Point(899, 138);
+            this.lbl_returnHover.Name = "lbl_returnHover";
+            this.lbl_returnHover.Size = new System.Drawing.Size(69, 20);
+            this.lbl_returnHover.TabIndex = 47;
+            this.lbl_returnHover.Text = "Return";
+            this.lbl_returnHover.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Admin_View_Refer_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 662);
-            this.Controls.Add(this.label24);
+            this.Controls.Add(this.lbl_returnHover);
             this.Controls.Add(this.lbl_addBookHover);
-            this.Controls.Add(this.btn_addBook);
+            this.Controls.Add(this.btn_returnBook);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.slidebar);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_Cancel);
+            this.Controls.Add(this.btn_referBook);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_View_Refer_Management";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -912,12 +924,12 @@
             this.guna2Panel1.PerformLayout();
             this.pnl_memberDetails.ResumeLayout(false);
             this.pnl_memberDetails.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.pnl_bookDetails.ResumeLayout(false);
+            this.pnl_bookDetails.PerformLayout();
             this.pnl_Instructions.ResumeLayout(false);
             this.pnl_Instructions.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_addBook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_returnBook)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -957,24 +969,24 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_searchMember;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_searchVisitorNIC;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel pnl_memberDetails;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TextBox txt_visitorNIC;
+        private System.Windows.Forms.TextBox txt_visitorFullName;
+        private System.Windows.Forms.Panel pnl_bookDetails;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lbl_showBookType;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lbl_showBookAuthor;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_showBookTitle;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel pnl_Instructions;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -987,10 +999,10 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_referBook;
+        private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Label lbl_addBookHover;
-        private System.Windows.Forms.PictureBox btn_addBook;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.PictureBox btn_returnBook;
+        private System.Windows.Forms.Label lbl_returnHover;
     }
 }

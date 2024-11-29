@@ -42,19 +42,19 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbl_showBookAdditional = new System.Windows.Forms.Label();
+            this.lbl_showBookType = new System.Windows.Forms.Label();
+            this.lbl_showBookCategory = new System.Windows.Forms.Label();
+            this.lbl_showBookISBN = new System.Windows.Forms.Label();
+            this.lbl_showBookAuthor = new System.Windows.Forms.Label();
+            this.lbl_showBookTitle = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
+            this.lbl_showBookRegistrationDate = new System.Windows.Forms.Label();
+            this.lbl_showBookID = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -89,7 +89,7 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.btn_Inventory = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
-            this.btn_registerBook = new System.Windows.Forms.Button();
+            this.btn_deleteBook = new System.Windows.Forms.Button();
             this.panel10.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.pnl_bookDetails.SuspendLayout();
@@ -130,6 +130,7 @@
             this.btn_Inquiries.Text = "    Inquiries";
             this.btn_Inquiries.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inquiries.UseVisualStyleBackColor = false;
+            this.btn_Inquiries.Click += new System.EventHandler(this.btn_Inquiries_Click);
             // 
             // slidebarTimer
             // 
@@ -160,19 +161,19 @@
             this.pnl_bookDetails.Controls.Add(this.label15);
             this.pnl_bookDetails.Controls.Add(this.label12);
             this.pnl_bookDetails.Controls.Add(this.label8);
-            this.pnl_bookDetails.Controls.Add(this.label23);
-            this.pnl_bookDetails.Controls.Add(this.label20);
-            this.pnl_bookDetails.Controls.Add(this.label17);
-            this.pnl_bookDetails.Controls.Add(this.label14);
-            this.pnl_bookDetails.Controls.Add(this.label11);
-            this.pnl_bookDetails.Controls.Add(this.label9);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookAdditional);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookType);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookCategory);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookISBN);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookAuthor);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookTitle);
             this.pnl_bookDetails.Controls.Add(this.label22);
             this.pnl_bookDetails.Controls.Add(this.label19);
             this.pnl_bookDetails.Controls.Add(this.label16);
             this.pnl_bookDetails.Controls.Add(this.label13);
             this.pnl_bookDetails.Controls.Add(this.label10);
-            this.pnl_bookDetails.Controls.Add(this.label29);
-            this.pnl_bookDetails.Controls.Add(this.label27);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookRegistrationDate);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookID);
             this.pnl_bookDetails.Controls.Add(this.label28);
             this.pnl_bookDetails.Controls.Add(this.label26);
             this.pnl_bookDetails.Controls.Add(this.label7);
@@ -252,65 +253,65 @@
             this.label8.TabIndex = 24;
             this.label8.Text = ":";
             // 
-            // label23
+            // lbl_showBookAdditional
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(223, 230);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(142, 22);
-            this.label23.TabIndex = 24;
-            this.label23.Text = "Sample Data";
+            this.lbl_showBookAdditional.AutoSize = true;
+            this.lbl_showBookAdditional.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookAdditional.Location = new System.Drawing.Point(223, 230);
+            this.lbl_showBookAdditional.Name = "lbl_showBookAdditional";
+            this.lbl_showBookAdditional.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookAdditional.TabIndex = 24;
+            this.lbl_showBookAdditional.Text = "Sample Data";
             // 
-            // label20
+            // lbl_showBookType
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(225, 187);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(142, 22);
-            this.label20.TabIndex = 24;
-            this.label20.Text = "Sample Data";
+            this.lbl_showBookType.AutoSize = true;
+            this.lbl_showBookType.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookType.Location = new System.Drawing.Point(225, 187);
+            this.lbl_showBookType.Name = "lbl_showBookType";
+            this.lbl_showBookType.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookType.TabIndex = 24;
+            this.lbl_showBookType.Text = "Sample Data";
             // 
-            // label17
+            // lbl_showBookCategory
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(225, 136);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(142, 22);
-            this.label17.TabIndex = 24;
-            this.label17.Text = "Sample Data";
+            this.lbl_showBookCategory.AutoSize = true;
+            this.lbl_showBookCategory.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookCategory.Location = new System.Drawing.Point(225, 136);
+            this.lbl_showBookCategory.Name = "lbl_showBookCategory";
+            this.lbl_showBookCategory.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookCategory.TabIndex = 24;
+            this.lbl_showBookCategory.Text = "Sample Data";
             // 
-            // label14
+            // lbl_showBookISBN
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(225, 93);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(142, 22);
-            this.label14.TabIndex = 24;
-            this.label14.Text = "Sample Data";
+            this.lbl_showBookISBN.AutoSize = true;
+            this.lbl_showBookISBN.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookISBN.Location = new System.Drawing.Point(225, 93);
+            this.lbl_showBookISBN.Name = "lbl_showBookISBN";
+            this.lbl_showBookISBN.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookISBN.TabIndex = 24;
+            this.lbl_showBookISBN.Text = "Sample Data";
             // 
-            // label11
+            // lbl_showBookAuthor
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(225, 49);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(142, 22);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "Sample Data";
+            this.lbl_showBookAuthor.AutoSize = true;
+            this.lbl_showBookAuthor.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookAuthor.Location = new System.Drawing.Point(225, 49);
+            this.lbl_showBookAuthor.Name = "lbl_showBookAuthor";
+            this.lbl_showBookAuthor.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookAuthor.TabIndex = 24;
+            this.lbl_showBookAuthor.Text = "Sample Data";
             // 
-            // label9
+            // lbl_showBookTitle
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(223, 10);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(142, 22);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "Sample Data";
+            this.lbl_showBookTitle.AutoSize = true;
+            this.lbl_showBookTitle.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookTitle.Location = new System.Drawing.Point(223, 10);
+            this.lbl_showBookTitle.Name = "lbl_showBookTitle";
+            this.lbl_showBookTitle.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookTitle.TabIndex = 24;
+            this.lbl_showBookTitle.Text = "Sample Data";
             // 
             // label22
             // 
@@ -362,25 +363,25 @@
             this.label10.TabIndex = 24;
             this.label10.Text = "Author";
             // 
-            // label29
+            // lbl_showBookRegistrationDate
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(487, 118);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(119, 20);
-            this.label29.TabIndex = 24;
-            this.label29.Text = "Sample Data";
+            this.lbl_showBookRegistrationDate.AutoSize = true;
+            this.lbl_showBookRegistrationDate.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookRegistrationDate.Location = new System.Drawing.Point(487, 118);
+            this.lbl_showBookRegistrationDate.Name = "lbl_showBookRegistrationDate";
+            this.lbl_showBookRegistrationDate.Size = new System.Drawing.Size(119, 20);
+            this.lbl_showBookRegistrationDate.TabIndex = 24;
+            this.lbl_showBookRegistrationDate.Text = "Sample Data";
             // 
-            // label27
+            // lbl_showBookID
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(487, 42);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(119, 20);
-            this.label27.TabIndex = 24;
-            this.label27.Text = "Sample Data";
+            this.lbl_showBookID.AutoSize = true;
+            this.lbl_showBookID.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookID.Location = new System.Drawing.Point(487, 42);
+            this.lbl_showBookID.Name = "lbl_showBookID";
+            this.lbl_showBookID.Size = new System.Drawing.Size(119, 20);
+            this.lbl_showBookID.TabIndex = 24;
+            this.lbl_showBookID.Text = "Sample Data";
             // 
             // label28
             // 
@@ -741,6 +742,7 @@
             this.btn_Reservation.Text = "    Reservations";
             this.btn_Reservation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reservation.UseVisualStyleBackColor = false;
+            this.btn_Reservation.Click += new System.EventHandler(this.btn_Reservation_Click);
             // 
             // panel9
             // 
@@ -764,6 +766,7 @@
             this.btn_Inventory.Text = "    Inventory";
             this.btn_Inventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inventory.UseVisualStyleBackColor = false;
+            this.btn_Inventory.Click += new System.EventHandler(this.btn_Inventory_Click);
             // 
             // btn_Cancel
             // 
@@ -779,18 +782,18 @@
             this.btn_Cancel.UseVisualStyleBackColor = false;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
-            // btn_registerBook
+            // btn_deleteBook
             // 
-            this.btn_registerBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_registerBook.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_registerBook.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_registerBook.Location = new System.Drawing.Point(972, 506);
-            this.btn_registerBook.Name = "btn_registerBook";
-            this.btn_registerBook.Size = new System.Drawing.Size(111, 34);
-            this.btn_registerBook.TabIndex = 34;
-            this.btn_registerBook.Text = "Delete";
-            this.btn_registerBook.UseCompatibleTextRendering = true;
-            this.btn_registerBook.UseVisualStyleBackColor = false;
+            this.btn_deleteBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_deleteBook.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_deleteBook.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_deleteBook.Location = new System.Drawing.Point(972, 506);
+            this.btn_deleteBook.Name = "btn_deleteBook";
+            this.btn_deleteBook.Size = new System.Drawing.Size(111, 34);
+            this.btn_deleteBook.TabIndex = 34;
+            this.btn_deleteBook.Text = "Delete";
+            this.btn_deleteBook.UseCompatibleTextRendering = true;
+            this.btn_deleteBook.UseVisualStyleBackColor = false;
             // 
             // Admin_View_Book_Delete
             // 
@@ -798,7 +801,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1102, 653);
             this.Controls.Add(this.btn_Cancel);
-            this.Controls.Add(this.btn_registerBook);
+            this.Controls.Add(this.btn_deleteBook);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.slidebar);
@@ -847,19 +850,19 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbl_showBookAdditional;
+        private System.Windows.Forms.Label lbl_showBookType;
+        private System.Windows.Forms.Label lbl_showBookCategory;
+        private System.Windows.Forms.Label lbl_showBookISBN;
+        private System.Windows.Forms.Label lbl_showBookAuthor;
+        private System.Windows.Forms.Label lbl_showBookTitle;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label lbl_showBookRegistrationDate;
+        private System.Windows.Forms.Label lbl_showBookID;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label7;
@@ -894,6 +897,6 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button btn_Inventory;
         private System.Windows.Forms.Button btn_Cancel;
-        private System.Windows.Forms.Button btn_registerBook;
+        private System.Windows.Forms.Button btn_deleteBook;
     }
 }

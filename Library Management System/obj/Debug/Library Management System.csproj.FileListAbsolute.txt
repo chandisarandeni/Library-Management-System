@@ -50,3 +50,13 @@ C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Lib
 C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_View_Member_Registration.resources
 C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_View_Borrow_Assign_Book.resources
 C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_View_Return_Book.resources
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_View_Inquiry_Management.resources
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_View_Inventory_Management.resources
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_View_Refer_Management.resources
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_View_Refer_Returns.resources
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Admin_View_Reservation_Management.resources
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Member_View_Borow_Books.resources
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Member_View_Inquiries.resources
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Member_View_My_Books.resources
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Member_View_Reservation.resources
+C:\Users\chand\OneDrive\Desktop\Final Project IMBS\Library-Management-System\Library Management System\obj\Debug\Library_Management_System.Member_View_Search_Book.resources

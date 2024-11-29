@@ -32,13 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_View_Member_Registration));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnl_bookDetails = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txt_bookCategory = new System.Windows.Forms.ComboBox();
-            this.txt_bookPublisher = new System.Windows.Forms.TextBox();
-            this.txt_bookISBN = new System.Windows.Forms.TextBox();
-            this.txt_bookAuthor = new System.Windows.Forms.TextBox();
-            this.txt_bookTitle = new System.Windows.Forms.TextBox();
+            this.txt_memberEmail = new System.Windows.Forms.TextBox();
+            this.txt_memberPassword = new System.Windows.Forms.TextBox();
+            this.txt_memberGender = new System.Windows.Forms.ComboBox();
+            this.txt_memberContact = new System.Windows.Forms.TextBox();
+            this.txt_memberAddress = new System.Windows.Forms.TextBox();
+            this.txt_memberNIC = new System.Windows.Forms.TextBox();
+            this.txt_memberFullName = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_Cancel = new System.Windows.Forms.Button();
-            this.btn_registerBook = new System.Windows.Forms.Button();
+            this.btn_registerMember = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.slidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -119,13 +119,13 @@
             // 
             // pnl_bookDetails
             // 
-            this.pnl_bookDetails.Controls.Add(this.textBox2);
-            this.pnl_bookDetails.Controls.Add(this.textBox1);
-            this.pnl_bookDetails.Controls.Add(this.txt_bookCategory);
-            this.pnl_bookDetails.Controls.Add(this.txt_bookPublisher);
-            this.pnl_bookDetails.Controls.Add(this.txt_bookISBN);
-            this.pnl_bookDetails.Controls.Add(this.txt_bookAuthor);
-            this.pnl_bookDetails.Controls.Add(this.txt_bookTitle);
+            this.pnl_bookDetails.Controls.Add(this.txt_memberEmail);
+            this.pnl_bookDetails.Controls.Add(this.txt_memberPassword);
+            this.pnl_bookDetails.Controls.Add(this.txt_memberGender);
+            this.pnl_bookDetails.Controls.Add(this.txt_memberContact);
+            this.pnl_bookDetails.Controls.Add(this.txt_memberAddress);
+            this.pnl_bookDetails.Controls.Add(this.txt_memberNIC);
+            this.pnl_bookDetails.Controls.Add(this.txt_memberFullName);
             this.pnl_bookDetails.Controls.Add(this.label25);
             this.pnl_bookDetails.Controls.Add(this.label24);
             this.pnl_bookDetails.Controls.Add(this.label21);
@@ -146,65 +146,65 @@
             this.pnl_bookDetails.Size = new System.Drawing.Size(717, 404);
             this.pnl_bookDetails.TabIndex = 35;
             // 
-            // textBox2
+            // txt_memberEmail
             // 
-            this.textBox2.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(216, 258);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(319, 28);
-            this.textBox2.TabIndex = 39;
+            this.txt_memberEmail.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_memberEmail.Location = new System.Drawing.Point(216, 258);
+            this.txt_memberEmail.Name = "txt_memberEmail";
+            this.txt_memberEmail.Size = new System.Drawing.Size(319, 28);
+            this.txt_memberEmail.TabIndex = 39;
             // 
-            // textBox1
+            // txt_memberPassword
             // 
-            this.textBox1.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(214, 306);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(319, 28);
-            this.textBox1.TabIndex = 38;
+            this.txt_memberPassword.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_memberPassword.Location = new System.Drawing.Point(214, 306);
+            this.txt_memberPassword.Name = "txt_memberPassword";
+            this.txt_memberPassword.Size = new System.Drawing.Size(319, 28);
+            this.txt_memberPassword.TabIndex = 38;
             // 
-            // txt_bookCategory
+            // txt_memberGender
             // 
-            this.txt_bookCategory.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_bookCategory.FormattingEnabled = true;
-            this.txt_bookCategory.Items.AddRange(new object[] {
+            this.txt_memberGender.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_memberGender.FormattingEnabled = true;
+            this.txt_memberGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.txt_bookCategory.Location = new System.Drawing.Point(216, 163);
-            this.txt_bookCategory.Name = "txt_bookCategory";
-            this.txt_bookCategory.Size = new System.Drawing.Size(182, 28);
-            this.txt_bookCategory.TabIndex = 37;
+            this.txt_memberGender.Location = new System.Drawing.Point(216, 163);
+            this.txt_memberGender.Name = "txt_memberGender";
+            this.txt_memberGender.Size = new System.Drawing.Size(182, 28);
+            this.txt_memberGender.TabIndex = 37;
             // 
-            // txt_bookPublisher
+            // txt_memberContact
             // 
-            this.txt_bookPublisher.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_bookPublisher.Location = new System.Drawing.Point(216, 209);
-            this.txt_bookPublisher.Name = "txt_bookPublisher";
-            this.txt_bookPublisher.Size = new System.Drawing.Size(319, 28);
-            this.txt_bookPublisher.TabIndex = 36;
+            this.txt_memberContact.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_memberContact.Location = new System.Drawing.Point(216, 209);
+            this.txt_memberContact.Name = "txt_memberContact";
+            this.txt_memberContact.Size = new System.Drawing.Size(319, 28);
+            this.txt_memberContact.TabIndex = 36;
             // 
-            // txt_bookISBN
+            // txt_memberAddress
             // 
-            this.txt_bookISBN.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_bookISBN.Location = new System.Drawing.Point(216, 109);
-            this.txt_bookISBN.Name = "txt_bookISBN";
-            this.txt_bookISBN.Size = new System.Drawing.Size(319, 28);
-            this.txt_bookISBN.TabIndex = 36;
+            this.txt_memberAddress.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_memberAddress.Location = new System.Drawing.Point(216, 109);
+            this.txt_memberAddress.Name = "txt_memberAddress";
+            this.txt_memberAddress.Size = new System.Drawing.Size(319, 28);
+            this.txt_memberAddress.TabIndex = 36;
             // 
-            // txt_bookAuthor
+            // txt_memberNIC
             // 
-            this.txt_bookAuthor.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_bookAuthor.Location = new System.Drawing.Point(216, 61);
-            this.txt_bookAuthor.Name = "txt_bookAuthor";
-            this.txt_bookAuthor.Size = new System.Drawing.Size(319, 28);
-            this.txt_bookAuthor.TabIndex = 36;
+            this.txt_memberNIC.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_memberNIC.Location = new System.Drawing.Point(216, 61);
+            this.txt_memberNIC.Name = "txt_memberNIC";
+            this.txt_memberNIC.Size = new System.Drawing.Size(319, 28);
+            this.txt_memberNIC.TabIndex = 36;
             // 
-            // txt_bookTitle
+            // txt_memberFullName
             // 
-            this.txt_bookTitle.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_bookTitle.Location = new System.Drawing.Point(214, 9);
-            this.txt_bookTitle.Name = "txt_bookTitle";
-            this.txt_bookTitle.Size = new System.Drawing.Size(319, 28);
-            this.txt_bookTitle.TabIndex = 36;
+            this.txt_memberFullName.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_memberFullName.Location = new System.Drawing.Point(214, 9);
+            this.txt_memberFullName.Name = "txt_memberFullName";
+            this.txt_memberFullName.Size = new System.Drawing.Size(319, 28);
+            this.txt_memberFullName.TabIndex = 36;
             // 
             // label25
             // 
@@ -393,18 +393,18 @@
             this.btn_Cancel.UseVisualStyleBackColor = false;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
-            // btn_registerBook
+            // btn_registerMember
             // 
-            this.btn_registerBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_registerBook.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_registerBook.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_registerBook.Location = new System.Drawing.Point(982, 506);
-            this.btn_registerBook.Name = "btn_registerBook";
-            this.btn_registerBook.Size = new System.Drawing.Size(111, 34);
-            this.btn_registerBook.TabIndex = 37;
-            this.btn_registerBook.Text = "Register";
-            this.btn_registerBook.UseCompatibleTextRendering = true;
-            this.btn_registerBook.UseVisualStyleBackColor = false;
+            this.btn_registerMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_registerMember.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_registerMember.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_registerMember.Location = new System.Drawing.Point(982, 506);
+            this.btn_registerMember.Name = "btn_registerMember";
+            this.btn_registerMember.Size = new System.Drawing.Size(111, 34);
+            this.btn_registerMember.TabIndex = 37;
+            this.btn_registerMember.Text = "Register";
+            this.btn_registerMember.UseCompatibleTextRendering = true;
+            this.btn_registerMember.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -563,6 +563,7 @@
             this.btn_Dashboard.Text = "    Dashboard";
             this.btn_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Dashboard.UseVisualStyleBackColor = false;
+            this.btn_Dashboard.Click += new System.EventHandler(this.btn_Dashboard_Click);
             // 
             // panel3
             // 
@@ -586,6 +587,7 @@
             this.btn_Books.Text = "    Books";
             this.btn_Books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Books.UseVisualStyleBackColor = false;
+            this.btn_Books.Click += new System.EventHandler(this.btn_Books_Click);
             // 
             // panel4
             // 
@@ -609,6 +611,7 @@
             this.btn_Members.Text = "    Members";
             this.btn_Members.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Members.UseVisualStyleBackColor = false;
+            this.btn_Members.Click += new System.EventHandler(this.btn_Members_Click);
             // 
             // panel5
             // 
@@ -632,6 +635,7 @@
             this.btn_Borrow.Text = "    Borrow";
             this.btn_Borrow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Borrow.UseVisualStyleBackColor = false;
+            this.btn_Borrow.Click += new System.EventHandler(this.btn_Borrow_Click);
             // 
             // panel6
             // 
@@ -655,6 +659,7 @@
             this.btn_Refer.Text = "    Refer";
             this.btn_Refer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Refer.UseVisualStyleBackColor = false;
+            this.btn_Refer.Click += new System.EventHandler(this.btn_Refer_Click);
             // 
             // panel8
             // 
@@ -678,6 +683,7 @@
             this.btn_Reservation.Text = "    Reservations";
             this.btn_Reservation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reservation.UseVisualStyleBackColor = false;
+            this.btn_Reservation.Click += new System.EventHandler(this.btn_Reservation_Click);
             // 
             // panel9
             // 
@@ -701,6 +707,7 @@
             this.btn_Inventory.Text = "    Inventory";
             this.btn_Inventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inventory.UseVisualStyleBackColor = false;
+            this.btn_Inventory.Click += new System.EventHandler(this.btn_Inventory_Click);
             // 
             // panel10
             // 
@@ -724,6 +731,7 @@
             this.btn_Inquiries.Text = "    Inquiries";
             this.btn_Inquiries.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inquiries.UseVisualStyleBackColor = false;
+            this.btn_Inquiries.Click += new System.EventHandler(this.btn_Inquiries_Click);
             // 
             // slidebarTimer
             // 
@@ -736,7 +744,7 @@
             this.ClientSize = new System.Drawing.Size(1102, 653);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.btn_Cancel);
-            this.Controls.Add(this.btn_registerBook);
+            this.Controls.Add(this.btn_registerMember);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.slidebar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -771,12 +779,12 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Panel pnl_bookDetails;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox txt_bookCategory;
-        private System.Windows.Forms.TextBox txt_bookPublisher;
-        private System.Windows.Forms.TextBox txt_bookISBN;
-        private System.Windows.Forms.TextBox txt_bookAuthor;
-        private System.Windows.Forms.TextBox txt_bookTitle;
+        private System.Windows.Forms.TextBox txt_memberPassword;
+        private System.Windows.Forms.ComboBox txt_memberGender;
+        private System.Windows.Forms.TextBox txt_memberContact;
+        private System.Windows.Forms.TextBox txt_memberAddress;
+        private System.Windows.Forms.TextBox txt_memberNIC;
+        private System.Windows.Forms.TextBox txt_memberFullName;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label21;
@@ -795,7 +803,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_Cancel;
-        private System.Windows.Forms.Button btn_registerBook;
+        private System.Windows.Forms.Button btn_registerMember;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel slidebar;
         private System.Windows.Forms.Panel panel1;
@@ -823,7 +831,7 @@
         private System.Windows.Forms.Button btn_Inventory;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button btn_Inquiries;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_memberEmail;
         private System.Windows.Forms.Timer slidebarTimer;
     }
 }
