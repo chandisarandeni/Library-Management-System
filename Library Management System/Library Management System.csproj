@@ -106,6 +106,18 @@
     <Compile Include="Admin View Borrow Management.Designer.cs">
       <DependentUpon>Admin View Borrow Management.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin View Inquiry Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View Inquiry Management.Designer.cs">
+      <DependentUpon>Admin View Inquiry Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin View Inventory Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View Inventory Management.Designer.cs">
+      <DependentUpon>Admin View Inventory Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin View Member Delete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +141,24 @@
     </Compile>
     <Compile Include="Admin View Member Registration.Designer.cs">
       <DependentUpon>Admin View Member Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin View Refer Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View Refer Management.Designer.cs">
+      <DependentUpon>Admin View Refer Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin View Refer Returns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View Refer Returns.Designer.cs">
+      <DependentUpon>Admin View Refer Returns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin View Reservation Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View Reservation Management.Designer.cs">
+      <DependentUpon>Admin View Reservation Management.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin View Return Book.cs">
       <SubType>Form</SubType>
@@ -159,6 +189,36 @@
     </Compile>
     <Compile Include="Member Forgot Password.Designer.cs">
       <DependentUpon>Member Forgot Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member View Borow Books.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member View Borow Books.Designer.cs">
+      <DependentUpon>Member View Borow Books.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member View Inquiries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member View Inquiries.Designer.cs">
+      <DependentUpon>Member View Inquiries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member View My Books.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member View My Books.Designer.cs">
+      <DependentUpon>Member View My Books.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member View Reservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member View Reservation.Designer.cs">
+      <DependentUpon>Member View Reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member View Search Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member View Search Book.Designer.cs">
+      <DependentUpon>Member View Search Book.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -192,6 +252,12 @@
     <EmbeddedResource Include="Admin View Borrow Management.resx">
       <DependentUpon>Admin View Borrow Management.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin View Inquiry Management.resx">
+      <DependentUpon>Admin View Inquiry Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin View Inventory Management.resx">
+      <DependentUpon>Admin View Inventory Management.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin View Member Delete.resx">
       <DependentUpon>Admin View Member Delete.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +269,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin View Member Registration.resx">
       <DependentUpon>Admin View Member Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin View Refer Management.resx">
+      <DependentUpon>Admin View Refer Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin View Refer Returns.resx">
+      <DependentUpon>Admin View Refer Returns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin View Reservation Management.resx">
+      <DependentUpon>Admin View Reservation Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin View Return Book.resx">
       <DependentUpon>Admin View Return Book.cs</DependentUpon>
@@ -218,6 +293,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Member Forgot Password.resx">
       <DependentUpon>Member Forgot Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member View Borow Books.resx">
+      <DependentUpon>Member View Borow Books.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member View Inquiries.resx">
+      <DependentUpon>Member View Inquiries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member View My Books.resx">
+      <DependentUpon>Member View My Books.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member View Reservation.resx">
+      <DependentUpon>Member View Reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member View Search Book.resx">
+      <DependentUpon>Member View Search Book.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

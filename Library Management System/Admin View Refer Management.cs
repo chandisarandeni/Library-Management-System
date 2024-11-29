@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Library_Management_System
 {
-    public partial class Admin_View_Book_Delete : Form
+    public partial class Admin_View_Refer_Management : Form
     {
         bool slidebarExpand;
-        public Admin_View_Book_Delete()
+        public Admin_View_Refer_Management()
         {
             InitializeComponent();
 
@@ -27,53 +27,16 @@ namespace Library_Management_System
             btn_Inquiries.TabStop = false;
         }
 
-        private void btn_Cancel_Click(object sender, EventArgs e)
+        private void Admin_View_Refer_Management_Load(object sender, EventArgs e)
         {
-            Admin_View_Book_Management adminViewBookManagement = new Admin_View_Book_Management();
-            adminViewBookManagement.Show();
-            this.Hide();
-        }
-
-        private void btn_Dashboard_Click(object sender, EventArgs e)
-        {
-            Admin_Dashboard adminDashboard = new Admin_Dashboard();
-            adminDashboard.Show();
-            this.Hide();
-        }
-
-        private void btn_Books_Click(object sender, EventArgs e)
-        {
-            Admin_View_Book_Management adminViewBookManagement = new Admin_View_Book_Management();
-            adminViewBookManagement.Show();
-            this.Hide();
-        }
-
-        private void btn_Members_Click(object sender, EventArgs e)
-        {
-            Admin_View_Member_Management adminViewMemberManagement = new Admin_View_Member_Management();
-            adminViewMemberManagement.Show();
-            this.Hide();
-        }
-
-        private void btn_Borrow_Click(object sender, EventArgs e)
-        {
-            Admin_View_Borrow_Management adminViewBorrowManagement = new Admin_View_Borrow_Management();
-            adminViewBorrowManagement.Show();
-            this.Hide();
-        }
-
-        private void Admin_View_Book_Delete_Load(object sender, EventArgs e)
-        {
-            // Ensure the state is consistent with the collapsed slide bar
-            slidebar.Width = slidebar.MinimumSize.Width;
-            slidebarExpand = false;
-
-            lbl_adminID.Hide();
-            lbl_adminName.Hide();
-            lbl_dot1.Hide();
-            lbl_dot2.Hide();
-            lbl_showAdminID.Hide();
-            lbl_showAdminName.Hide();
+            btn_Dashboard.TabStop = false;
+            btn_Books.TabStop = false;
+            btn_Members.TabStop = false;
+            btn_Borrow.TabStop = false;
+            btn_Refer.TabStop = false;
+            btn_Reservation.TabStop = false;
+            btn_Inventory.TabStop = false;
+            btn_Inquiries.TabStop = false;
         }
 
         private void slidebarTimer_Tick(object sender, EventArgs e)
@@ -124,7 +87,7 @@ namespace Library_Management_System
             slidebarTimer.Start();
         }
 
-        private void Admin_View_Book_Delete_MouseClick(object sender, MouseEventArgs e)
+        private void Admin_View_Refer_Management_MouseClick(object sender, MouseEventArgs e)
         {
             // Check if the click is outside the slidebar area
             if (!slidebar.ClientRectangle.Contains(e.Location))
@@ -134,13 +97,6 @@ namespace Library_Management_System
                     slidebarTimer.Start(); // Start the timer to collapse the slidebar
                 }
             }
-        }
-
-        private void btn_Refer_Click(object sender, EventArgs e)
-        {
-            Admin_View_Refer_Management adminViewReferManagement = new Admin_View_Refer_Management();
-            adminViewReferManagement.Show();
-            this.Hide();
         }
     }
 }
