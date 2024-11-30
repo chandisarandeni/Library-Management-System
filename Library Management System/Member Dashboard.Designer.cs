@@ -255,6 +255,7 @@
             this.btn_myBooks.Text = "    My Books";
             this.btn_myBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_myBooks.UseVisualStyleBackColor = false;
+            this.btn_myBooks.Click += new System.EventHandler(this.btn_myBooks_Click);
             // 
             // panel4
             // 
@@ -278,6 +279,7 @@
             this.btn_Borrow.Text = "    Borrow";
             this.btn_Borrow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Borrow.UseVisualStyleBackColor = false;
+            this.btn_Borrow.Click += new System.EventHandler(this.btn_Borrow_Click);
             // 
             // panel5
             // 
@@ -301,6 +303,7 @@
             this.btn_searchBook.Text = "    Search Book";
             this.btn_searchBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_searchBook.UseVisualStyleBackColor = false;
+            this.btn_searchBook.Click += new System.EventHandler(this.btn_searchBook_Click);
             // 
             // panel6
             // 
@@ -324,6 +327,7 @@
             this.btn_Reservation.Text = "    Reservation";
             this.btn_Reservation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reservation.UseVisualStyleBackColor = false;
+            this.btn_Reservation.Click += new System.EventHandler(this.btn_Reservation_Click);
             // 
             // panel8
             // 
@@ -347,6 +351,7 @@
             this.btn_Inquiries.Text = "    Inquiries";
             this.btn_Inquiries.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inquiries.UseVisualStyleBackColor = false;
+            this.btn_Inquiries.Click += new System.EventHandler(this.btn_Inquiries_Click);
             // 
             // panel7
             // 

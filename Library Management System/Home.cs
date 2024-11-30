@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +28,36 @@ namespace Library_Management_System
             checkBox_showPassword.TabStop = false;
             btn_Login.TabStop = false;
         }
+
+        public class MemberLoginState
+        {
+            public bool IsLoggedIn { get; set; }
+            public string MemberEmail { get; set; }
+        }
+
+        public static class MemberLoginStateManager
+        {
+            private static string filePath = "memberLoginState.json";
+
+            public static void SaveLoginState(MemberLoginState state)
+            {
+                string json = JsonConvert.SerializeObject(state, Formatting.Indented);
+                File.WriteAllText(filePath, json);
+            }
+
+            public static MemberLoginState LoadLoginState()
+            {
+                if (File.Exists(filePath))
+                {
+                    string json = File.ReadAllText(filePath);
+                    return JsonConvert.DeserializeObject<MemberLoginState>(json);
+                }
+                return new MemberLoginState { IsLoggedIn = false };
+            }
+        }
+
+
+
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -58,12 +91,52 @@ namespace Library_Management_System
                 adminLogin.Show();
                 this.Hide();
             }
-            else
+
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string memberEmail = txt_memberUsername.Text;
+            string memberPassword = txt_memberPassword.Text;
+
+            string query = "SELECT COUNT(*) FROM libraryMember WHERE memberEmail = @memberEmail AND memberPassword = @memberPassword";
+
+            try
             {
-                Member_Dashboard member_Dashboard = new Member_Dashboard();
-                member_Dashboard.Show();
-                this.Hide();
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@memberEmail", memberEmail);
+                    cmd.Parameters.AddWithValue("@memberPassword", memberPassword);
+
+                    connection.Open();
+                    int result = (int)cmd.ExecuteScalar();
+
+                    if (result > 0)
+                    {
+                        // Save login state
+                        MemberLoginState loginState = new MemberLoginState
+                        {
+                            IsLoggedIn = true,
+                            MemberEmail = memberEmail
+                        };
+                        MemberLoginStateManager.SaveLoginState(loginState);
+
+
+                        Member_Dashboard memberDashboard = new Member_Dashboard();
+                        memberDashboard.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid email or password.");
+                        txt_memberUsername.Clear();
+                        txt_memberPassword.Clear();
+                    }
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
         }
 
         private void lbl_getHelp_Click(object sender, EventArgs e)

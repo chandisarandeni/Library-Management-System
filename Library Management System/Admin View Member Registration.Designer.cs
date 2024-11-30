@@ -405,6 +405,7 @@
             this.btn_registerMember.Text = "Register";
             this.btn_registerMember.UseCompatibleTextRendering = true;
             this.btn_registerMember.UseVisualStyleBackColor = false;
+            this.btn_registerMember.Click += new System.EventHandler(this.btn_registerMember_Click);
             // 
             // label1
             // 

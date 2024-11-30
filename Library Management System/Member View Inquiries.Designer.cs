@@ -35,13 +35,19 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txt_bookID = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.slidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -69,12 +75,6 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.slidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel8.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.slidebar.SuspendLayout();
@@ -112,6 +112,7 @@
             this.btn_Inquiries.Text = "    Inquiries";
             this.btn_Inquiries.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inquiries.UseVisualStyleBackColor = false;
+            this.btn_Inquiries.Click += new System.EventHandler(this.btn_Inquiries_Click);
             // 
             // guna2Panel1
             // 
@@ -152,9 +153,115 @@
             this.label13.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(55, 221);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(208, 29);
+            this.label13.Size = new System.Drawing.Size(166, 23);
             this.label13.TabIndex = 24;
             this.label13.Text = "Description :";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(234, 170);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(312, 30);
+            this.textBox2.TabIndex = 26;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(234, 124);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(312, 30);
+            this.textBox1.TabIndex = 26;
+            // 
+            // txt_bookID
+            // 
+            this.txt_bookID.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_bookID.Location = new System.Drawing.Point(234, 80);
+            this.txt_bookID.Name = "txt_bookID";
+            this.txt_bookID.Size = new System.Drawing.Size(312, 30);
+            this.txt_bookID.TabIndex = 26;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(202, 175);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(22, 23);
+            this.label9.TabIndex = 25;
+            this.label9.Text = ":";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(202, 129);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 23);
+            this.label3.TabIndex = 25;
+            this.label3.Text = ":";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(202, 85);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(22, 23);
+            this.label5.TabIndex = 25;
+            this.label5.Text = ":";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(55, 175);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(94, 23);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Contact";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(55, 129);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 23);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Email";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(55, 85);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(118, 23);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Full Name";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(242, 18);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(169, 20);
+            this.label33.TabIndex = 5;
+            this.label33.Text = "Member Inquiries";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(28, 34);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(619, 20);
+            this.label34.TabIndex = 5;
+            this.label34.Text = "_____________________________________________________________";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button2
             // 
@@ -181,56 +288,6 @@
             this.button1.Text = "Submit";
             this.button1.UseCompatibleTextRendering = true;
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // txt_bookID
-            // 
-            this.txt_bookID.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_bookID.Location = new System.Drawing.Point(234, 80);
-            this.txt_bookID.Name = "txt_bookID";
-            this.txt_bookID.Size = new System.Drawing.Size(312, 30);
-            this.txt_bookID.TabIndex = 26;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(202, 85);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(22, 23);
-            this.label5.TabIndex = 25;
-            this.label5.Text = ":";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(55, 85);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 29);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Full Name";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(242, 18);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(169, 20);
-            this.label33.TabIndex = 5;
-            this.label33.Text = "Member Inquiries";
-            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(28, 34);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(619, 20);
-            this.label34.TabIndex = 5;
-            this.label34.Text = "_____________________________________________________________";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel7
             // 
@@ -383,6 +440,7 @@
             this.btn_Dashboard.Text = "    Dashboard";
             this.btn_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Dashboard.UseVisualStyleBackColor = false;
+            this.btn_Dashboard.Click += new System.EventHandler(this.btn_Dashboard_Click);
             // 
             // panel3
             // 
@@ -406,6 +464,7 @@
             this.btn_myBooks.Text = "    My Books";
             this.btn_myBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_myBooks.UseVisualStyleBackColor = false;
+            this.btn_myBooks.Click += new System.EventHandler(this.btn_myBooks_Click);
             // 
             // panel4
             // 
@@ -429,6 +488,7 @@
             this.btn_Borrow.Text = "    Borrow";
             this.btn_Borrow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Borrow.UseVisualStyleBackColor = false;
+            this.btn_Borrow.Click += new System.EventHandler(this.btn_Borrow_Click);
             // 
             // panel5
             // 
@@ -452,6 +512,7 @@
             this.btn_searchBook.Text = "    Search Book";
             this.btn_searchBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_searchBook.UseVisualStyleBackColor = false;
+            this.btn_searchBook.Click += new System.EventHandler(this.btn_searchBook_Click);
             // 
             // panel6
             // 
@@ -475,6 +536,7 @@
             this.btn_Reservation.Text = "    Reservation";
             this.btn_Reservation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reservation.UseVisualStyleBackColor = false;
+            this.btn_Reservation.Click += new System.EventHandler(this.btn_Reservation_Click);
             // 
             // pictureBox3
             // 
@@ -523,6 +585,10 @@
             this.guna2Panel3.Size = new System.Drawing.Size(241, 506);
             this.guna2Panel3.TabIndex = 16;
             // 
+            // slidebarTimer
+            // 
+            this.slidebarTimer.Tick += new System.EventHandler(this.slidebarTimer_Tick);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -533,62 +599,6 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Inquiries";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(55, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 29);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Email";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(202, 129);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 23);
-            this.label3.TabIndex = 25;
-            this.label3.Text = ":";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(234, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(312, 30);
-            this.textBox1.TabIndex = 26;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(55, 175);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 23);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "Contact";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(202, 175);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(22, 23);
-            this.label9.TabIndex = 25;
-            this.label9.Text = ":";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(234, 170);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(312, 30);
-            this.textBox2.TabIndex = 26;
             // 
             // Member_View_Inquiries
             // 
@@ -605,6 +615,8 @@
             this.Name = "Member_View_Inquiries";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Management System";
+            this.Load += new System.EventHandler(this.Member_View_Inquiries_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Member_View_Inquiries_MouseClick);
             this.panel8.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();

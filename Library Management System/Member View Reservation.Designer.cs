@@ -60,6 +60,16 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Search = new System.Windows.Forms.Button();
+            this.txt_bookID = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
             this.pnl_bookDetails = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -81,19 +91,9 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_Search = new System.Windows.Forms.Button();
-            this.txt_bookID = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.pnl_instructions = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -230,6 +230,10 @@
             this.btn_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Dashboard.UseVisualStyleBackColor = false;
             // 
+            // slidebarTimer
+            // 
+            this.slidebarTimer.Tick += new System.EventHandler(this.slidebarTimer_Tick);
+            // 
             // guna2Panel3
             // 
             this.guna2Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -346,6 +350,7 @@
             this.btn_Menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Menu.TabIndex = 1;
             this.btn_Menu.TabStop = false;
+            this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click);
             // 
             // lbl_showMemberID
             // 
@@ -460,6 +465,113 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(667, 506);
             this.guna2Panel1.TabIndex = 13;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(159, 405);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(340, 83);
+            this.richTextBox1.TabIndex = 35;
+            this.richTextBox1.Text = "";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(43, 373);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(298, 23);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "Reservation Description:";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button2.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(524, 452);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(111, 34);
+            this.button2.TabIndex = 32;
+            this.button2.Text = "Cancel";
+            this.button2.UseCompatibleTextRendering = true;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(524, 411);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 34);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Reserve";
+            this.button1.UseCompatibleTextRendering = true;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Search.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Search.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Search.Location = new System.Drawing.Point(515, 65);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(111, 34);
+            this.btn_Search.TabIndex = 32;
+            this.btn_Search.Text = "Search";
+            this.btn_Search.UseCompatibleTextRendering = true;
+            this.btn_Search.UseVisualStyleBackColor = false;
+            // 
+            // txt_bookID
+            // 
+            this.txt_bookID.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_bookID.Location = new System.Drawing.Point(187, 68);
+            this.txt_bookID.Name = "txt_bookID";
+            this.txt_bookID.Size = new System.Drawing.Size(312, 30);
+            this.txt_bookID.TabIndex = 26;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(155, 73);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(22, 23);
+            this.label5.TabIndex = 25;
+            this.label5.Text = ":";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(55, 73);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 23);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Book ID";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(234, 18);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(119, 20);
+            this.label33.TabIndex = 5;
+            this.label33.Text = "Search Book";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(28, 34);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(619, 20);
+            this.label34.TabIndex = 5;
+            this.label34.Text = "_____________________________________________________________";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_bookDetails
             // 
@@ -689,80 +801,6 @@
             this.label2.TabIndex = 24;
             this.label2.Text = "Book Title";
             // 
-            // btn_Search
-            // 
-            this.btn_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_Search.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Search.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Search.Location = new System.Drawing.Point(515, 65);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(111, 34);
-            this.btn_Search.TabIndex = 32;
-            this.btn_Search.Text = "Search";
-            this.btn_Search.UseCompatibleTextRendering = true;
-            this.btn_Search.UseVisualStyleBackColor = false;
-            // 
-            // txt_bookID
-            // 
-            this.txt_bookID.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_bookID.Location = new System.Drawing.Point(187, 68);
-            this.txt_bookID.Name = "txt_bookID";
-            this.txt_bookID.Size = new System.Drawing.Size(312, 30);
-            this.txt_bookID.TabIndex = 26;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(155, 73);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(22, 23);
-            this.label5.TabIndex = 25;
-            this.label5.Text = ":";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(55, 73);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 23);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Book ID";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(234, 18);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(119, 20);
-            this.label33.TabIndex = 5;
-            this.label33.Text = "Search Book";
-            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(28, 34);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(619, 20);
-            this.label34.TabIndex = 5;
-            this.label34.Text = "_____________________________________________________________";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(77, 150);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(322, 46);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "You can search book using\r\nBook ID, Book Name or ISBN";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pnl_instructions
             // 
             this.pnl_instructions.Controls.Add(this.pictureBox1);
@@ -782,49 +820,16 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label13
+            // label3
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(43, 373);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(373, 29);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "Reservation Description:";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(159, 405);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(340, 83);
-            this.richTextBox1.TabIndex = 35;
-            this.richTextBox1.Text = "";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(524, 411);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 34);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Reserve";
-            this.button1.UseCompatibleTextRendering = true;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(524, 452);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 34);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "Cancel";
-            this.button2.UseCompatibleTextRendering = true;
-            this.button2.UseVisualStyleBackColor = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(77, 150);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(322, 46);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "You can search book using\r\nBook ID, Book Name or ISBN";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Member_View_Reservation
             // 
@@ -839,6 +844,8 @@
             this.Name = "Member_View_Reservation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Management System";
+            this.Load += new System.EventHandler(this.Member_View_Reservation_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Member_View_Reservation_MouseClick);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

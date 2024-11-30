@@ -261,5 +261,123 @@ namespace Library_Management_System
             adminViewInquiryManagement.Show();
             this.Hide();
         }
+
+        private void btn_registerBook_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+
+            // Collect the book details from the form
+            string bookTitle = txt_bookTitle.Text;
+            string bookAuthor = txt_bookAuthor.Text;
+            string bookISBN = txt_bookISBN.Text;
+            string bookCategory = txt_bookCategory.Text;
+            string bookPublisher = txt_bookPublisher.Text;
+            string bookType = txt_bookType.Text;
+            string bookLanguage = txt_bookLanguage.Text;
+            string bookAdditional = txt_bookAdditional.Text;
+
+            // Get the latest book ID from the database and generate the new one
+            string newBookID = GenerateBookID();
+
+            // Get the current date for the book registration
+            DateTime currentDate = DateTime.Now;
+
+            // Set isAvailable to 'true' (can be passed explicitly or derived from frontend)
+            string isAvailable = "true";  // Pass 'true' explicitly from the frontend
+
+            // SQL query to insert a new book record into the database
+            string query = "INSERT INTO Book (bookID, bookTitle, bookAuthor, bookISBN, bookCategory, bookPublisher, bookType, bookLanguage, bookAdditional, bookRegistrationDate, isAvailable) " +
+                           "VALUES (@bookID, @bookTitle, @bookAuthor, @bookISBN, @bookCategory, @bookPublisher, @bookType, @bookLanguage, @bookAdditional, @bookRegistrationDate, @isAvailable)";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+
+                    // Add parameters to the query
+                    cmd.Parameters.Add("@bookID", SqlDbType.NVarChar).Value = newBookID;
+                    cmd.Parameters.Add("@bookTitle", SqlDbType.NVarChar).Value = bookTitle;
+                    cmd.Parameters.Add("@bookAuthor", SqlDbType.VarChar).Value = bookAuthor;
+                    cmd.Parameters.Add("@bookISBN", SqlDbType.NVarChar).Value = bookISBN;
+                    cmd.Parameters.Add("@bookCategory", SqlDbType.VarChar).Value = bookCategory;
+                    cmd.Parameters.Add("@bookPublisher", SqlDbType.VarChar).Value = bookPublisher;
+                    cmd.Parameters.Add("@bookType", SqlDbType.VarChar).Value = bookType;
+                    cmd.Parameters.Add("@bookLanguage", SqlDbType.VarChar).Value = bookLanguage;
+                    cmd.Parameters.Add("@bookAdditional", SqlDbType.NVarChar).Value = bookAdditional;
+                    cmd.Parameters.Add("@bookRegistrationDate", SqlDbType.Date).Value = currentDate;
+                    cmd.Parameters.Add("@isAvailable", SqlDbType.VarChar).Value = isAvailable;  // Pass the 'true' value explicitly
+
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Book registered successfully.");
+
+                    // Optionally, clear the form fields after registration
+                    ClearForm();
+
+                    Admin_View_Book_Management adminViewBookManagement = new Admin_View_Book_Management();
+                    adminViewBookManagement.Show();
+                    this.Hide();
+                }
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show("SQL Error: " + sqlEx.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private string GenerateBookID()
+        {
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string query = "SELECT TOP 1 bookID FROM Book ORDER BY bookID DESC";
+
+            string lastBookID = string.Empty;
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        lastBookID = reader["bookID"].ToString();
+                    }
+                }
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show("SQL Error: " + sqlEx.Message);
+            }
+
+            // Generate new book ID based on the last one (e.g., B-0001 -> B-0002)
+            if (!string.IsNullOrEmpty(lastBookID))
+            {
+                string lastIDNumber = lastBookID.Substring(2);  // Remove "B-" part
+                int nextIDNumber = int.Parse(lastIDNumber) + 1;
+                return "B-" + nextIDNumber.ToString("D4");  // Format as B-0001, B-0002, etc.
+            }
+
+            // If no book ID exists, start with B-0001
+            return "B-0001";
+        }
+
+        private void ClearForm()
+        {
+            txt_bookTitle.Clear();
+            txt_bookAuthor.Clear();
+            txt_bookISBN.Clear();
+            txt_bookCategory.ResetText();
+            txt_bookPublisher.Clear();
+            txt_bookType.ResetText();
+            txt_bookLanguage.ResetText();
+            txt_bookAdditional.Clear();
+        }
     }
 }

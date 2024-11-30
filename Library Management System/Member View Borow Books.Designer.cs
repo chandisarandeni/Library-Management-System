@@ -99,6 +99,7 @@
             this.btn_Inquiries.Text = "    Inquiries";
             this.btn_Inquiries.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inquiries.UseVisualStyleBackColor = false;
+            this.btn_Inquiries.Click += new System.EventHandler(this.btn_Inquiries_Click);
             // 
             // panel5
             // 
@@ -122,6 +123,7 @@
             this.btn_searchBook.Text = "    Search Book";
             this.btn_searchBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_searchBook.UseVisualStyleBackColor = false;
+            this.btn_searchBook.Click += new System.EventHandler(this.btn_searchBook_Click);
             // 
             // label1
             // 
@@ -156,6 +158,7 @@
             this.btn_Borrow.Text = "    Borrow";
             this.btn_Borrow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Borrow.UseVisualStyleBackColor = false;
+            this.btn_Borrow.Click += new System.EventHandler(this.btn_Borrow_Click);
             // 
             // guna2Panel1
             // 
@@ -226,6 +229,7 @@
             this.btn_myBooks.Text = "    My Books";
             this.btn_myBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_myBooks.UseVisualStyleBackColor = false;
+            this.btn_myBooks.Click += new System.EventHandler(this.btn_myBooks_Click);
             // 
             // panel2
             // 
@@ -249,6 +253,11 @@
             this.btn_Dashboard.Text = "    Dashboard";
             this.btn_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Dashboard.UseVisualStyleBackColor = false;
+            this.btn_Dashboard.Click += new System.EventHandler(this.btn_Dashboard_Click);
+            // 
+            // slidebarTimer
+            // 
+            this.slidebarTimer.Tick += new System.EventHandler(this.slidebarTimer_Tick);
             // 
             // guna2Panel2
             // 
@@ -413,6 +422,7 @@
             this.btn_Menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Menu.TabIndex = 1;
             this.btn_Menu.TabStop = false;
+            this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click);
             // 
             // lbl_showMemberID
             // 
@@ -469,6 +479,7 @@
             this.btn_Reservation.Text = "    Reservation";
             this.btn_Reservation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reservation.UseVisualStyleBackColor = false;
+            this.btn_Reservation.Click += new System.EventHandler(this.btn_Reservation_Click);
             // 
             // slidebar
             // 
@@ -517,6 +528,8 @@
             this.Name = "Member_View_Borow_Books";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Management System";
+            this.Load += new System.EventHandler(this.Member_View_Borow_Books_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Member_View_Borow_Books_MouseClick);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);

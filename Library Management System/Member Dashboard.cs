@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Library_Management_System.Home;
 
 namespace Library_Management_System
 {
@@ -27,16 +29,69 @@ namespace Library_Management_System
 
         private void Member_Dashboard_Load(object sender, EventArgs e)
         {
-            // Ensure the state is consistent with the collapsed slide bar
-            slidebar.Width = slidebar.MinimumSize.Width;
-            slidebarExpand = false;
+            // Load the member login state
+            MemberLoginState loginState = MemberLoginStateManager.LoadLoginState();
 
-            lbl_memberID.Hide();
-            lbl_memberName.Hide();
-            lbl_dot1.Hide();
-            lbl_dot2.Hide();
-            lbl_showMemberID.Hide();
-            lbl_showMemberName.Hide();
+            if (!loginState.IsLoggedIn)
+            {
+                Home home = new Home();
+                home.Show();
+                this.Hide();
+            }
+            else
+            {
+                // Ensure the state is consistent with the collapsed slide bar
+                slidebar.Width = slidebar.MinimumSize.Width;
+                slidebarExpand = false;
+
+                lbl_memberID.Hide();
+                lbl_memberName.Hide();
+                lbl_dot1.Hide();
+                lbl_dot2.Hide();
+                lbl_showMemberID.Hide();
+                lbl_showMemberName.Hide();
+
+                string memberEmail = loginState.MemberEmail;
+                string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+                string query = "SELECT memberID, memberFullName FROM libraryMember WHERE memberEmail = @memberEmail";
+
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        SqlCommand cmd = new SqlCommand(query, connection);
+                        cmd.Parameters.AddWithValue("@memberEmail", memberEmail);
+
+                        connection.Open();
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.Read())
+                        {
+                            string memberID = reader["memberID"].ToString();
+                            string memberFullName = reader["memberFullName"].ToString();
+
+                            lbl_showMemberID.Text = memberID;
+                            lbl_showMemberName.Text = memberFullName;
+
+                            // Display fetched Member ID and Name
+                            lbl_showMemberID.Show();
+                            lbl_showMemberName.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Member details not found.");
+                        }
+                    }
+                }
+                catch (SqlException sqlEx)
+                {
+                    MessageBox.Show("SQL Error: " + sqlEx.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
         }
 
         private void btn_Logout_Click(object sender, EventArgs e)
@@ -110,6 +165,41 @@ namespace Library_Management_System
                     slidebarTimer.Start(); // Start the timer to collapse the slidebar
                 }
             }
+        }
+
+        private void btn_myBooks_Click(object sender, EventArgs e)
+        {
+            Member_View_My_Books memberViewMyBooks = new Member_View_My_Books();
+            memberViewMyBooks.Show();
+            this.Hide();
+        }
+
+        private void btn_Borrow_Click(object sender, EventArgs e)
+        {
+            Member_View_Borow_Books memberViewBorrowBooks = new Member_View_Borow_Books();
+            memberViewBorrowBooks.Show();
+            this.Hide();
+        }
+
+        private void btn_searchBook_Click(object sender, EventArgs e)
+        {
+            Member_View_Search_Book memberViewSearchBooks = new Member_View_Search_Book();
+            memberViewSearchBooks.Show();
+            this.Hide();
+        }
+
+        private void btn_Reservation_Click(object sender, EventArgs e)
+        {
+            Member_View_Reservation memberViewReservation = new Member_View_Reservation();
+            memberViewReservation.Show();
+            this.Hide();
+        }
+
+        private void btn_Inquiries_Click(object sender, EventArgs e)
+        {
+            Member_View_Inquiries memberViewInquiries = new Member_View_Inquiries();
+            memberViewInquiries.Show();
+            this.Hide();
         }
     }
 }

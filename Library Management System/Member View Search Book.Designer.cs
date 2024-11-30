@@ -133,7 +133,7 @@
             this.label1.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(369, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(355, 58);
+            this.label1.Size = new System.Drawing.Size(284, 46);
             this.label1.TabIndex = 9;
             this.label1.Text = "Search Book";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -206,6 +206,10 @@
             this.btn_Dashboard.Text = "    Dashboard";
             this.btn_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Dashboard.UseVisualStyleBackColor = false;
+            // 
+            // slidebarTimer
+            // 
+            this.slidebarTimer.Tick += new System.EventHandler(this.slidebarTimer_Tick);
             // 
             // panel1
             // 
@@ -602,6 +606,8 @@
             this.Name = "Member_View_Search_Book";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Management System";
+            this.Load += new System.EventHandler(this.Member_View_Search_Book_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Member_View_Search_Book_MouseClick);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

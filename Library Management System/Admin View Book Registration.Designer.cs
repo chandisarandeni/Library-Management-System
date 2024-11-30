@@ -485,6 +485,10 @@
             "English"});
             this.txt_bookLanguage.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_bookLanguage.FormattingEnabled = true;
+            this.txt_bookLanguage.Items.AddRange(new object[] {
+            "Sinhala",
+            "Tamil",
+            "English"});
             this.txt_bookLanguage.Location = new System.Drawing.Point(217, 281);
             this.txt_bookLanguage.Name = "txt_bookLanguage";
             this.txt_bookLanguage.Size = new System.Drawing.Size(182, 28);
@@ -494,6 +498,9 @@
             // 
             this.txt_bookType.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_bookType.FormattingEnabled = true;
+            this.txt_bookType.Items.AddRange(new object[] {
+            "Borrowable",
+            "Only for Reference"});
             this.txt_bookType.Location = new System.Drawing.Point(216, 237);
             this.txt_bookType.Name = "txt_bookType";
             this.txt_bookType.Size = new System.Drawing.Size(182, 28);
@@ -750,6 +757,7 @@
             this.btn_registerBook.Text = "Register";
             this.btn_registerBook.UseCompatibleTextRendering = true;
             this.btn_registerBook.UseVisualStyleBackColor = false;
+            this.btn_registerBook.Click += new System.EventHandler(this.btn_registerBook_Click);
             // 
             // label1
             // 
