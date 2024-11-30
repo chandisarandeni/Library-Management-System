@@ -268,5 +268,13 @@ namespace Library_Management_System
                 return "I-001"; // Default ID if an error occurs
             }
         }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            txt_memberFullName.Clear();
+            txt_memberEmail.Clear();
+            txt_memberContact.Clear();
+            txt_memberDescription.Clear();
+        }
     }
 }

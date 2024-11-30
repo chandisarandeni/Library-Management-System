@@ -35,6 +35,9 @@
             this.slidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnl_memberDetails = new System.Windows.Forms.Panel();
+            this.listView_borrowDetails = new System.Windows.Forms.ListView();
+            this.bookID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.bookTitle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -84,9 +87,6 @@
             this.btn_Reservation = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btn_Inventory = new System.Windows.Forms.Button();
-            this.listView_borrowDetails = new System.Windows.Forms.ListView();
-            this.bookID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.bookTitle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel10.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.pnl_memberDetails.SuspendLayout();
@@ -175,6 +175,29 @@
             this.pnl_memberDetails.Name = "pnl_memberDetails";
             this.pnl_memberDetails.Size = new System.Drawing.Size(623, 336);
             this.pnl_memberDetails.TabIndex = 34;
+            // 
+            // listView_borrowDetails
+            // 
+            this.listView_borrowDetails.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.bookID,
+            this.bookTitle});
+            this.listView_borrowDetails.HideSelection = false;
+            this.listView_borrowDetails.Location = new System.Drawing.Point(202, 175);
+            this.listView_borrowDetails.Name = "listView_borrowDetails";
+            this.listView_borrowDetails.Size = new System.Drawing.Size(311, 144);
+            this.listView_borrowDetails.TabIndex = 25;
+            this.listView_borrowDetails.UseCompatibleStateImageBehavior = false;
+            this.listView_borrowDetails.View = System.Windows.Forms.View.Details;
+            // 
+            // bookID
+            // 
+            this.bookID.Text = "Book ID";
+            this.bookID.Width = 141;
+            // 
+            // bookTitle
+            // 
+            this.bookTitle.Text = "Title";
+            this.bookTitle.Width = 147;
             // 
             // label18
             // 
@@ -512,7 +535,7 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(300, 662);
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(73, 653);
+            this.slidebar.Size = new System.Drawing.Size(300, 653);
             this.slidebar.TabIndex = 7;
             // 
             // panel1
@@ -727,39 +750,16 @@
             this.btn_Inventory.UseVisualStyleBackColor = false;
             this.btn_Inventory.Click += new System.EventHandler(this.btn_Inventory_Click);
             // 
-            // listView_borrowDetails
-            // 
-            this.listView_borrowDetails.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.bookID,
-            this.bookTitle});
-            this.listView_borrowDetails.HideSelection = false;
-            this.listView_borrowDetails.Location = new System.Drawing.Point(202, 175);
-            this.listView_borrowDetails.Name = "listView_borrowDetails";
-            this.listView_borrowDetails.Size = new System.Drawing.Size(311, 144);
-            this.listView_borrowDetails.TabIndex = 25;
-            this.listView_borrowDetails.UseCompatibleStateImageBehavior = false;
-            this.listView_borrowDetails.View = System.Windows.Forms.View.Details;
-            // 
-            // bookID
-            // 
-            this.bookID.Text = "Book ID";
-            this.bookID.Width = 141;
-            // 
-            // bookTitle
-            // 
-            this.bookTitle.Text = "Title";
-            this.bookTitle.Width = 147;
-            // 
             // Admin_View_Borrow_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1102, 653);
+            this.Controls.Add(this.slidebar);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_returnBook);
             this.Controls.Add(this.btn_checkoutBook);
-            this.Controls.Add(this.slidebar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_View_Borrow_Management";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

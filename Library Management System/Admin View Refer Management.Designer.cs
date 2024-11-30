@@ -466,7 +466,7 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(300, 662);
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(73, 662);
+            this.slidebar.Size = new System.Drawing.Size(300, 662);
             this.slidebar.TabIndex = 5;
             // 
             // panel9
@@ -799,7 +799,7 @@
             this.label13.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(25, 93);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(193, 29);
+            this.label13.Size = new System.Drawing.Size(154, 23);
             this.label13.TabIndex = 24;
             this.label13.Text = "Book Details";
             // 
@@ -893,13 +893,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 662);
+            this.Controls.Add(this.slidebar);
             this.Controls.Add(this.lbl_returnHover);
             this.Controls.Add(this.lbl_addBookHover);
             this.Controls.Add(this.btn_returnBook);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Panel3);
-            this.Controls.Add(this.slidebar);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_referBook);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

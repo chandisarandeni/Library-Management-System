@@ -63,7 +63,7 @@
             this.pnl_reservationForm = new System.Windows.Forms.Panel();
             this.txt_reservationDescription = new System.Windows.Forms.RichTextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_addReservation = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
             this.txt_bookID = new System.Windows.Forms.TextBox();
@@ -432,7 +432,7 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(281, 662);
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(73, 662);
+            this.slidebar.Size = new System.Drawing.Size(281, 662);
             this.slidebar.TabIndex = 8;
             // 
             // panel8
@@ -475,7 +475,7 @@
             // 
             this.pnl_reservationForm.Controls.Add(this.txt_reservationDescription);
             this.pnl_reservationForm.Controls.Add(this.label13);
-            this.pnl_reservationForm.Controls.Add(this.button2);
+            this.pnl_reservationForm.Controls.Add(this.btn_Cancel);
             this.pnl_reservationForm.Controls.Add(this.btn_addReservation);
             this.pnl_reservationForm.Location = new System.Drawing.Point(24, 382);
             this.pnl_reservationForm.Name = "pnl_reservationForm";
@@ -484,6 +484,7 @@
             // 
             // txt_reservationDescription
             // 
+            this.txt_reservationDescription.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_reservationDescription.Location = new System.Drawing.Point(131, 35);
             this.txt_reservationDescription.Name = "txt_reservationDescription";
             this.txt_reservationDescription.Size = new System.Drawing.Size(340, 83);
@@ -500,18 +501,19 @@
             this.label13.TabIndex = 36;
             this.label13.Text = "Reservation Description:";
             // 
-            // button2
+            // btn_Cancel
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(496, 82);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 34);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Cancel";
-            this.button2.UseCompatibleTextRendering = true;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Cancel.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Cancel.Location = new System.Drawing.Point(496, 82);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(111, 34);
+            this.btn_Cancel.TabIndex = 37;
+            this.btn_Cancel.Text = "Cancel";
+            this.btn_Cancel.UseCompatibleTextRendering = true;
+            this.btn_Cancel.UseVisualStyleBackColor = false;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // btn_addReservation
             // 
@@ -957,7 +959,7 @@
         private System.Windows.Forms.Panel pnl_reservationForm;
         private System.Windows.Forms.RichTextBox txt_reservationDescription;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_addReservation;
     }
 }

@@ -147,7 +147,7 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(300, 662);
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(73, 653);
+            this.slidebar.Size = new System.Drawing.Size(300, 653);
             this.slidebar.TabIndex = 38;
             // 
             // panel1
@@ -723,7 +723,7 @@
             this.label26.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(566, 10);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(163, 29);
+            this.label26.Size = new System.Drawing.Size(130, 23);
             this.label26.TabIndex = 24;
             this.label26.Text = "Member ID:";
             // 

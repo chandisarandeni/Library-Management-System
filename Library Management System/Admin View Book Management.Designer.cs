@@ -59,6 +59,33 @@
             this.slidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnl_bookDetails = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_showBookAdditional = new System.Windows.Forms.Label();
+            this.lbl_showBookType = new System.Windows.Forms.Label();
+            this.lbl_showBookLanguage = new System.Windows.Forms.Label();
+            this.lbl_showBookCategory = new System.Windows.Forms.Label();
+            this.lbl_showBookISBN = new System.Windows.Forms.Label();
+            this.lbl_showBookAuthor = new System.Windows.Forms.Label();
+            this.lbl_showBookTitle = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lbl_showBookRegistrationDate = new System.Windows.Forms.Label();
+            this.lbl_showBookID = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.pnl_instructions = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -74,33 +101,6 @@
             this.btn_addBook = new System.Windows.Forms.PictureBox();
             this.btn_editBook = new System.Windows.Forms.PictureBox();
             this.btn_deleteBook = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.lbl_showBookID = new System.Windows.Forms.Label();
-            this.lbl_showBookRegistrationDate = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.lbl_showBookTitle = new System.Windows.Forms.Label();
-            this.lbl_showBookAuthor = new System.Windows.Forms.Label();
-            this.lbl_showBookISBN = new System.Windows.Forms.Label();
-            this.lbl_showBookCategory = new System.Windows.Forms.Label();
-            this.lbl_showBookLanguage = new System.Windows.Forms.Label();
-            this.lbl_showBookType = new System.Windows.Forms.Label();
-            this.lbl_showBookAdditional = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.pnl_bookDetails = new System.Windows.Forms.Panel();
             this.slidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Logout)).BeginInit();
@@ -114,12 +114,12 @@
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            this.pnl_bookDetails.SuspendLayout();
             this.pnl_instructions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_addBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_editBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_deleteBook)).BeginInit();
-            this.pnl_bookDetails.SuspendLayout();
             this.SuspendLayout();
             // 
             // slidebar
@@ -139,7 +139,7 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(300, 662);
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(73, 662);
+            this.slidebar.Size = new System.Drawing.Size(300, 662);
             this.slidebar.TabIndex = 1;
             // 
             // panel1
@@ -477,6 +477,300 @@
             this.guna2Panel1.Size = new System.Drawing.Size(871, 496);
             this.guna2Panel1.TabIndex = 4;
             // 
+            // pnl_bookDetails
+            // 
+            this.pnl_bookDetails.Controls.Add(this.label25);
+            this.pnl_bookDetails.Controls.Add(this.label24);
+            this.pnl_bookDetails.Controls.Add(this.label32);
+            this.pnl_bookDetails.Controls.Add(this.label21);
+            this.pnl_bookDetails.Controls.Add(this.label18);
+            this.pnl_bookDetails.Controls.Add(this.label15);
+            this.pnl_bookDetails.Controls.Add(this.label12);
+            this.pnl_bookDetails.Controls.Add(this.label8);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookAdditional);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookType);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookLanguage);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookCategory);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookISBN);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookAuthor);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookTitle);
+            this.pnl_bookDetails.Controls.Add(this.label30);
+            this.pnl_bookDetails.Controls.Add(this.label22);
+            this.pnl_bookDetails.Controls.Add(this.label19);
+            this.pnl_bookDetails.Controls.Add(this.label16);
+            this.pnl_bookDetails.Controls.Add(this.label13);
+            this.pnl_bookDetails.Controls.Add(this.label10);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookRegistrationDate);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookID);
+            this.pnl_bookDetails.Controls.Add(this.label28);
+            this.pnl_bookDetails.Controls.Add(this.label26);
+            this.pnl_bookDetails.Controls.Add(this.label7);
+            this.pnl_bookDetails.Location = new System.Drawing.Point(123, 124);
+            this.pnl_bookDetails.Name = "pnl_bookDetails";
+            this.pnl_bookDetails.Size = new System.Drawing.Size(623, 336);
+            this.pnl_bookDetails.TabIndex = 34;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(456, -2);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(19, 280);
+            this.label25.TabIndex = 35;
+            this.label25.Text = "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(187, 261);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(22, 23);
+            this.label24.TabIndex = 24;
+            this.label24.Text = ":";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(185, 179);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(22, 23);
+            this.label32.TabIndex = 24;
+            this.label32.Text = ":";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(188, 219);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(22, 23);
+            this.label21.TabIndex = 24;
+            this.label21.Text = ":";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(188, 136);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(22, 23);
+            this.label18.TabIndex = 24;
+            this.label18.Text = ":";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(188, 93);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(22, 23);
+            this.label15.TabIndex = 24;
+            this.label15.Text = ":";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(188, 49);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(22, 23);
+            this.label12.TabIndex = 24;
+            this.label12.Text = ":";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(186, 10);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(22, 23);
+            this.label8.TabIndex = 24;
+            this.label8.Text = ":";
+            // 
+            // lbl_showBookAdditional
+            // 
+            this.lbl_showBookAdditional.AutoSize = true;
+            this.lbl_showBookAdditional.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookAdditional.Location = new System.Drawing.Point(223, 261);
+            this.lbl_showBookAdditional.Name = "lbl_showBookAdditional";
+            this.lbl_showBookAdditional.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookAdditional.TabIndex = 24;
+            this.lbl_showBookAdditional.Text = "Sample Data";
+            // 
+            // lbl_showBookType
+            // 
+            this.lbl_showBookType.AutoSize = true;
+            this.lbl_showBookType.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookType.Location = new System.Drawing.Point(221, 181);
+            this.lbl_showBookType.Name = "lbl_showBookType";
+            this.lbl_showBookType.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookType.TabIndex = 24;
+            this.lbl_showBookType.Text = "Sample Data";
+            // 
+            // lbl_showBookLanguage
+            // 
+            this.lbl_showBookLanguage.AutoSize = true;
+            this.lbl_showBookLanguage.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookLanguage.Location = new System.Drawing.Point(225, 219);
+            this.lbl_showBookLanguage.Name = "lbl_showBookLanguage";
+            this.lbl_showBookLanguage.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookLanguage.TabIndex = 24;
+            this.lbl_showBookLanguage.Text = "Sample Data";
+            // 
+            // lbl_showBookCategory
+            // 
+            this.lbl_showBookCategory.AutoSize = true;
+            this.lbl_showBookCategory.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookCategory.Location = new System.Drawing.Point(225, 136);
+            this.lbl_showBookCategory.Name = "lbl_showBookCategory";
+            this.lbl_showBookCategory.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookCategory.TabIndex = 24;
+            this.lbl_showBookCategory.Text = "Sample Data";
+            // 
+            // lbl_showBookISBN
+            // 
+            this.lbl_showBookISBN.AutoSize = true;
+            this.lbl_showBookISBN.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookISBN.Location = new System.Drawing.Point(225, 93);
+            this.lbl_showBookISBN.Name = "lbl_showBookISBN";
+            this.lbl_showBookISBN.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookISBN.TabIndex = 24;
+            this.lbl_showBookISBN.Text = "Sample Data";
+            // 
+            // lbl_showBookAuthor
+            // 
+            this.lbl_showBookAuthor.AutoSize = true;
+            this.lbl_showBookAuthor.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookAuthor.Location = new System.Drawing.Point(225, 49);
+            this.lbl_showBookAuthor.Name = "lbl_showBookAuthor";
+            this.lbl_showBookAuthor.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookAuthor.TabIndex = 24;
+            this.lbl_showBookAuthor.Text = "Sample Data";
+            // 
+            // lbl_showBookTitle
+            // 
+            this.lbl_showBookTitle.AutoSize = true;
+            this.lbl_showBookTitle.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookTitle.Location = new System.Drawing.Point(223, 10);
+            this.lbl_showBookTitle.Name = "lbl_showBookTitle";
+            this.lbl_showBookTitle.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookTitle.TabIndex = 24;
+            this.lbl_showBookTitle.Text = "Sample Data";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(21, 179);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(118, 23);
+            this.label30.TabIndex = 24;
+            this.label30.Text = "Book Type";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(23, 261);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(130, 23);
+            this.label22.TabIndex = 24;
+            this.label22.Text = "Additional";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(23, 219);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(106, 23);
+            this.label19.TabIndex = 24;
+            this.label19.Text = "Language";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(25, 136);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(106, 23);
+            this.label16.TabIndex = 24;
+            this.label16.Text = "Category";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(25, 93);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(58, 23);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "ISBN";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(25, 49);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(82, 23);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Author";
+            // 
+            // lbl_showBookRegistrationDate
+            // 
+            this.lbl_showBookRegistrationDate.AutoSize = true;
+            this.lbl_showBookRegistrationDate.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookRegistrationDate.Location = new System.Drawing.Point(487, 118);
+            this.lbl_showBookRegistrationDate.Name = "lbl_showBookRegistrationDate";
+            this.lbl_showBookRegistrationDate.Size = new System.Drawing.Size(119, 20);
+            this.lbl_showBookRegistrationDate.TabIndex = 24;
+            this.lbl_showBookRegistrationDate.Text = "Sample Data";
+            // 
+            // lbl_showBookID
+            // 
+            this.lbl_showBookID.AutoSize = true;
+            this.lbl_showBookID.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookID.Location = new System.Drawing.Point(487, 42);
+            this.lbl_showBookID.Name = "lbl_showBookID";
+            this.lbl_showBookID.Size = new System.Drawing.Size(119, 20);
+            this.lbl_showBookID.TabIndex = 24;
+            this.lbl_showBookID.Text = "Sample Data";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(481, 86);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(130, 23);
+            this.label28.TabIndex = 24;
+            this.label28.Text = "Reg. Date:";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(481, 10);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(106, 23);
+            this.label26.TabIndex = 24;
+            this.label26.Text = "Book ID:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(23, 10);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(130, 23);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "Book Title";
+            // 
             // pnl_instructions
             // 
             this.pnl_instructions.Controls.Add(this.pictureBox1);
@@ -643,300 +937,6 @@
             this.btn_deleteBook.MouseLeave += new System.EventHandler(this.btn_deleteBook_MouseLeave);
             this.btn_deleteBook.MouseHover += new System.EventHandler(this.btn_deleteBook_MouseHover);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(23, 10);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(130, 23);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Book Title";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(481, 10);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(106, 23);
-            this.label26.TabIndex = 24;
-            this.label26.Text = "Book ID:";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(481, 86);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(130, 23);
-            this.label28.TabIndex = 24;
-            this.label28.Text = "Reg. Date:";
-            // 
-            // lbl_showBookID
-            // 
-            this.lbl_showBookID.AutoSize = true;
-            this.lbl_showBookID.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_showBookID.Location = new System.Drawing.Point(487, 42);
-            this.lbl_showBookID.Name = "lbl_showBookID";
-            this.lbl_showBookID.Size = new System.Drawing.Size(119, 20);
-            this.lbl_showBookID.TabIndex = 24;
-            this.lbl_showBookID.Text = "Sample Data";
-            // 
-            // lbl_showBookRegistrationDate
-            // 
-            this.lbl_showBookRegistrationDate.AutoSize = true;
-            this.lbl_showBookRegistrationDate.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_showBookRegistrationDate.Location = new System.Drawing.Point(487, 118);
-            this.lbl_showBookRegistrationDate.Name = "lbl_showBookRegistrationDate";
-            this.lbl_showBookRegistrationDate.Size = new System.Drawing.Size(119, 20);
-            this.lbl_showBookRegistrationDate.TabIndex = 24;
-            this.lbl_showBookRegistrationDate.Text = "Sample Data";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(25, 49);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 23);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "Author";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(25, 93);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(58, 23);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "ISBN";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(25, 136);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(106, 23);
-            this.label16.TabIndex = 24;
-            this.label16.Text = "Category";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(23, 219);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(106, 23);
-            this.label19.TabIndex = 24;
-            this.label19.Text = "Language";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(23, 261);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(130, 23);
-            this.label22.TabIndex = 24;
-            this.label22.Text = "Additional";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(21, 179);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(118, 23);
-            this.label30.TabIndex = 24;
-            this.label30.Text = "Book Type";
-            // 
-            // lbl_showBookTitle
-            // 
-            this.lbl_showBookTitle.AutoSize = true;
-            this.lbl_showBookTitle.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_showBookTitle.Location = new System.Drawing.Point(223, 10);
-            this.lbl_showBookTitle.Name = "lbl_showBookTitle";
-            this.lbl_showBookTitle.Size = new System.Drawing.Size(142, 22);
-            this.lbl_showBookTitle.TabIndex = 24;
-            this.lbl_showBookTitle.Text = "Sample Data";
-            // 
-            // lbl_showBookAuthor
-            // 
-            this.lbl_showBookAuthor.AutoSize = true;
-            this.lbl_showBookAuthor.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_showBookAuthor.Location = new System.Drawing.Point(225, 49);
-            this.lbl_showBookAuthor.Name = "lbl_showBookAuthor";
-            this.lbl_showBookAuthor.Size = new System.Drawing.Size(142, 22);
-            this.lbl_showBookAuthor.TabIndex = 24;
-            this.lbl_showBookAuthor.Text = "Sample Data";
-            // 
-            // lbl_showBookISBN
-            // 
-            this.lbl_showBookISBN.AutoSize = true;
-            this.lbl_showBookISBN.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_showBookISBN.Location = new System.Drawing.Point(225, 93);
-            this.lbl_showBookISBN.Name = "lbl_showBookISBN";
-            this.lbl_showBookISBN.Size = new System.Drawing.Size(142, 22);
-            this.lbl_showBookISBN.TabIndex = 24;
-            this.lbl_showBookISBN.Text = "Sample Data";
-            // 
-            // lbl_showBookCategory
-            // 
-            this.lbl_showBookCategory.AutoSize = true;
-            this.lbl_showBookCategory.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_showBookCategory.Location = new System.Drawing.Point(225, 136);
-            this.lbl_showBookCategory.Name = "lbl_showBookCategory";
-            this.lbl_showBookCategory.Size = new System.Drawing.Size(142, 22);
-            this.lbl_showBookCategory.TabIndex = 24;
-            this.lbl_showBookCategory.Text = "Sample Data";
-            // 
-            // lbl_showBookLanguage
-            // 
-            this.lbl_showBookLanguage.AutoSize = true;
-            this.lbl_showBookLanguage.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_showBookLanguage.Location = new System.Drawing.Point(225, 219);
-            this.lbl_showBookLanguage.Name = "lbl_showBookLanguage";
-            this.lbl_showBookLanguage.Size = new System.Drawing.Size(142, 22);
-            this.lbl_showBookLanguage.TabIndex = 24;
-            this.lbl_showBookLanguage.Text = "Sample Data";
-            // 
-            // lbl_showBookType
-            // 
-            this.lbl_showBookType.AutoSize = true;
-            this.lbl_showBookType.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_showBookType.Location = new System.Drawing.Point(221, 181);
-            this.lbl_showBookType.Name = "lbl_showBookType";
-            this.lbl_showBookType.Size = new System.Drawing.Size(142, 22);
-            this.lbl_showBookType.TabIndex = 24;
-            this.lbl_showBookType.Text = "Sample Data";
-            // 
-            // lbl_showBookAdditional
-            // 
-            this.lbl_showBookAdditional.AutoSize = true;
-            this.lbl_showBookAdditional.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_showBookAdditional.Location = new System.Drawing.Point(223, 261);
-            this.lbl_showBookAdditional.Name = "lbl_showBookAdditional";
-            this.lbl_showBookAdditional.Size = new System.Drawing.Size(142, 22);
-            this.lbl_showBookAdditional.TabIndex = 24;
-            this.lbl_showBookAdditional.Text = "Sample Data";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(186, 10);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(22, 23);
-            this.label8.TabIndex = 24;
-            this.label8.Text = ":";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(188, 49);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(22, 23);
-            this.label12.TabIndex = 24;
-            this.label12.Text = ":";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(188, 93);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(22, 23);
-            this.label15.TabIndex = 24;
-            this.label15.Text = ":";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(188, 136);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(22, 23);
-            this.label18.TabIndex = 24;
-            this.label18.Text = ":";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(188, 219);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(22, 23);
-            this.label21.TabIndex = 24;
-            this.label21.Text = ":";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(185, 179);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(22, 23);
-            this.label32.TabIndex = 24;
-            this.label32.Text = ":";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(187, 261);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(22, 23);
-            this.label24.TabIndex = 24;
-            this.label24.Text = ":";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(456, -2);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(19, 280);
-            this.label25.TabIndex = 35;
-            this.label25.Text = "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnl_bookDetails
-            // 
-            this.pnl_bookDetails.Controls.Add(this.label25);
-            this.pnl_bookDetails.Controls.Add(this.label24);
-            this.pnl_bookDetails.Controls.Add(this.label32);
-            this.pnl_bookDetails.Controls.Add(this.label21);
-            this.pnl_bookDetails.Controls.Add(this.label18);
-            this.pnl_bookDetails.Controls.Add(this.label15);
-            this.pnl_bookDetails.Controls.Add(this.label12);
-            this.pnl_bookDetails.Controls.Add(this.label8);
-            this.pnl_bookDetails.Controls.Add(this.lbl_showBookAdditional);
-            this.pnl_bookDetails.Controls.Add(this.lbl_showBookType);
-            this.pnl_bookDetails.Controls.Add(this.lbl_showBookLanguage);
-            this.pnl_bookDetails.Controls.Add(this.lbl_showBookCategory);
-            this.pnl_bookDetails.Controls.Add(this.lbl_showBookISBN);
-            this.pnl_bookDetails.Controls.Add(this.lbl_showBookAuthor);
-            this.pnl_bookDetails.Controls.Add(this.lbl_showBookTitle);
-            this.pnl_bookDetails.Controls.Add(this.label30);
-            this.pnl_bookDetails.Controls.Add(this.label22);
-            this.pnl_bookDetails.Controls.Add(this.label19);
-            this.pnl_bookDetails.Controls.Add(this.label16);
-            this.pnl_bookDetails.Controls.Add(this.label13);
-            this.pnl_bookDetails.Controls.Add(this.label10);
-            this.pnl_bookDetails.Controls.Add(this.lbl_showBookRegistrationDate);
-            this.pnl_bookDetails.Controls.Add(this.lbl_showBookID);
-            this.pnl_bookDetails.Controls.Add(this.label28);
-            this.pnl_bookDetails.Controls.Add(this.label26);
-            this.pnl_bookDetails.Controls.Add(this.label7);
-            this.pnl_bookDetails.Location = new System.Drawing.Point(123, 124);
-            this.pnl_bookDetails.Name = "pnl_bookDetails";
-            this.pnl_bookDetails.Size = new System.Drawing.Size(623, 336);
-            this.pnl_bookDetails.TabIndex = 34;
-            // 
             // Admin_View_Book_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -971,14 +971,14 @@
             this.panel10.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            this.pnl_bookDetails.ResumeLayout(false);
+            this.pnl_bookDetails.PerformLayout();
             this.pnl_instructions.ResumeLayout(false);
             this.pnl_instructions.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_addBook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_editBook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_deleteBook)).EndInit();
-            this.pnl_bookDetails.ResumeLayout(false);
-            this.pnl_bookDetails.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

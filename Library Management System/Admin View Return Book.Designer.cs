@@ -68,8 +68,11 @@
             this.btn_returnBook = new System.Windows.Forms.Button();
             this.btn_searchBook = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.lbl_isOverDue = new System.Windows.Forms.Label();
             this.lbl_showBookType = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lbl_showBookAuthor = new System.Windows.Forms.Label();
@@ -90,9 +93,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lbl_isOverDue = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Logout)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).BeginInit();
@@ -314,7 +314,7 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(300, 662);
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(73, 653);
+            this.slidebar.Size = new System.Drawing.Size(300, 653);
             this.slidebar.TabIndex = 45;
             // 
             // panel2
@@ -566,6 +566,16 @@
             this.panel7.Size = new System.Drawing.Size(410, 164);
             this.panel7.TabIndex = 46;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(166, 129);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(22, 23);
+            this.label18.TabIndex = 31;
+            this.label18.Text = ":";
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -576,6 +586,16 @@
             this.label17.TabIndex = 31;
             this.label17.Text = ":";
             // 
+            // lbl_isOverDue
+            // 
+            this.lbl_isOverDue.AutoSize = true;
+            this.lbl_isOverDue.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_isOverDue.Location = new System.Drawing.Point(203, 129);
+            this.lbl_isOverDue.Name = "lbl_isOverDue";
+            this.lbl_isOverDue.Size = new System.Drawing.Size(142, 22);
+            this.lbl_isOverDue.TabIndex = 32;
+            this.lbl_isOverDue.Text = "Sample Data";
+            // 
             // lbl_showBookType
             // 
             this.lbl_showBookType.AutoSize = true;
@@ -585,6 +605,16 @@
             this.lbl_showBookType.Size = new System.Drawing.Size(142, 22);
             this.lbl_showBookType.TabIndex = 32;
             this.lbl_showBookType.Text = "Sample Data";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 129);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 23);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Is Overdue";
             // 
             // label19
             // 
@@ -802,36 +832,6 @@
             this.label1.TabIndex = 46;
             this.label1.Text = "Borrow Books";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 129);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 29);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "Is Overdue";
-            // 
-            // lbl_isOverDue
-            // 
-            this.lbl_isOverDue.AutoSize = true;
-            this.lbl_isOverDue.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_isOverDue.Location = new System.Drawing.Point(203, 129);
-            this.lbl_isOverDue.Name = "lbl_isOverDue";
-            this.lbl_isOverDue.Size = new System.Drawing.Size(142, 22);
-            this.lbl_isOverDue.TabIndex = 32;
-            this.lbl_isOverDue.Text = "Sample Data";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(166, 129);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(22, 23);
-            this.label18.TabIndex = 31;
-            this.label18.Text = ":";
             // 
             // Admin_View_Return_Book
             // 

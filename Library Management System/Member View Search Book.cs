@@ -29,6 +29,9 @@ namespace Library_Management_System
 
         private void Member_View_Search_Book_Load(object sender, EventArgs e)
         {
+            pnl_instructions.Show();
+            pnl_bookDetails.Hide();
+
             // Load the member login state
             MemberLoginState loginState = MemberLoginStateManager.LoadLoginState();
 
@@ -92,9 +95,6 @@ namespace Library_Management_System
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
-
-            pnl_bookDetails.Hide();
-            pnl_instructions.Show();
 
             LoadAllBooks();
         }

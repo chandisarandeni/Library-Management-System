@@ -81,9 +81,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.pnl_instructions = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label23 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -104,6 +101,9 @@
             this.bookAuthor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pnl_instructions = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -116,10 +116,10 @@
             this.panel8.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.pnl_bookDetails.SuspendLayout();
-            this.pnl_instructions.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            this.pnl_instructions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Inquiries
@@ -393,7 +393,7 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(281, 662);
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(73, 662);
+            this.slidebar.Size = new System.Drawing.Size(281, 662);
             this.slidebar.TabIndex = 8;
             // 
             // panel8
@@ -453,7 +453,6 @@
             this.pnl_bookDetails.Controls.Add(this.label14);
             this.pnl_bookDetails.Controls.Add(this.label20);
             this.pnl_bookDetails.Controls.Add(this.label17);
-            this.pnl_bookDetails.Controls.Add(this.pnl_instructions);
             this.pnl_bookDetails.Location = new System.Drawing.Point(18, 52);
             this.pnl_bookDetails.Name = "pnl_bookDetails";
             this.pnl_bookDetails.Size = new System.Drawing.Size(375, 436);
@@ -699,36 +698,6 @@
             this.label17.TabIndex = 69;
             this.label17.Text = "Book Title";
             // 
-            // pnl_instructions
-            // 
-            this.pnl_instructions.Controls.Add(this.pictureBox1);
-            this.pnl_instructions.Controls.Add(this.label23);
-            this.pnl_instructions.Location = new System.Drawing.Point(16, 82);
-            this.pnl_instructions.Name = "pnl_instructions";
-            this.pnl_instructions.Size = new System.Drawing.Size(341, 247);
-            this.pnl_instructions.TabIndex = 34;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(127, 38);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(102, 95);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(6, 158);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(323, 17);
-            this.label23.TabIndex = 24;
-            this.label23.Text = "Click on cell and view book details";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -956,15 +925,46 @@
             this.label3.Text = "_________________________________________________";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pnl_instructions
+            // 
+            this.pnl_instructions.Controls.Add(this.pictureBox1);
+            this.pnl_instructions.Controls.Add(this.label23);
+            this.pnl_instructions.Location = new System.Drawing.Point(689, 208);
+            this.pnl_instructions.Name = "pnl_instructions";
+            this.pnl_instructions.Size = new System.Drawing.Size(341, 247);
+            this.pnl_instructions.TabIndex = 35;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(127, 38);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(102, 95);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(6, 158);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(323, 17);
+            this.label23.TabIndex = 24;
+            this.label23.Text = "Click on cell and view book details";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Member_View_Search_Book
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 662);
-            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.slidebar);
+            this.Controls.Add(this.pnl_instructions);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.slidebar);
+            this.Controls.Add(this.guna2Panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Member_View_Search_Book";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -986,12 +986,12 @@
             this.guna2Panel2.PerformLayout();
             this.pnl_bookDetails.ResumeLayout(false);
             this.pnl_bookDetails.PerformLayout();
-            this.pnl_instructions.ResumeLayout(false);
-            this.pnl_instructions.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            this.pnl_instructions.ResumeLayout(false);
+            this.pnl_instructions.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -141,6 +141,7 @@
             // 
             // txt_memberDescription
             // 
+            this.txt_memberDescription.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_memberDescription.Location = new System.Drawing.Point(234, 229);
             this.txt_memberDescription.Name = "txt_memberDescription";
             this.txt_memberDescription.Size = new System.Drawing.Size(312, 168);
@@ -275,6 +276,7 @@
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseCompatibleTextRendering = true;
             this.btn_Cancel.UseVisualStyleBackColor = false;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // btn_Submit
             // 
@@ -313,7 +315,7 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(281, 662);
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(73, 662);
+            this.slidebar.Size = new System.Drawing.Size(281, 662);
             this.slidebar.TabIndex = 14;
             // 
             // panel1
@@ -606,8 +608,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 662);
-            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.slidebar);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.btn_Submit);

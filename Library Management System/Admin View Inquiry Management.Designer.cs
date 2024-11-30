@@ -33,6 +33,8 @@
             this.btn_Reservation = new System.Windows.Forms.Button();
             this.listView_recentInquiries = new System.Windows.Forms.ListView();
             this.memberFullName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.memberContact = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.memberDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel9 = new System.Windows.Forms.Panel();
             this.btn_Inventory = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -47,6 +49,15 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_showMemberDescription = new System.Windows.Forms.Label();
+            this.lbl_showMemberContact = new System.Windows.Forms.Label();
+            this.lbl_showMemberName = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.slidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -67,17 +78,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btn_Borrow = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.memberContact = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.memberDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label32 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lbl_showMemberDescription = new System.Windows.Forms.Label();
-            this.lbl_showMemberContact = new System.Windows.Forms.Label();
-            this.lbl_showMemberName = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -131,6 +131,16 @@
             // 
             this.memberFullName.Text = "Name";
             this.memberFullName.Width = 81;
+            // 
+            // memberContact
+            // 
+            this.memberContact.Text = "Contact";
+            this.memberContact.Width = 97;
+            // 
+            // memberDescription
+            // 
+            this.memberDescription.Text = "Description";
+            this.memberDescription.Width = 113;
             // 
             // panel9
             // 
@@ -301,6 +311,96 @@
             this.guna2Panel2.Size = new System.Drawing.Size(411, 506);
             this.guna2Panel2.TabIndex = 16;
             // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(182, 163);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(22, 23);
+            this.label32.TabIndex = 40;
+            this.label32.Text = ":";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(181, 103);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(22, 23);
+            this.label12.TabIndex = 42;
+            this.label12.Text = ":";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(179, 64);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(22, 23);
+            this.label8.TabIndex = 43;
+            this.label8.Text = ":";
+            // 
+            // lbl_showMemberDescription
+            // 
+            this.lbl_showMemberDescription.AutoSize = true;
+            this.lbl_showMemberDescription.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showMemberDescription.Location = new System.Drawing.Point(43, 210);
+            this.lbl_showMemberDescription.Name = "lbl_showMemberDescription";
+            this.lbl_showMemberDescription.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showMemberDescription.TabIndex = 44;
+            this.lbl_showMemberDescription.Text = "Sample Data";
+            // 
+            // lbl_showMemberContact
+            // 
+            this.lbl_showMemberContact.AutoSize = true;
+            this.lbl_showMemberContact.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showMemberContact.Location = new System.Drawing.Point(218, 103);
+            this.lbl_showMemberContact.Name = "lbl_showMemberContact";
+            this.lbl_showMemberContact.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showMemberContact.TabIndex = 46;
+            this.lbl_showMemberContact.Text = "Sample Data";
+            // 
+            // lbl_showMemberName
+            // 
+            this.lbl_showMemberName.AutoSize = true;
+            this.lbl_showMemberName.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showMemberName.Location = new System.Drawing.Point(216, 64);
+            this.lbl_showMemberName.Name = "lbl_showMemberName";
+            this.lbl_showMemberName.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showMemberName.TabIndex = 47;
+            this.lbl_showMemberName.Text = "Sample Data";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(18, 163);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(142, 23);
+            this.label30.TabIndex = 48;
+            this.label30.Text = "Description";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(18, 103);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 23);
+            this.label10.TabIndex = 50;
+            this.label10.Text = "Contact";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(16, 64);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 23);
+            this.label6.TabIndex = 51;
+            this.label6.Text = "Name";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -329,7 +429,7 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(300, 662);
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(73, 662);
+            this.slidebar.Size = new System.Drawing.Size(300, 662);
             this.slidebar.TabIndex = 13;
             // 
             // panel1
@@ -539,115 +639,15 @@
             this.panel6.Size = new System.Drawing.Size(297, 58);
             this.panel6.TabIndex = 3;
             // 
-            // memberContact
-            // 
-            this.memberContact.Text = "Contact";
-            this.memberContact.Width = 97;
-            // 
-            // memberDescription
-            // 
-            this.memberDescription.Text = "Description";
-            this.memberDescription.Width = 113;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(182, 163);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(22, 23);
-            this.label32.TabIndex = 40;
-            this.label32.Text = ":";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(181, 103);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(22, 23);
-            this.label12.TabIndex = 42;
-            this.label12.Text = ":";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(179, 64);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(22, 23);
-            this.label8.TabIndex = 43;
-            this.label8.Text = ":";
-            // 
-            // lbl_showMemberDescription
-            // 
-            this.lbl_showMemberDescription.AutoSize = true;
-            this.lbl_showMemberDescription.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_showMemberDescription.Location = new System.Drawing.Point(43, 210);
-            this.lbl_showMemberDescription.Name = "lbl_showMemberDescription";
-            this.lbl_showMemberDescription.Size = new System.Drawing.Size(142, 22);
-            this.lbl_showMemberDescription.TabIndex = 44;
-            this.lbl_showMemberDescription.Text = "Sample Data";
-            // 
-            // lbl_showMemberContact
-            // 
-            this.lbl_showMemberContact.AutoSize = true;
-            this.lbl_showMemberContact.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_showMemberContact.Location = new System.Drawing.Point(218, 103);
-            this.lbl_showMemberContact.Name = "lbl_showMemberContact";
-            this.lbl_showMemberContact.Size = new System.Drawing.Size(142, 22);
-            this.lbl_showMemberContact.TabIndex = 46;
-            this.lbl_showMemberContact.Text = "Sample Data";
-            // 
-            // lbl_showMemberName
-            // 
-            this.lbl_showMemberName.AutoSize = true;
-            this.lbl_showMemberName.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_showMemberName.Location = new System.Drawing.Point(216, 64);
-            this.lbl_showMemberName.Name = "lbl_showMemberName";
-            this.lbl_showMemberName.Size = new System.Drawing.Size(142, 22);
-            this.lbl_showMemberName.TabIndex = 47;
-            this.lbl_showMemberName.Text = "Sample Data";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(18, 163);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(142, 23);
-            this.label30.TabIndex = 48;
-            this.label30.Text = "Description";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(18, 103);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(118, 29);
-            this.label10.TabIndex = 50;
-            this.label10.Text = "Contact";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 64);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 29);
-            this.label6.TabIndex = 51;
-            this.label6.Text = "Name";
-            // 
             // Admin_View_Inquiry_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 662);
+            this.Controls.Add(this.slidebar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.slidebar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_View_Inquiry_Management";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -682,7 +682,7 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(300, 662);
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(73, 653);
+            this.slidebar.Size = new System.Drawing.Size(300, 653);
             this.slidebar.TabIndex = 7;
             // 
             // panel1
@@ -902,6 +902,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1102, 653);
+            this.Controls.Add(this.slidebar);
             this.Controls.Add(this.lbl_deleteMemberHover);
             this.Controls.Add(this.lbl_editMemberHover);
             this.Controls.Add(this.lbl_addMemberHover);
@@ -910,7 +911,6 @@
             this.Controls.Add(this.btn_editMember);
             this.Controls.Add(this.btn_addMember);
             this.Controls.Add(this.btn_deleteMember);
-            this.Controls.Add(this.slidebar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_View_Member_Management";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

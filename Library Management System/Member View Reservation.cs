@@ -199,6 +199,8 @@ namespace Library_Management_System
                         pnl_reservationForm.Hide(); // Hide the reservation form panel
 
                         MessageBox.Show("Book not found.");
+
+                        txt_bookID.Clear(); // Clear the input field
                     }
                 }
             }
@@ -326,6 +328,14 @@ namespace Library_Management_System
             Member_View_Inquiries memberViewInquiries = new Member_View_Inquiries();
             memberViewInquiries.Show();
             this.Hide();
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            pnl_reservationForm.Hide();
+            pnl_bookDetails.Hide();
+
+            txt_bookID.Clear();
         }
     }
 }

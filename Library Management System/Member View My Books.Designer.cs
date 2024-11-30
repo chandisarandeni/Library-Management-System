@@ -480,7 +480,7 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(281, 662);
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(73, 662);
+            this.slidebar.Size = new System.Drawing.Size(281, 662);
             this.slidebar.TabIndex = 8;
             // 
             // panel8
@@ -528,9 +528,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 662);
+            this.Controls.Add(this.slidebar);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.slidebar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel3);
