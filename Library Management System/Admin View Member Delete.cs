@@ -15,7 +15,7 @@ namespace Library_Management_System
     public partial class Admin_View_Member_Delete : Form
     {
         bool slidebarExpand;
-        public Admin_View_Member_Delete()
+        public Admin_View_Member_Delete(string nic)
         {
             InitializeComponent();
 
@@ -28,8 +28,10 @@ namespace Library_Management_System
             btn_Inventory.TabStop = false;
             btn_Inquiries.TabStop = false;
 
-
+            memberNIC = nic;
         }
+
+        private string memberNIC;
 
         private void Admin_View_Member_Delete_Load(object sender, EventArgs e)
         {
@@ -121,7 +123,54 @@ namespace Library_Management_System
             lbl_dot2.Hide();
             lbl_showAdminID.Hide();
             lbl_showAdminName.Hide();
+
+
+            LoadMemberDetails(memberNIC);
         }
+
+        private void LoadMemberDetails(string nic)
+        {
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string query = "SELECT * FROM libraryMember WHERE memberNIC = @memberNIC";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@memberNIC", nic);
+
+                    connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        lbl_showMemberFullName.Text = reader["memberFullName"].ToString();
+                        lbl_showMemberNIC.Text = reader["memberNIC"].ToString();
+                        lbl_showMemberAddress.Text = reader["memberAddress"].ToString();
+                        lbl_showMemberGender.Text = reader["memberGender"].ToString();
+                        lbl_showMemberContact.Text = reader["memberContact"].ToString();
+                        showMemberEmail.Text = reader["memberEmail"].ToString();
+                        lbl_showMemberID.Text = reader["memberID"].ToString();
+                        lbl_showMemberRegisterDate.Text = Convert.ToDateTime(reader["memberRegistrationDate"]).ToString("yyyy-MM-dd");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Member not found.");
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+
 
         private void slidebarTimer_Tick(object sender, EventArgs e)
         {
@@ -245,5 +294,55 @@ namespace Library_Management_System
             adminViewMemberManagement.Show();
             this.Hide();
         }
+
+        private void btn_registerBook_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void btn_deleteMember_Click(object sender, EventArgs e)
+        {
+            // Confirm deletion
+            var confirmResult = MessageBox.Show("Are you sure you want to delete this member?", "Confirm Delete", MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+                string query = "DELETE FROM libraryMember WHERE memberNIC = @memberNIC";
+
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        SqlCommand cmd = new SqlCommand(query, connection);
+                        cmd.Parameters.AddWithValue("@memberNIC", memberNIC); // Use the current member's NIC
+
+                        connection.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Member deleted successfully.");
+                            // Optionally, redirect to another form or refresh the current one
+                            Admin_View_Member_Management adminViewMemberManagement = new Admin_View_Member_Management();
+                            adminViewMemberManagement.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Member not found.");
+                        }
+                    }
+                }
+                catch (SqlException sqlEx)
+                {
+                    MessageBox.Show("SQL Error: " + sqlEx.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+            }
     }
 }

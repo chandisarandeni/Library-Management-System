@@ -29,6 +29,8 @@ namespace Library_Management_System
             btn_Inquiries.TabStop = false;
         }
 
+        
+
         Timer textTimer = new Timer { Interval = 30 };
         int textPosition = 0;
         string hoverText = "";
@@ -222,14 +224,14 @@ namespace Library_Management_System
 
         private void btn_editMember_Click(object sender, EventArgs e)
         {
-            Admin_View_Member_Edit adminViewMemberEdit = new Admin_View_Member_Edit();
+            Admin_View_Member_Edit adminViewMemberEdit = new Admin_View_Member_Edit(txt_memberNIC.Text);
             adminViewMemberEdit.Show();
             this.Hide();
         }
 
         private void btn_deleteMember_Click(object sender, EventArgs e)
         {
-            Admin_View_Member_Delete adminViewMemberDelete = new Admin_View_Member_Delete();
+            Admin_View_Member_Delete adminViewMemberDelete = new Admin_View_Member_Delete(txt_memberNIC.Text);
             adminViewMemberDelete.Show();
             this.Hide();
         }
@@ -348,6 +350,58 @@ namespace Library_Management_System
             Admin_View_Inquiry_Management adminViewInquiryManagement = new Admin_View_Inquiry_Management();
             adminViewInquiryManagement.Show();
             this.Hide();
+        }
+
+        private void btn_seachMember_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string memberNIC = txt_memberNIC.Text;
+
+            string query = "SELECT * FROM libraryMember WHERE memberNIC = @memberNIC";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.Add("@memberNIC", SqlDbType.NVarChar).Value = memberNIC;
+
+                    connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    pnl_memberDetails.Show();
+                    pnl_instructions.Hide();
+
+                    if (reader.Read())
+                    {
+                        lbl_showMemberID.Text = reader["memberID"].ToString();
+                        lbl_showMemberFullName.Text = reader["memberFullName"].ToString();
+                        lbl_showMemberNIC.Text = reader["memberNIC"].ToString();
+                        lbl_showMemberAddress.Text = reader["memberAddress"].ToString();
+                        lbl_showMemberGender.Text = reader["memberGender"].ToString();
+                        lbl_showMemberContact.Text = reader["memberContact"].ToString();
+                        showMemberEmail.Text = reader["memberEmail"].ToString();
+                        lbl_showMemberRegistrationDate.Text = reader["memberRegistrationDate"].ToString();
+
+                        pnl_memberDetails.Show();
+                        pnl_instructions.Hide();
+                    }
+                    else
+                    {
+                        pnl_memberDetails.Hide();
+                        pnl_instructions.Show();
+                        MessageBox.Show("Member not found. Please check the NIC.");
+                    }
+                }
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show("SQL Error: " + sqlEx.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
     }
 }

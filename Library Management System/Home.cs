@@ -86,56 +86,60 @@ namespace Library_Management_System
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            if (txt_memberUsername.Text == "./admin") { 
+            if (txt_memberUsername.Text == "./admin")
+            {
                 AdminLogin adminLogin = new AdminLogin();
                 adminLogin.Show();
                 this.Hide();
             }
-
-            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
-            string memberEmail = txt_memberUsername.Text;
-            string memberPassword = txt_memberPassword.Text;
-
-            string query = "SELECT COUNT(*) FROM libraryMember WHERE memberEmail = @memberEmail AND memberPassword = @memberPassword";
-
-            try
+            else
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+                string memberEmail = txt_memberUsername.Text;
+                string memberPassword = txt_memberPassword.Text;
+
+                string query = "SELECT COUNT(*) FROM libraryMember WHERE memberEmail = @memberEmail AND memberPassword = @memberPassword";
+
+                try
                 {
-                    SqlCommand cmd = new SqlCommand(query, connection);
-                    cmd.Parameters.AddWithValue("@memberEmail", memberEmail);
-                    cmd.Parameters.AddWithValue("@memberPassword", memberPassword);
-
-                    connection.Open();
-                    int result = (int)cmd.ExecuteScalar();
-
-                    if (result > 0)
+                    using (SqlConnection connection = new SqlConnection(connectionString))
                     {
-                        // Save login state
-                        MemberLoginState loginState = new MemberLoginState
+                        SqlCommand cmd = new SqlCommand(query, connection);
+                        cmd.Parameters.AddWithValue("@memberEmail", memberEmail);
+                        cmd.Parameters.AddWithValue("@memberPassword", memberPassword);
+
+                        connection.Open();
+                        int result = (int)cmd.ExecuteScalar();
+
+                        if (result > 0)
                         {
-                            IsLoggedIn = true,
-                            MemberEmail = memberEmail
-                        };
-                        MemberLoginStateManager.SaveLoginState(loginState);
+                            // Save login state
+                            MemberLoginState loginState = new MemberLoginState
+                            {
+                                IsLoggedIn = true,
+                                MemberEmail = memberEmail
+                            };
+                            MemberLoginStateManager.SaveLoginState(loginState);
 
 
-                        Member_Dashboard memberDashboard = new Member_Dashboard();
-                        memberDashboard.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid email or password.");
-                        txt_memberUsername.Clear();
-                        txt_memberPassword.Clear();
+                            Member_Dashboard memberDashboard = new Member_Dashboard();
+                            memberDashboard.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid email or password.");
+                            txt_memberUsername.Clear();
+                            txt_memberPassword.Clear();
+                        }
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
+            
 
         }
 

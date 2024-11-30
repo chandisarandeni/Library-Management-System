@@ -29,6 +29,14 @@ namespace Library_Management_System
             btn_Inquiries.TabStop = false;
         }
 
+        private string memberNIC;
+
+        public Admin_View_Member_Edit(string nic)
+        {
+            InitializeComponent();
+            memberNIC = nic; // Store the passed NIC
+        }
+
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             Admin_View_Member_Management adminViewMemberManagement = new Admin_View_Member_Management();
@@ -126,6 +134,52 @@ namespace Library_Management_System
             lbl_dot2.Hide();
             lbl_showAdminID.Hide();
             lbl_showAdminName.Hide();
+
+
+
+
+            LoadMemberDetails(memberNIC);
+        }
+
+
+        private void LoadMemberDetails(string nic)
+        {
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string query = "SELECT * FROM libraryMember WHERE memberNIC = @memberNIC";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@memberNIC", nic);
+
+                    connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        // Populate the form fields with member data
+                        txt_memberFullName.Text = reader["memberFullName"].ToString();
+                        txt_memberNIC.Text = reader["memberNIC"].ToString();
+                        txt_memberAddress.Text = reader["memberAddress"].ToString();
+                        txt_memberGender.Text = reader["memberGender"].ToString();
+                        txt_memberContact.Text = reader["memberContact"].ToString();
+                        txt_memberEmail.Text = reader["memberEmail"].ToString();
+
+                        lbl_showMemberID.Text = reader["memberID"].ToString();
+                        lbl_showMemberRegistrationDate.Text = Convert.ToDateTime(reader["memberRegistrationDate"]).ToString("yyyy-MM-dd");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Member not found.");
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
         }
 
         private void slidebarTimer_Tick(object sender, EventArgs e)
@@ -242,6 +296,44 @@ namespace Library_Management_System
             Admin_View_Inquiry_Management adminViewInquiryManagement = new Admin_View_Inquiry_Management();
             adminViewInquiryManagement.Show();
             this.Hide();
+        }
+
+        private void btn_editBook_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string updateQuery = "UPDATE libraryMember SET memberFullName = @fullName, memberAddress = @address, " +
+                                 "memberGender = @gender, memberContact = @contact, memberEmail = @email " +
+                                 "WHERE memberNIC = @memberNIC";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(updateQuery, connection);
+                    cmd.Parameters.AddWithValue("@fullName", txt_memberFullName.Text);
+                    cmd.Parameters.AddWithValue("@address", txt_memberAddress.Text);
+                    cmd.Parameters.AddWithValue("@gender", txt_memberGender.Text);
+                    cmd.Parameters.AddWithValue("@contact", txt_memberContact.Text);
+                    cmd.Parameters.AddWithValue("@email", txt_memberEmail.Text);
+                    cmd.Parameters.AddWithValue("@memberNIC", memberNIC); // Use passed NIC
+
+                    connection.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Member details updated successfully.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update failed.");
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
         }
     }
 }

@@ -60,7 +60,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.btn_Inquiries = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_registerBook = new System.Windows.Forms.Button();
+            this.btn_deleteMember = new System.Windows.Forms.Button();
             this.slidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnl_memberDetails = new System.Windows.Forms.Panel();
@@ -466,18 +466,19 @@
             this.label2.Text = "Delete Member";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_registerBook
+            // btn_deleteMember
             // 
-            this.btn_registerBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_registerBook.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_registerBook.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_registerBook.Location = new System.Drawing.Point(972, 506);
-            this.btn_registerBook.Name = "btn_registerBook";
-            this.btn_registerBook.Size = new System.Drawing.Size(111, 34);
-            this.btn_registerBook.TabIndex = 39;
-            this.btn_registerBook.Text = "Delete";
-            this.btn_registerBook.UseCompatibleTextRendering = true;
-            this.btn_registerBook.UseVisualStyleBackColor = false;
+            this.btn_deleteMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_deleteMember.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_deleteMember.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_deleteMember.Location = new System.Drawing.Point(972, 506);
+            this.btn_deleteMember.Name = "btn_deleteMember";
+            this.btn_deleteMember.Size = new System.Drawing.Size(111, 34);
+            this.btn_deleteMember.TabIndex = 39;
+            this.btn_deleteMember.Text = "Delete";
+            this.btn_deleteMember.UseCompatibleTextRendering = true;
+            this.btn_deleteMember.UseVisualStyleBackColor = false;
+            this.btn_deleteMember.Click += new System.EventHandler(this.btn_deleteMember_Click);
             // 
             // slidebarTimer
             // 
@@ -767,7 +768,7 @@
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.slidebar);
-            this.Controls.Add(this.btn_registerBook);
+            this.Controls.Add(this.btn_deleteMember);
             this.Controls.Add(this.guna2Panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_View_Member_Delete";
@@ -829,7 +830,7 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button btn_Inquiries;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_registerBook;
+        private System.Windows.Forms.Button btn_deleteMember;
         private System.Windows.Forms.Timer slidebarTimer;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Panel pnl_memberDetails;

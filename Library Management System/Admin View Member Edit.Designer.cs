@@ -80,8 +80,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.lbl_bookRegistrationDate = new System.Windows.Forms.Label();
-            this.lbl_showBookID = new System.Windows.Forms.Label();
+            this.lbl_showMemberRegistrationDate = new System.Windows.Forms.Label();
+            this.lbl_showMemberID = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -456,6 +456,7 @@
             this.btn_editBook.Text = "Edit";
             this.btn_editBook.UseCompatibleTextRendering = true;
             this.btn_editBook.UseVisualStyleBackColor = false;
+            this.btn_editBook.Click += new System.EventHandler(this.btn_editBook_Click);
             // 
             // guna2Panel1
             // 
@@ -493,8 +494,8 @@
             this.pnl_bookDetails.Controls.Add(this.label10);
             this.pnl_bookDetails.Controls.Add(this.label7);
             this.pnl_bookDetails.Controls.Add(this.label25);
-            this.pnl_bookDetails.Controls.Add(this.lbl_bookRegistrationDate);
-            this.pnl_bookDetails.Controls.Add(this.lbl_showBookID);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showMemberRegistrationDate);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showMemberID);
             this.pnl_bookDetails.Controls.Add(this.label28);
             this.pnl_bookDetails.Controls.Add(this.label26);
             this.pnl_bookDetails.Location = new System.Drawing.Point(49, 70);
@@ -686,25 +687,25 @@
             this.label25.Text = "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_bookRegistrationDate
+            // lbl_showMemberRegistrationDate
             // 
-            this.lbl_bookRegistrationDate.AutoSize = true;
-            this.lbl_bookRegistrationDate.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_bookRegistrationDate.Location = new System.Drawing.Point(572, 118);
-            this.lbl_bookRegistrationDate.Name = "lbl_bookRegistrationDate";
-            this.lbl_bookRegistrationDate.Size = new System.Drawing.Size(119, 20);
-            this.lbl_bookRegistrationDate.TabIndex = 24;
-            this.lbl_bookRegistrationDate.Text = "Sample Data";
+            this.lbl_showMemberRegistrationDate.AutoSize = true;
+            this.lbl_showMemberRegistrationDate.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showMemberRegistrationDate.Location = new System.Drawing.Point(572, 118);
+            this.lbl_showMemberRegistrationDate.Name = "lbl_showMemberRegistrationDate";
+            this.lbl_showMemberRegistrationDate.Size = new System.Drawing.Size(119, 20);
+            this.lbl_showMemberRegistrationDate.TabIndex = 24;
+            this.lbl_showMemberRegistrationDate.Text = "Sample Data";
             // 
-            // lbl_showBookID
+            // lbl_showMemberID
             // 
-            this.lbl_showBookID.AutoSize = true;
-            this.lbl_showBookID.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_showBookID.Location = new System.Drawing.Point(572, 42);
-            this.lbl_showBookID.Name = "lbl_showBookID";
-            this.lbl_showBookID.Size = new System.Drawing.Size(119, 20);
-            this.lbl_showBookID.TabIndex = 24;
-            this.lbl_showBookID.Text = "Sample Data";
+            this.lbl_showMemberID.AutoSize = true;
+            this.lbl_showMemberID.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showMemberID.Location = new System.Drawing.Point(572, 42);
+            this.lbl_showMemberID.Name = "lbl_showMemberID";
+            this.lbl_showMemberID.Size = new System.Drawing.Size(119, 20);
+            this.lbl_showMemberID.TabIndex = 24;
+            this.lbl_showMemberID.Text = "Sample Data";
             // 
             // label28
             // 
@@ -722,9 +723,9 @@
             this.label26.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(566, 10);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(106, 23);
+            this.label26.Size = new System.Drawing.Size(163, 29);
             this.label26.TabIndex = 24;
-            this.label26.Text = "Book ID:";
+            this.label26.Text = "Member ID:";
             // 
             // label2
             // 
@@ -824,8 +825,8 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Panel pnl_bookDetails;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label lbl_bookRegistrationDate;
-        private System.Windows.Forms.Label lbl_showBookID;
+        private System.Windows.Forms.Label lbl_showMemberRegistrationDate;
+        private System.Windows.Forms.Label lbl_showMemberID;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label2;

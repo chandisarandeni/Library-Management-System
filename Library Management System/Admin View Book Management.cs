@@ -344,5 +344,63 @@ namespace Library_Management_System
             adminViewInquiryManagement.Show();
             this.Hide();
         }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string bookID = txt_bookID.Text;
+
+            string query = "SELECT * FROM Book WHERE bookID = @bookID";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.Add("@bookID", SqlDbType.NVarChar).Value = bookID;
+
+                    connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    pnl_bookDetails.Show();
+
+                    if (reader.Read())
+                    {
+                        lbl_showBookID.Text = reader["bookID"].ToString();
+                        lbl_showBookTitle.Text = reader["bookTitle"].ToString();
+                        lbl_showBookAuthor.Text = reader["bookAuthor"].ToString();
+                        lbl_showBookISBN.Text = reader["bookISBN"].ToString();
+                        lbl_showBookCategory.Text = reader["bookCategory"].ToString();
+                        lbl_showBookType.Text = reader["bookType"].ToString();
+                        lbl_showBookLanguage.Text = reader["bookLanguage"].ToString();
+                        lbl_showBookAdditional.Text = reader["bookAdditional"].ToString();
+                        lbl_showBookRegistrationDate.Text = reader["bookRegistrationDate"].ToString();
+
+                        if (reader["isAvailable"].ToString().ToLower() != "true")
+                        {
+                            pnl_instructions.Show();
+                            MessageBox.Show("This book is currently not available.");
+                        }
+                        else
+                        {
+                            pnl_instructions.Hide();
+                        }
+                    }
+                    else
+                    {
+                        pnl_instructions.Show();
+                        MessageBox.Show("Book not found. Please check the Book ID.");
+                    }
+                }
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show("SQL Error: " + sqlEx.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
     }
 }

@@ -179,6 +179,7 @@
             this.btn_seachMember.Text = "Search";
             this.btn_seachMember.UseCompatibleTextRendering = true;
             this.btn_seachMember.UseVisualStyleBackColor = false;
+            this.btn_seachMember.Click += new System.EventHandler(this.btn_seachMember_Click);
             // 
             // txt_memberNIC
             // 

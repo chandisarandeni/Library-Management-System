@@ -33,7 +33,7 @@
             this.btn_Back = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_resetPassword = new System.Windows.Forms.Button();
-            this.checkBox_condirmPassword = new System.Windows.Forms.CheckBox();
+            this.checkBox_confirmPassword = new System.Windows.Forms.CheckBox();
             this.lbl_dot2 = new System.Windows.Forms.Label();
             this.lbl_confirmPassword = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -107,18 +107,19 @@
             this.btn_resetPassword.Text = "Reset";
             this.btn_resetPassword.UseCompatibleTextRendering = true;
             this.btn_resetPassword.UseVisualStyleBackColor = false;
+            this.btn_resetPassword.Click += new System.EventHandler(this.btn_resetPassword_Click);
             // 
-            // checkBox_condirmPassword
+            // checkBox_confirmPassword
             // 
-            this.checkBox_condirmPassword.AutoSize = true;
-            this.checkBox_condirmPassword.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_condirmPassword.Location = new System.Drawing.Point(1000, 501);
-            this.checkBox_condirmPassword.Name = "checkBox_condirmPassword";
-            this.checkBox_condirmPassword.Size = new System.Drawing.Size(61, 20);
-            this.checkBox_condirmPassword.TabIndex = 62;
-            this.checkBox_condirmPassword.Text = "Show";
-            this.checkBox_condirmPassword.UseVisualStyleBackColor = true;
-            this.checkBox_condirmPassword.CheckedChanged += new System.EventHandler(this.checkBox_condirmPassword_CheckedChanged);
+            this.checkBox_confirmPassword.AutoSize = true;
+            this.checkBox_confirmPassword.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_confirmPassword.Location = new System.Drawing.Point(1000, 501);
+            this.checkBox_confirmPassword.Name = "checkBox_confirmPassword";
+            this.checkBox_confirmPassword.Size = new System.Drawing.Size(61, 20);
+            this.checkBox_confirmPassword.TabIndex = 62;
+            this.checkBox_confirmPassword.Text = "Show";
+            this.checkBox_confirmPassword.UseVisualStyleBackColor = true;
+            this.checkBox_confirmPassword.CheckedChanged += new System.EventHandler(this.checkBox_condirmPassword_CheckedChanged);
             // 
             // lbl_dot2
             // 
@@ -344,7 +345,7 @@
             this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_resetPassword);
-            this.Controls.Add(this.checkBox_condirmPassword);
+            this.Controls.Add(this.checkBox_confirmPassword);
             this.Controls.Add(this.lbl_dot2);
             this.Controls.Add(this.lbl_confirmPassword);
             this.Controls.Add(this.label1);
@@ -384,7 +385,7 @@
         private System.Windows.Forms.Button btn_Back;
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_resetPassword;
-        private System.Windows.Forms.CheckBox checkBox_condirmPassword;
+        private System.Windows.Forms.CheckBox checkBox_confirmPassword;
         private System.Windows.Forms.Label lbl_dot2;
         private System.Windows.Forms.Label lbl_confirmPassword;
         private System.Windows.Forms.Label label1;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -40,7 +41,7 @@ namespace Library_Management_System
             btn_resetPassword.Hide();
             btn_Cancel.Hide();
             checkBox_newPassword.Hide();
-            checkBox_condirmPassword.Hide();
+            checkBox_confirmPassword.Hide();
         }
 
         private void checkBox_newPassword_CheckedChanged(object sender, EventArgs e)
@@ -57,7 +58,7 @@ namespace Library_Management_System
 
         private void checkBox_condirmPassword_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox_condirmPassword.Checked)
+            if (checkBox_confirmPassword.Checked)
             {
                 txt_confirmPassword.UseSystemPasswordChar = false;
             }
@@ -83,21 +84,113 @@ namespace Library_Management_System
 
         private void btn_Verify_Click(object sender, EventArgs e)
         {
-            lbl_passwordResetInstructions.Hide();
+            lbl_passwordResetInstructions.Show();
 
-            lbl_verifiedSuccessfully.Show();
-            lbl_newPassword.Show();
-            lbl_confirmPassword.Show();
-            lbl_dot1.Show();
-            lbl_dot2.Show();
-            txt_newPassword.Show();
-            txt_confirmPassword.Show();
-            checkBox_newPassword.Show();
-            checkBox_condirmPassword.Show();
-            lbl_redStar.Show();
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string memberEmail = txt_memberUsername.Text;
+            string memberNIC = txt_memberNIC.Text;
 
-            btn_resetPassword.Show();
-            btn_Cancel.Show();
+            string verifyQuery = "SELECT COUNT(*) FROM libraryMember WHERE memberEmail = @memberEmail AND memberNIC = @memberNIC";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand verifyCmd = new SqlCommand(verifyQuery, connection);
+                    verifyCmd.Parameters.Add("@memberEmail", SqlDbType.NVarChar).Value = memberEmail;
+                    verifyCmd.Parameters.Add("@memberNIC", SqlDbType.NVarChar).Value = memberNIC;
+
+                    connection.Open();
+                    int result = (int)verifyCmd.ExecuteScalar();
+
+                    if (result > 0)
+                    {
+                        lbl_passwordResetInstructions.Hide();
+
+                        lbl_redStar.Show();
+                        lbl_verifiedSuccessfully.Show();
+                        lbl_newPassword.Show();
+                        lbl_confirmPassword.Show();
+                        lbl_dot1.Show();
+                        lbl_dot2.Show();
+                        txt_newPassword.Show();
+                        txt_confirmPassword.Show();
+                        checkBox_newPassword.Show();
+                        checkBox_confirmPassword.Show();
+                        btn_resetPassword.Show();
+                        btn_Cancel.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or NIC. Please check again!");
+                        txt_memberUsername.Clear();
+                        txt_memberNIC.Clear();
+                    }
+                }
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show("SQL Error: " + sqlEx.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void btn_resetPassword_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string memberEmail = txt_memberUsername.Text;
+            string memberNIC = txt_memberNIC.Text;
+            string newPassword = txt_newPassword.Text;
+            string confirmPassword = txt_confirmPassword.Text;
+
+            if (newPassword == confirmPassword)
+            {
+                string updateQuery = "UPDATE libraryMember SET memberPassword = @newPassword WHERE memberEmail = @memberEmail AND memberNIC = @memberNIC";
+
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        SqlCommand updateCmd = new SqlCommand(updateQuery, connection);
+                        updateCmd.Parameters.Add("@newPassword", SqlDbType.NVarChar).Value = newPassword;
+                        updateCmd.Parameters.Add("@memberEmail", SqlDbType.NVarChar).Value = memberEmail;
+                        updateCmd.Parameters.Add("@memberNIC", SqlDbType.NVarChar).Value = memberNIC;
+
+                        connection.Open();
+                        int rowsAffected = updateCmd.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Password updated successfully!");
+                            
+                            Home home = new Home();
+                            home.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Password update failed.");
+                        }
+                    }
+                }
+                catch (SqlException sqlEx)
+                {
+                    MessageBox.Show("SQL Error: " + sqlEx.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Passwords do not match.");
+                txt_newPassword.Clear();
+                txt_confirmPassword.Clear();
+            }
         }
     }
 }
