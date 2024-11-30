@@ -794,6 +794,7 @@
             this.btn_deleteBook.Text = "Delete";
             this.btn_deleteBook.UseCompatibleTextRendering = true;
             this.btn_deleteBook.UseVisualStyleBackColor = false;
+            this.btn_deleteBook.Click += new System.EventHandler(this.btn_deleteBook_Click);
             // 
             // Admin_View_Book_Delete
             // 

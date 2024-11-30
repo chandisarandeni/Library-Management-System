@@ -298,14 +298,14 @@ namespace Library_Management_System
 
         private void btn_editBook_Click_1(object sender, EventArgs e)
         {
-            Admin_View_Book_Edit adminViewBookEdit = new Admin_View_Book_Edit();
+            Admin_View_Book_Edit adminViewBookEdit = new Admin_View_Book_Edit(txt_bookID.Text);
             adminViewBookEdit.Show();
             this.Hide();
         }
 
         private void btn_deleteBook_Click(object sender, EventArgs e)
         {
-            Admin_View_Book_Delete adminViewBookDelete = new Admin_View_Book_Delete();
+            Admin_View_Book_Delete adminViewBookDelete = new Admin_View_Book_Delete(txt_bookID.Text);
             adminViewBookDelete.Show();
             this.Hide();
         }

@@ -466,6 +466,7 @@
             this.btn_editBook.Text = "Edit";
             this.btn_editBook.UseCompatibleTextRendering = true;
             this.btn_editBook.UseVisualStyleBackColor = false;
+            this.btn_editBook.Click += new System.EventHandler(this.btn_editBook_Click);
             // 
             // btn_Cancel
             // 

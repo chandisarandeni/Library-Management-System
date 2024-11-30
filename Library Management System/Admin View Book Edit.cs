@@ -15,7 +15,7 @@ namespace Library_Management_System
     public partial class Admin_View_Book_Edit : Form
     {
         bool slidebarExpand;
-        public Admin_View_Book_Edit()
+        public Admin_View_Book_Edit(string bookID)
         {
             InitializeComponent();
 
@@ -36,7 +36,11 @@ namespace Library_Management_System
             txt_bookType.TabIndex = 5;
             txt_bookLanguage.TabIndex = 6;
             txt_bookAdditional.TabIndex = 7;
+
+            this.bookID = bookID;
         }
+
+        private String bookID; 
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
@@ -142,7 +146,61 @@ namespace Library_Management_System
             lbl_dot2.Hide();
             lbl_showAdminID.Hide();
             lbl_showAdminName.Hide();
+
+
+            LoadBookDetails(bookID);
         }
+
+        private void LoadBookDetails(string bookID)
+        {
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string query = "SELECT * FROM Book WHERE bookID = @bookID";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@bookID", bookID);
+
+                    connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        // Populate text fields with book details
+                        txt_bookTitle.Text = reader["bookTitle"].ToString();
+                        txt_bookAuthor.Text = reader["bookAuthor"].ToString();
+                        txt_bookISBN.Text = reader["bookISBN"].ToString();
+                        txt_bookCategory.Text = reader["bookCategory"].ToString();
+                        txt_bookPublisher.Text = reader["bookPublisher"].ToString();
+                        txt_bookType.Text = reader["bookType"].ToString();
+                        txt_bookLanguage.Text = reader["bookLanguage"].ToString();
+                        txt_bookAdditional.Text = reader["bookAdditional"].ToString();
+
+                        lbl_bookID.Text = reader["bookID"].ToString();
+                        lbl_bookRegistrationDate.Text = Convert.ToDateTime(reader["bookRegistrationDate"]).ToString("yyyy-MM-dd");
+
+                        pnl_bookDetails.Show(); // Show book details
+                    }
+                    else
+                    {
+                        pnl_bookDetails.Hide();
+                        MessageBox.Show("Book not available.");
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+
 
         private void slidebarTimer_Tick(object sender, EventArgs e)
         {
@@ -251,6 +309,51 @@ namespace Library_Management_System
             Admin_View_Inquiry_Management adminViewInquiryManagement = new Admin_View_Inquiry_Management();
             adminViewInquiryManagement.Show();
             this.Hide();
+        }
+
+        private void btn_editBook_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string query = "UPDATE Book SET bookTitle = @bookTitle, bookAuthor = @bookAuthor, bookISBN = @bookISBN, " +
+                           "bookCategory = @bookCategory, bookPublisher = @bookPublisher, bookType = @bookType, " +
+                           "bookLanguage = @bookLanguage, bookAdditional = @bookAdditional WHERE bookID = @bookID";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@bookTitle", txt_bookTitle.Text);
+                    cmd.Parameters.AddWithValue("@bookAuthor", txt_bookAuthor.Text);
+                    cmd.Parameters.AddWithValue("@bookISBN", txt_bookISBN.Text);
+                    cmd.Parameters.AddWithValue("@bookCategory", txt_bookCategory.Text);
+                    cmd.Parameters.AddWithValue("@bookPublisher", txt_bookPublisher.Text);
+                    cmd.Parameters.AddWithValue("@bookType", txt_bookType.Text);
+                    cmd.Parameters.AddWithValue("@bookLanguage", txt_bookLanguage.Text);
+                    cmd.Parameters.AddWithValue("@bookAdditional", txt_bookAdditional.Text);
+                    cmd.Parameters.AddWithValue("@bookID", lbl_bookID.Text);
+
+                    connection.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Book details updated successfully.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to update book details.");
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
     }
 }
