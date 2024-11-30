@@ -92,7 +92,52 @@ namespace Library_Management_System
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+
+            pnl_bookDetails.Hide();
+            pnl_instructions.Show();
+
+            LoadAllBooks();
         }
+
+
+        private void LoadAllBooks()
+        {
+            listView_BookDetails.Items.Clear(); // Clear existing items
+
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string query = "SELECT bookID, bookTitle, bookAuthor FROM Book";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        ListViewItem item = new ListViewItem(reader["bookID"].ToString());
+                        item.SubItems.Add(reader["bookTitle"].ToString());
+                        item.SubItems.Add(reader["bookAuthor"].ToString());
+
+                        listView_BookDetails.Items.Add(item);
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+
+
+
 
         private void slidebarTimer_Tick(object sender, EventArgs e)
         {
@@ -145,6 +190,143 @@ namespace Library_Management_System
                 if (slidebarExpand)
                 {
                     slidebarTimer.Start(); // Start the timer to collapse the slidebar
+                }
+            }
+        }
+
+        private void btn_filter_Click(object sender, EventArgs e)
+        {
+            string bookCategory = txt_bookCategory.Text.Trim();
+            string bookLanguage = txt_bookLanguage.Text.Trim();
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+
+            string query = "SELECT bookID, bookTitle, bookAuthor FROM Book WHERE 1=1";
+
+            if (!string.IsNullOrEmpty(bookCategory))
+                query += " AND bookCategory = @bookCategory";
+
+            if (!string.IsNullOrEmpty(bookLanguage))
+                query += " AND bookLanguage = @bookLanguage";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+
+                    if (!string.IsNullOrEmpty(bookCategory))
+                        cmd.Parameters.AddWithValue("@bookCategory", bookCategory);
+
+                    if (!string.IsNullOrEmpty(bookLanguage))
+                        cmd.Parameters.AddWithValue("@bookLanguage", bookLanguage);
+
+                    connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    listView_BookDetails.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        ListViewItem item = new ListViewItem(reader["bookID"].ToString());
+                        item.SubItems.Add(reader["bookTitle"].ToString());
+                        item.SubItems.Add(reader["bookAuthor"].ToString());
+                        listView_BookDetails.Items.Add(item);
+                    }
+
+                    if (listView_BookDetails.Items.Count == 0)
+                    {
+                        MessageBox.Show("No books found matching the criteria.");
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            string searchQuery = txt_detail.Text.Trim(); // Input for search
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string query = @"SELECT bookID, bookTitle, bookAuthor 
+                     FROM Book 
+                     WHERE bookID LIKE @search OR bookTitle LIKE @search";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@search", "%" + searchQuery + "%");
+                    connection.Open();
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    listView_BookDetails.Items.Clear(); // Clear existing data
+
+                    while (reader.Read())
+                    {
+                        ListViewItem item = new ListViewItem(reader["bookID"].ToString());
+                        item.SubItems.Add(reader["bookTitle"].ToString());
+                        item.SubItems.Add(reader["bookAuthor"].ToString());
+                        listView_BookDetails.Items.Add(item);
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void listView_BookDetails_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView_BookDetails.SelectedItems.Count > 0)
+            {
+                string bookID = listView_BookDetails.SelectedItems[0].SubItems[0].Text;
+
+                string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+                string query = "SELECT * FROM Book WHERE bookID = @bookID";
+
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        pnl_instructions.Hide();
+                        pnl_bookDetails.Show();
+
+                        SqlCommand cmd = new SqlCommand(query, connection);
+                        cmd.Parameters.AddWithValue("@bookID", bookID);
+                        connection.Open();
+
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            lbl_showBookID.Text = reader["bookID"].ToString();
+                            lbl_showBookTitle.Text = reader["bookTitle"].ToString();
+                            lbl_showBookAuthor.Text = reader["bookAuthor"].ToString();
+                            lbl_showBookISBN.Text = reader["bookISBN"].ToString();
+                            lbl_showBookCategory.Text = reader["bookCategory"].ToString();
+                            lbl_showBookType.Text = reader["bookType"].ToString();
+                            lbl_showBookLanguage.Text = reader["bookLanguage"].ToString();
+                            lbl_showBookAdditional.Text = reader["bookAdditional"].ToString();
+                        }
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("SQL Error: " + ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
         }

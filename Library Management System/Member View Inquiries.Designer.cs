@@ -33,11 +33,11 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.btn_Inquiries = new System.Windows.Forms.Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txt_memberDescription = new System.Windows.Forms.RichTextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txt_bookID = new System.Windows.Forms.TextBox();
+            this.txt_memberContact = new System.Windows.Forms.TextBox();
+            this.txt_memberEmail = new System.Windows.Forms.TextBox();
+            this.txt_memberFullName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,8 +46,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Cancel = new System.Windows.Forms.Button();
+            this.btn_Submit = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.slidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -121,11 +121,11 @@
             this.guna2Panel1.BorderRadius = 6;
             this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.richTextBox1);
+            this.guna2Panel1.Controls.Add(this.txt_memberDescription);
             this.guna2Panel1.Controls.Add(this.label13);
-            this.guna2Panel1.Controls.Add(this.textBox2);
-            this.guna2Panel1.Controls.Add(this.textBox1);
-            this.guna2Panel1.Controls.Add(this.txt_bookID);
+            this.guna2Panel1.Controls.Add(this.txt_memberContact);
+            this.guna2Panel1.Controls.Add(this.txt_memberEmail);
+            this.guna2Panel1.Controls.Add(this.txt_memberFullName);
             this.guna2Panel1.Controls.Add(this.label9);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.label5);
@@ -139,13 +139,13 @@
             this.guna2Panel1.Size = new System.Drawing.Size(667, 440);
             this.guna2Panel1.TabIndex = 17;
             // 
-            // richTextBox1
+            // txt_memberDescription
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(234, 229);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(312, 168);
-            this.richTextBox1.TabIndex = 35;
-            this.richTextBox1.Text = "";
+            this.txt_memberDescription.Location = new System.Drawing.Point(234, 229);
+            this.txt_memberDescription.Name = "txt_memberDescription";
+            this.txt_memberDescription.Size = new System.Drawing.Size(312, 168);
+            this.txt_memberDescription.TabIndex = 35;
+            this.txt_memberDescription.Text = "";
             // 
             // label13
             // 
@@ -157,29 +157,29 @@
             this.label13.TabIndex = 24;
             this.label13.Text = "Description :";
             // 
-            // textBox2
+            // txt_memberContact
             // 
-            this.textBox2.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(234, 170);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(312, 30);
-            this.textBox2.TabIndex = 26;
+            this.txt_memberContact.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_memberContact.Location = new System.Drawing.Point(234, 170);
+            this.txt_memberContact.Name = "txt_memberContact";
+            this.txt_memberContact.Size = new System.Drawing.Size(312, 30);
+            this.txt_memberContact.TabIndex = 26;
             // 
-            // textBox1
+            // txt_memberEmail
             // 
-            this.textBox1.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(234, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(312, 30);
-            this.textBox1.TabIndex = 26;
+            this.txt_memberEmail.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_memberEmail.Location = new System.Drawing.Point(234, 124);
+            this.txt_memberEmail.Name = "txt_memberEmail";
+            this.txt_memberEmail.Size = new System.Drawing.Size(312, 30);
+            this.txt_memberEmail.TabIndex = 26;
             // 
-            // txt_bookID
+            // txt_memberFullName
             // 
-            this.txt_bookID.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_bookID.Location = new System.Drawing.Point(234, 80);
-            this.txt_bookID.Name = "txt_bookID";
-            this.txt_bookID.Size = new System.Drawing.Size(312, 30);
-            this.txt_bookID.TabIndex = 26;
+            this.txt_memberFullName.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_memberFullName.Location = new System.Drawing.Point(234, 80);
+            this.txt_memberFullName.Name = "txt_memberFullName";
+            this.txt_memberFullName.Size = new System.Drawing.Size(312, 30);
+            this.txt_memberFullName.TabIndex = 26;
             // 
             // label9
             // 
@@ -263,31 +263,32 @@
             this.label34.Text = "_____________________________________________________________";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button2
+            // btn_Cancel
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(709, 584);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 34);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "Cancel";
-            this.button2.UseCompatibleTextRendering = true;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Cancel.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Cancel.Location = new System.Drawing.Point(709, 584);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(111, 34);
+            this.btn_Cancel.TabIndex = 32;
+            this.btn_Cancel.Text = "Cancel";
+            this.btn_Cancel.UseCompatibleTextRendering = true;
+            this.btn_Cancel.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btn_Submit
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(581, 584);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 34);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Submit";
-            this.button1.UseCompatibleTextRendering = true;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_Submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Submit.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Submit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Submit.Location = new System.Drawing.Point(581, 584);
+            this.btn_Submit.Name = "btn_Submit";
+            this.btn_Submit.Size = new System.Drawing.Size(111, 34);
+            this.btn_Submit.TabIndex = 32;
+            this.btn_Submit.Text = "Submit";
+            this.btn_Submit.UseCompatibleTextRendering = true;
+            this.btn_Submit.UseVisualStyleBackColor = false;
+            this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
             // 
             // panel7
             // 
@@ -607,9 +608,9 @@
             this.ClientSize = new System.Drawing.Size(1105, 662);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.slidebar);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.guna2Panel3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Submit);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Member_View_Inquiries";
@@ -643,11 +644,11 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btn_Inquiries;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txt_memberDescription;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txt_bookID;
+        private System.Windows.Forms.Button btn_Cancel;
+        private System.Windows.Forms.Button btn_Submit;
+        private System.Windows.Forms.TextBox txt_memberFullName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label33;
@@ -679,8 +680,8 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private System.Windows.Forms.Timer slidebarTimer;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_memberContact;
+        private System.Windows.Forms.TextBox txt_memberEmail;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;

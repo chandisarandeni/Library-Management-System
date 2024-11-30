@@ -14,6 +14,7 @@ namespace Library_Management_System
 {
     public partial class Member_View_Reservation : Form
     {
+        private String memberID;
         bool slidebarExpand;
         public Member_View_Reservation()
         {
@@ -25,11 +26,12 @@ namespace Library_Management_System
             btn_searchBook.TabStop = false;
             btn_Reservation.TabStop = false;
             btn_Inquiries.TabStop = false;
+
+            memberID = string.Empty;
         }
 
         private void Member_View_Reservation_Load(object sender, EventArgs e)
         {
-            // Load the member login state
             MemberLoginState loginState = MemberLoginStateManager.LoadLoginState();
 
             if (!loginState.IsLoggedIn)
@@ -40,7 +42,6 @@ namespace Library_Management_System
             }
             else
             {
-                // Ensure the state is consistent with the collapsed slide bar
                 slidebar.Width = slidebar.MinimumSize.Width;
                 slidebarExpand = false;
 
@@ -67,13 +68,12 @@ namespace Library_Management_System
 
                         if (reader.Read())
                         {
-                            string memberID = reader["memberID"].ToString();
+                            memberID = reader["memberID"].ToString(); // Correct assignment
                             string memberFullName = reader["memberFullName"].ToString();
 
                             lbl_showMemberID.Text = memberID;
                             lbl_showMemberName.Text = memberFullName;
 
-                            // Display fetched Member ID and Name
                             lbl_showMemberID.Show();
                             lbl_showMemberName.Show();
                         }
@@ -92,6 +92,10 @@ namespace Library_Management_System
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+
+            pnl_bookDetails.Hide();
+            pnl_instructions.Show();
+            pnl_reservationForm.Hide();
         }
 
         private void slidebarTimer_Tick(object sender, EventArgs e)
@@ -152,6 +156,134 @@ namespace Library_Management_System
         private void btn_Menu_Click(object sender, EventArgs e)
         {
             slidebarTimer.Start();
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            string bookID = txt_bookID.Text.Trim(); // Get bookID from input
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string query = @"SELECT bookID, bookTitle, bookAuthor, bookCategory, 
+                            bookType, bookLanguage, bookRegistrationDate 
+                     FROM Book 
+                     WHERE bookID = @bookID";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    pnl_instructions.Hide(); // Hide the instructions panel
+                    pnl_reservationForm.Show(); // Show the reservation form panel
+                    pnl_bookDetails.Show(); // Show the book details panel
+
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@bookID", bookID);
+
+                    connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        // Retrieve and display book details
+                        lbl_showBookID.Text = reader["bookID"].ToString();
+                        lbl_showBookTitle.Text = reader["bookTitle"].ToString();
+                        lbl_showBookAuthor.Text = reader["bookAuthor"].ToString();
+                        lbl_showBookCategory.Text = reader["bookCategory"].ToString();
+                        lbl_showBookType.Text = reader["bookType"].ToString();
+                        lbl_showBookLanguage.Text = reader["bookLanguage"].ToString();
+                        lbl_showBookRegisterationDate.Text = Convert.ToDateTime(reader["bookRegistrationDate"]).ToString("yyyy-MM-dd");
+                    }
+                    else
+                    {
+                        pnl_bookDetails.Hide(); // Hide the book details panel
+                        pnl_instructions.Show(); // Show the instructions panel
+                        pnl_reservationForm.Hide(); // Hide the reservation form panel
+
+                        MessageBox.Show("Book not found.");
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void btn_addReservation_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string reservationID = GenerateReservationID();
+            string bookID = lbl_showBookID.Text.Trim();
+            string memberID = lbl_showMemberID.Text.Trim(); // Fix: Use lbl_showMemberID
+            string reservationDescription = txt_reservationDescription.Text.Trim();
+            string reservationDate = DateTime.Now.ToString("yyyy-MM-dd");
+
+            if (string.IsNullOrEmpty(bookID) || string.IsNullOrEmpty(memberID))
+            {
+                MessageBox.Show("Please provide both Book ID and Member ID.");
+                return;
+            }
+
+            string query = @"INSERT INTO Reservations 
+                     (reservationID, bookID, memberID, reservationDescription, reservationDate) 
+                     VALUES (@reservationID, @bookID, @memberID, @reservationDescription, @reservationDate)";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@reservationID", reservationID);
+                    cmd.Parameters.AddWithValue("@bookID", bookID);
+                    cmd.Parameters.AddWithValue("@memberID", memberID); // Fixed parameter
+                    cmd.Parameters.AddWithValue("@reservationDescription", reservationDescription);
+                    cmd.Parameters.AddWithValue("@reservationDate", reservationDate);
+
+                    connection.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Reservation added successfully!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to add reservation.");
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private string GenerateReservationID()
+        {
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string query = "SELECT COUNT(*) FROM Reservations";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    connection.Open();
+                    int count = (int)cmd.ExecuteScalar();
+                    return $"R-{(count + 1).ToString("D3")}";
+                }
+            }
+            catch
+            {
+                return "R-001"; // Default ID if error occurs
+            }
         }
     }
 }

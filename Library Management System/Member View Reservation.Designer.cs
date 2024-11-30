@@ -60,10 +60,11 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.pnl_reservationForm = new System.Windows.Forms.Panel();
+            this.txt_reservationDescription = new System.Windows.Forms.RichTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_addReservation = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
             this.txt_bookID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -77,17 +78,17 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbl_showBookType = new System.Windows.Forms.Label();
+            this.lbl_showBookLanguage = new System.Windows.Forms.Label();
+            this.lbl_showBookCategory = new System.Windows.Forms.Label();
+            this.lbl_showBookAuthor = new System.Windows.Forms.Label();
+            this.lbl_showBookTitle = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
+            this.lbl_showBookRegisterationDate = new System.Windows.Forms.Label();
+            this.lbl_showBookID = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -107,6 +108,7 @@
             this.slidebar.SuspendLayout();
             this.panel8.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            this.pnl_reservationForm.SuspendLayout();
             this.pnl_bookDetails.SuspendLayout();
             this.pnl_instructions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -424,7 +426,7 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(281, 662);
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(73, 662);
+            this.slidebar.Size = new System.Drawing.Size(281, 662);
             this.slidebar.TabIndex = 8;
             // 
             // panel8
@@ -449,10 +451,7 @@
             this.guna2Panel1.BorderRadius = 6;
             this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.richTextBox1);
-            this.guna2Panel1.Controls.Add(this.label13);
-            this.guna2Panel1.Controls.Add(this.button2);
-            this.guna2Panel1.Controls.Add(this.button1);
+            this.guna2Panel1.Controls.Add(this.pnl_reservationForm);
             this.guna2Panel1.Controls.Add(this.btn_Search);
             this.guna2Panel1.Controls.Add(this.txt_bookID);
             this.guna2Panel1.Controls.Add(this.label5);
@@ -466,22 +465,33 @@
             this.guna2Panel1.Size = new System.Drawing.Size(667, 506);
             this.guna2Panel1.TabIndex = 13;
             // 
-            // richTextBox1
+            // pnl_reservationForm
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(159, 405);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(340, 83);
-            this.richTextBox1.TabIndex = 35;
-            this.richTextBox1.Text = "";
+            this.pnl_reservationForm.Controls.Add(this.txt_reservationDescription);
+            this.pnl_reservationForm.Controls.Add(this.label13);
+            this.pnl_reservationForm.Controls.Add(this.button2);
+            this.pnl_reservationForm.Controls.Add(this.btn_addReservation);
+            this.pnl_reservationForm.Location = new System.Drawing.Point(24, 382);
+            this.pnl_reservationForm.Name = "pnl_reservationForm";
+            this.pnl_reservationForm.Size = new System.Drawing.Size(623, 121);
+            this.pnl_reservationForm.TabIndex = 35;
+            // 
+            // txt_reservationDescription
+            // 
+            this.txt_reservationDescription.Location = new System.Drawing.Point(131, 35);
+            this.txt_reservationDescription.Name = "txt_reservationDescription";
+            this.txt_reservationDescription.Size = new System.Drawing.Size(340, 83);
+            this.txt_reservationDescription.TabIndex = 39;
+            this.txt_reservationDescription.Text = "";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(43, 373);
+            this.label13.Location = new System.Drawing.Point(15, 3);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(298, 23);
-            this.label13.TabIndex = 24;
+            this.label13.TabIndex = 36;
             this.label13.Text = "Reservation Description:";
             // 
             // button2
@@ -489,26 +499,27 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button2.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(524, 452);
+            this.button2.Location = new System.Drawing.Point(496, 82);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(111, 34);
-            this.button2.TabIndex = 32;
+            this.button2.TabIndex = 37;
             this.button2.Text = "Cancel";
             this.button2.UseCompatibleTextRendering = true;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btn_addReservation
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(524, 411);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 34);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Reserve";
-            this.button1.UseCompatibleTextRendering = true;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_addReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_addReservation.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addReservation.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_addReservation.Location = new System.Drawing.Point(496, 41);
+            this.btn_addReservation.Name = "btn_addReservation";
+            this.btn_addReservation.Size = new System.Drawing.Size(111, 34);
+            this.btn_addReservation.TabIndex = 38;
+            this.btn_addReservation.Text = "Reserve";
+            this.btn_addReservation.UseCompatibleTextRendering = true;
+            this.btn_addReservation.UseVisualStyleBackColor = false;
+            this.btn_addReservation.Click += new System.EventHandler(this.btn_addReservation_Click);
             // 
             // btn_Search
             // 
@@ -522,6 +533,7 @@
             this.btn_Search.Text = "Search";
             this.btn_Search.UseCompatibleTextRendering = true;
             this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // txt_bookID
             // 
@@ -581,17 +593,17 @@
             this.pnl_bookDetails.Controls.Add(this.label18);
             this.pnl_bookDetails.Controls.Add(this.label12);
             this.pnl_bookDetails.Controls.Add(this.label8);
-            this.pnl_bookDetails.Controls.Add(this.label31);
-            this.pnl_bookDetails.Controls.Add(this.label20);
-            this.pnl_bookDetails.Controls.Add(this.label17);
-            this.pnl_bookDetails.Controls.Add(this.label11);
-            this.pnl_bookDetails.Controls.Add(this.label9);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookType);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookLanguage);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookCategory);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookAuthor);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookTitle);
             this.pnl_bookDetails.Controls.Add(this.label30);
             this.pnl_bookDetails.Controls.Add(this.label19);
             this.pnl_bookDetails.Controls.Add(this.label16);
             this.pnl_bookDetails.Controls.Add(this.label10);
-            this.pnl_bookDetails.Controls.Add(this.label29);
-            this.pnl_bookDetails.Controls.Add(this.label27);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookRegisterationDate);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookID);
             this.pnl_bookDetails.Controls.Add(this.label28);
             this.pnl_bookDetails.Controls.Add(this.label26);
             this.pnl_bookDetails.Controls.Add(this.label2);
@@ -661,55 +673,55 @@
             this.label8.TabIndex = 24;
             this.label8.Text = ":";
             // 
-            // label31
+            // lbl_showBookType
             // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(221, 128);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(142, 22);
-            this.label31.TabIndex = 24;
-            this.label31.Text = "Sample Data";
+            this.lbl_showBookType.AutoSize = true;
+            this.lbl_showBookType.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookType.Location = new System.Drawing.Point(221, 128);
+            this.lbl_showBookType.Name = "lbl_showBookType";
+            this.lbl_showBookType.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookType.TabIndex = 24;
+            this.lbl_showBookType.Text = "Sample Data";
             // 
-            // label20
+            // lbl_showBookLanguage
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(225, 166);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(142, 22);
-            this.label20.TabIndex = 24;
-            this.label20.Text = "Sample Data";
+            this.lbl_showBookLanguage.AutoSize = true;
+            this.lbl_showBookLanguage.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookLanguage.Location = new System.Drawing.Point(225, 166);
+            this.lbl_showBookLanguage.Name = "lbl_showBookLanguage";
+            this.lbl_showBookLanguage.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookLanguage.TabIndex = 24;
+            this.lbl_showBookLanguage.Text = "Sample Data";
             // 
-            // label17
+            // lbl_showBookCategory
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(225, 83);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(142, 22);
-            this.label17.TabIndex = 24;
-            this.label17.Text = "Sample Data";
+            this.lbl_showBookCategory.AutoSize = true;
+            this.lbl_showBookCategory.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookCategory.Location = new System.Drawing.Point(225, 83);
+            this.lbl_showBookCategory.Name = "lbl_showBookCategory";
+            this.lbl_showBookCategory.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookCategory.TabIndex = 24;
+            this.lbl_showBookCategory.Text = "Sample Data";
             // 
-            // label11
+            // lbl_showBookAuthor
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(225, 49);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(142, 22);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "Sample Data";
+            this.lbl_showBookAuthor.AutoSize = true;
+            this.lbl_showBookAuthor.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookAuthor.Location = new System.Drawing.Point(225, 49);
+            this.lbl_showBookAuthor.Name = "lbl_showBookAuthor";
+            this.lbl_showBookAuthor.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookAuthor.TabIndex = 24;
+            this.lbl_showBookAuthor.Text = "Sample Data";
             // 
-            // label9
+            // lbl_showBookTitle
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(223, 10);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(142, 22);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "Sample Data";
+            this.lbl_showBookTitle.AutoSize = true;
+            this.lbl_showBookTitle.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookTitle.Location = new System.Drawing.Point(223, 10);
+            this.lbl_showBookTitle.Name = "lbl_showBookTitle";
+            this.lbl_showBookTitle.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookTitle.TabIndex = 24;
+            this.lbl_showBookTitle.Text = "Sample Data";
             // 
             // label30
             // 
@@ -751,25 +763,25 @@
             this.label10.TabIndex = 24;
             this.label10.Text = "Author";
             // 
-            // label29
+            // lbl_showBookRegisterationDate
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(487, 118);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(119, 20);
-            this.label29.TabIndex = 24;
-            this.label29.Text = "Sample Data";
+            this.lbl_showBookRegisterationDate.AutoSize = true;
+            this.lbl_showBookRegisterationDate.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookRegisterationDate.Location = new System.Drawing.Point(487, 118);
+            this.lbl_showBookRegisterationDate.Name = "lbl_showBookRegisterationDate";
+            this.lbl_showBookRegisterationDate.Size = new System.Drawing.Size(119, 20);
+            this.lbl_showBookRegisterationDate.TabIndex = 24;
+            this.lbl_showBookRegisterationDate.Text = "Sample Data";
             // 
-            // label27
+            // lbl_showBookID
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(487, 42);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(119, 20);
-            this.label27.TabIndex = 24;
-            this.label27.Text = "Sample Data";
+            this.lbl_showBookID.AutoSize = true;
+            this.lbl_showBookID.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookID.Location = new System.Drawing.Point(487, 42);
+            this.lbl_showBookID.Name = "lbl_showBookID";
+            this.lbl_showBookID.Size = new System.Drawing.Size(119, 20);
+            this.lbl_showBookID.TabIndex = 24;
+            this.lbl_showBookID.Text = "Sample Data";
             // 
             // label28
             // 
@@ -824,11 +836,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(77, 150);
+            this.label3.Location = new System.Drawing.Point(32, 151);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(322, 46);
+            this.label3.Size = new System.Drawing.Size(406, 23);
             this.label3.TabIndex = 24;
-            this.label3.Text = "You can search book using\r\nBook ID, Book Name or ISBN";
+            this.label3.Text = "You can search book using Book ID";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Member_View_Reservation
@@ -836,8 +848,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 662);
-            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.slidebar);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Panel3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -862,6 +874,8 @@
             this.panel8.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            this.pnl_reservationForm.ResumeLayout(false);
+            this.pnl_reservationForm.PerformLayout();
             this.pnl_bookDetails.ResumeLayout(false);
             this.pnl_bookDetails.PerformLayout();
             this.pnl_instructions.ResumeLayout(false);
@@ -917,26 +931,27 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbl_showBookType;
+        private System.Windows.Forms.Label lbl_showBookLanguage;
+        private System.Windows.Forms.Label lbl_showBookCategory;
+        private System.Windows.Forms.Label lbl_showBookAuthor;
+        private System.Windows.Forms.Label lbl_showBookTitle;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label lbl_showBookRegisterationDate;
+        private System.Windows.Forms.Label lbl_showBookID;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnl_instructions;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Panel pnl_reservationForm;
+        private System.Windows.Forms.RichTextBox txt_reservationDescription;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_addReservation;
     }
 }
