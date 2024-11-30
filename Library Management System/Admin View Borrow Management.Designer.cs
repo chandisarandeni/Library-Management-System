@@ -34,7 +34,7 @@
             this.btn_Inquiries = new System.Windows.Forms.Button();
             this.slidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnl_bookDetails = new System.Windows.Forms.Panel();
+            this.pnl_memberDetails = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -84,9 +84,12 @@
             this.btn_Reservation = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btn_Inventory = new System.Windows.Forms.Button();
+            this.listView_borrowDetails = new System.Windows.Forms.ListView();
+            this.bookID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.bookTitle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel10.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            this.pnl_bookDetails.SuspendLayout();
+            this.pnl_memberDetails.SuspendLayout();
             this.pnl_instructions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_returnBook)).BeginInit();
@@ -139,7 +142,7 @@
             this.guna2Panel1.BorderRadius = 6;
             this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.pnl_bookDetails);
+            this.guna2Panel1.Controls.Add(this.pnl_memberDetails);
             this.guna2Panel1.Controls.Add(this.pnl_instructions);
             this.guna2Panel1.Controls.Add(this.btn_Search);
             this.guna2Panel1.Controls.Add(this.txt_memberNIC);
@@ -154,23 +157,24 @@
             this.guna2Panel1.Size = new System.Drawing.Size(871, 496);
             this.guna2Panel1.TabIndex = 9;
             // 
-            // pnl_bookDetails
+            // pnl_memberDetails
             // 
-            this.pnl_bookDetails.Controls.Add(this.label18);
-            this.pnl_bookDetails.Controls.Add(this.label15);
-            this.pnl_bookDetails.Controls.Add(this.label12);
-            this.pnl_bookDetails.Controls.Add(this.label8);
-            this.pnl_bookDetails.Controls.Add(this.lbl_showNumberOfBooks);
-            this.pnl_bookDetails.Controls.Add(this.lbl_showMemberNIC);
-            this.pnl_bookDetails.Controls.Add(this.lbl_showMemberFullName);
-            this.pnl_bookDetails.Controls.Add(this.label16);
-            this.pnl_bookDetails.Controls.Add(this.label13);
-            this.pnl_bookDetails.Controls.Add(this.label10);
-            this.pnl_bookDetails.Controls.Add(this.label7);
-            this.pnl_bookDetails.Location = new System.Drawing.Point(123, 124);
-            this.pnl_bookDetails.Name = "pnl_bookDetails";
-            this.pnl_bookDetails.Size = new System.Drawing.Size(623, 336);
-            this.pnl_bookDetails.TabIndex = 34;
+            this.pnl_memberDetails.Controls.Add(this.listView_borrowDetails);
+            this.pnl_memberDetails.Controls.Add(this.label18);
+            this.pnl_memberDetails.Controls.Add(this.label15);
+            this.pnl_memberDetails.Controls.Add(this.label12);
+            this.pnl_memberDetails.Controls.Add(this.label8);
+            this.pnl_memberDetails.Controls.Add(this.lbl_showNumberOfBooks);
+            this.pnl_memberDetails.Controls.Add(this.lbl_showMemberNIC);
+            this.pnl_memberDetails.Controls.Add(this.lbl_showMemberFullName);
+            this.pnl_memberDetails.Controls.Add(this.label16);
+            this.pnl_memberDetails.Controls.Add(this.label13);
+            this.pnl_memberDetails.Controls.Add(this.label10);
+            this.pnl_memberDetails.Controls.Add(this.label7);
+            this.pnl_memberDetails.Location = new System.Drawing.Point(123, 124);
+            this.pnl_memberDetails.Name = "pnl_memberDetails";
+            this.pnl_memberDetails.Size = new System.Drawing.Size(623, 336);
+            this.pnl_memberDetails.TabIndex = 34;
             // 
             // label18
             // 
@@ -324,6 +328,7 @@
             this.btn_Search.Text = "Search";
             this.btn_Search.UseCompatibleTextRendering = true;
             this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // txt_memberNIC
             // 
@@ -722,6 +727,29 @@
             this.btn_Inventory.UseVisualStyleBackColor = false;
             this.btn_Inventory.Click += new System.EventHandler(this.btn_Inventory_Click);
             // 
+            // listView_borrowDetails
+            // 
+            this.listView_borrowDetails.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.bookID,
+            this.bookTitle});
+            this.listView_borrowDetails.HideSelection = false;
+            this.listView_borrowDetails.Location = new System.Drawing.Point(202, 175);
+            this.listView_borrowDetails.Name = "listView_borrowDetails";
+            this.listView_borrowDetails.Size = new System.Drawing.Size(311, 144);
+            this.listView_borrowDetails.TabIndex = 25;
+            this.listView_borrowDetails.UseCompatibleStateImageBehavior = false;
+            this.listView_borrowDetails.View = System.Windows.Forms.View.Details;
+            // 
+            // bookID
+            // 
+            this.bookID.Text = "Book ID";
+            this.bookID.Width = 141;
+            // 
+            // bookTitle
+            // 
+            this.bookTitle.Text = "Title";
+            this.bookTitle.Width = 147;
+            // 
             // Admin_View_Borrow_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -732,15 +760,17 @@
             this.Controls.Add(this.btn_returnBook);
             this.Controls.Add(this.btn_checkoutBook);
             this.Controls.Add(this.slidebar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_View_Borrow_Management";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Management System";
             this.Load += new System.EventHandler(this.Admin_View_Borrow_Management_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Admin_View_Borrow_Management_MouseClick);
             this.panel10.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            this.pnl_bookDetails.ResumeLayout(false);
-            this.pnl_bookDetails.PerformLayout();
+            this.pnl_memberDetails.ResumeLayout(false);
+            this.pnl_memberDetails.PerformLayout();
             this.pnl_instructions.ResumeLayout(false);
             this.pnl_instructions.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -769,7 +799,7 @@
         private System.Windows.Forms.Button btn_Inquiries;
         private System.Windows.Forms.Timer slidebarTimer;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Panel pnl_bookDetails;
+        private System.Windows.Forms.Panel pnl_memberDetails;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label8;
@@ -819,5 +849,8 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label lbl_showNumberOfBooks;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ListView listView_borrowDetails;
+        private System.Windows.Forms.ColumnHeader bookID;
+        private System.Windows.Forms.ColumnHeader bookTitle;
     }
 }

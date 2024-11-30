@@ -31,9 +31,17 @@ namespace Library_Management_System
 
         private void btn_checkoutBook_Click(object sender, EventArgs e)
         {
-            Admin_View_Borrow_Assign_Book adminViewBorrowAssignBook = new Admin_View_Borrow_Assign_Book();
-            adminViewBorrowAssignBook.Show();
-            this.Hide();
+            int numberOfBooks = 0;
+            if (int.TryParse(lbl_showNumberOfBooks.Text, out numberOfBooks) && numberOfBooks <= 5)
+            {
+                Admin_View_Borrow_Assign_Book adminViewBorrowAssignBook = new Admin_View_Borrow_Assign_Book(txt_memberNIC.Text);
+                adminViewBorrowAssignBook.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Member has reached the maximum number of books that can be borrowed.");
+            }
         }
 
         private void Admin_View_Borrow_Management_Load(object sender, EventArgs e)
@@ -126,6 +134,9 @@ namespace Library_Management_System
             lbl_dot2.Hide();
             lbl_showAdminID.Hide();
             lbl_showAdminName.Hide();
+
+            pnl_instructions.Show();
+            pnl_memberDetails.Hide();
         }
 
         private void slidebarTimer_Tick(object sender, EventArgs e)
@@ -190,7 +201,7 @@ namespace Library_Management_System
 
         private void btn_returnBook_Click(object sender, EventArgs e)
         {
-            Admin_View_Return_Book adminViewReturnBook = new Admin_View_Return_Book();
+            Admin_View_Return_Book adminViewReturnBook = new Admin_View_Return_Book(txt_memberNIC.Text);
             adminViewReturnBook.Show();
             this.Hide();
         }
@@ -250,5 +261,155 @@ namespace Library_Management_System
             adminViewInquiryManagement.Show();
             this.Hide();
         }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            string memberNIC = txt_memberNIC.Text.Trim(); // Get NIC from the input
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+
+            // Query to get memberID and memberFullName based on NIC
+            string queryMember = @"SELECT memberID, memberFullName, memberNIC 
+                       FROM libraryMember 
+                       WHERE memberNIC = @memberNIC";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    pnl_instructions.Hide();
+                    pnl_memberDetails.Show();
+
+                    SqlCommand cmdMember = new SqlCommand(queryMember, connection);
+                    cmdMember.Parameters.AddWithValue("@memberNIC", memberNIC);
+
+                    connection.Open();
+                    SqlDataReader reader = cmdMember.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        // Retrieve and display member details
+                        string memberID = reader["memberID"].ToString();
+                        lbl_showMemberFullName.Text = reader["memberFullName"].ToString();
+                        lbl_showMemberNIC.Text = reader["memberNIC"].ToString();
+
+                        // After retrieving memberID, get borrow details for the member where books are unavailable (isAvailable = 'false')
+                        string queryBorrow = @"
+    SELECT b.borrowID, b.bookID, b.borrowedDate, b.returnDate, bk.isAvailable 
+    FROM borrowBook b
+    INNER JOIN Book bk ON b.bookID = bk.bookID
+    WHERE b.memberID = @memberID AND bk.isAvailable = 'false'"; // 'false' as string
+
+                        SqlCommand cmdBorrow = new SqlCommand(queryBorrow, connection);
+                        cmdBorrow.Parameters.AddWithValue("@memberID", memberID);
+
+                        reader.Close(); // Close the previous reader
+
+                        SqlDataReader borrowReader = cmdBorrow.ExecuteReader();
+
+                        // Clear previous data from the listView
+                        listView_borrowDetails.Items.Clear();
+
+                        int numberOfBooks = 0;
+
+                        while (borrowReader.Read())
+                        {
+                            string bookID = borrowReader["bookID"].ToString();
+                            string borrowedDate = borrowReader["borrowedDate"].ToString();
+                            string returnDate = borrowReader["returnDate"].ToString();
+                            string isAvailable = borrowReader["isAvailable"].ToString();
+
+                            // Add each borrowed book to the listView
+                            ListViewItem item = new ListViewItem(bookID);
+                            item.SubItems.Add(borrowedDate);
+                            item.SubItems.Add(returnDate);
+
+                            // Check if the book is available
+                            if (isAvailable == "false")
+                            {
+                                item.SubItems.Add("Not Available");
+                            }
+                            else
+                            {
+                                item.SubItems.Add("Available");
+                            }
+
+                            listView_borrowDetails.Items.Add(item);
+                            numberOfBooks++; // Count the number of books
+                        }
+
+                        // Show the number of books borrowed
+                        lbl_showNumberOfBooks.Text = numberOfBooks.ToString();
+
+                        // If no books are found, hide the listView
+                        if (numberOfBooks == 0)
+                        {
+                            listView_borrowDetails.Visible = false;
+                        }
+                        else
+                        {
+                            listView_borrowDetails.Visible = true;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Member not found.");
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+        }
+
+        private void LoadBorrowedBooks(string memberID)
+        {
+            listView_borrowDetails.Items.Clear();
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string query = @"SELECT b.bookID, b.bookTitle 
+                     FROM borrowBook bb 
+                     INNER JOIN Book b ON bb.bookID = b.bookID 
+                     WHERE bb.memberID = @memberID";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@memberID", memberID);
+                    connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        listView_borrowDetails.Show(); // Show the list if there are borrowed books
+                        while (reader.Read())
+                        {
+                            ListViewItem item = new ListViewItem(reader["bookID"].ToString());
+                            item.SubItems.Add(reader["bookTitle"].ToString());
+                            listView_borrowDetails.Items.Add(item);
+                        }
+                    }
+                    else
+                    {
+                        listView_borrowDetails.Hide(); // Hide the list if no borrowed books
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
     }
 }

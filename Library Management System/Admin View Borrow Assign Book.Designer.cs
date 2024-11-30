@@ -36,7 +36,7 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pnl_memberDetails = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.pnl_bookDetails = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.lbl_showBookType = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -92,7 +92,7 @@
             this.btn_assignBook = new System.Windows.Forms.Button();
             this.guna2Panel1.SuspendLayout();
             this.pnl_memberDetails.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.pnl_bookDetails.SuspendLayout();
             this.pnl_Instructions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -125,6 +125,7 @@
             this.btn_searchBook.Text = "Search";
             this.btn_searchBook.UseCompatibleTextRendering = true;
             this.btn_searchBook.UseVisualStyleBackColor = false;
+            this.btn_searchBook.Click += new System.EventHandler(this.btn_searchBook_Click);
             // 
             // label2
             // 
@@ -165,7 +166,7 @@
             // 
             // pnl_memberDetails
             // 
-            this.pnl_memberDetails.Controls.Add(this.panel7);
+            this.pnl_memberDetails.Controls.Add(this.pnl_bookDetails);
             this.pnl_memberDetails.Controls.Add(this.pnl_Instructions);
             this.pnl_memberDetails.Controls.Add(this.btn_searchBook);
             this.pnl_memberDetails.Controls.Add(this.txt_bookID);
@@ -185,21 +186,21 @@
             this.pnl_memberDetails.Size = new System.Drawing.Size(623, 336);
             this.pnl_memberDetails.TabIndex = 40;
             // 
-            // panel7
+            // pnl_bookDetails
             // 
-            this.panel7.Controls.Add(this.label17);
-            this.panel7.Controls.Add(this.lbl_showBookType);
-            this.panel7.Controls.Add(this.label19);
-            this.panel7.Controls.Add(this.label11);
-            this.panel7.Controls.Add(this.lbl_showBookAuthor);
-            this.panel7.Controls.Add(this.label16);
-            this.panel7.Controls.Add(this.label5);
-            this.panel7.Controls.Add(this.lbl_showBookTitle);
-            this.panel7.Controls.Add(this.label9);
-            this.panel7.Location = new System.Drawing.Point(29, 169);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(410, 149);
-            this.panel7.TabIndex = 46;
+            this.pnl_bookDetails.Controls.Add(this.label17);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookType);
+            this.pnl_bookDetails.Controls.Add(this.label19);
+            this.pnl_bookDetails.Controls.Add(this.label11);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookAuthor);
+            this.pnl_bookDetails.Controls.Add(this.label16);
+            this.pnl_bookDetails.Controls.Add(this.label5);
+            this.pnl_bookDetails.Controls.Add(this.lbl_showBookTitle);
+            this.pnl_bookDetails.Controls.Add(this.label9);
+            this.pnl_bookDetails.Location = new System.Drawing.Point(29, 169);
+            this.pnl_bookDetails.Name = "pnl_bookDetails";
+            this.pnl_bookDetails.Size = new System.Drawing.Size(410, 149);
+            this.pnl_bookDetails.TabIndex = 46;
             // 
             // label17
             // 
@@ -793,6 +794,7 @@
             this.btn_assignBook.Text = "Assign";
             this.btn_assignBook.UseCompatibleTextRendering = true;
             this.btn_assignBook.UseVisualStyleBackColor = false;
+            this.btn_assignBook.Click += new System.EventHandler(this.btn_assignBook_Click);
             // 
             // Admin_View_Borrow_Assign_Book
             // 
@@ -813,8 +815,8 @@
             this.guna2Panel1.PerformLayout();
             this.pnl_memberDetails.ResumeLayout(false);
             this.pnl_memberDetails.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.pnl_bookDetails.ResumeLayout(false);
+            this.pnl_bookDetails.PerformLayout();
             this.pnl_Instructions.ResumeLayout(false);
             this.pnl_Instructions.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -887,7 +889,7 @@
         private System.Windows.Forms.Panel pnl_Instructions;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel pnl_bookDetails;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lbl_showBookAuthor;
         private System.Windows.Forms.Label label16;
