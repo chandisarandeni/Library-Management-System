@@ -330,5 +330,52 @@ namespace Library_Management_System
                 }
             }
         }
+
+        private void btn_Dashboard_Click(object sender, EventArgs e)
+        {
+            Member_Dashboard memberDashboard = new Member_Dashboard();
+            memberDashboard.Show();
+            this.Hide();
+        }
+
+        private void btn_Menu_Click(object sender, EventArgs e)
+        {
+            slidebarTimer.Start();
+        }
+
+        private void btn_myBooks_Click(object sender, EventArgs e)
+        {
+            Member_View_My_Books memberViewMyBooks = new Member_View_My_Books();
+            memberViewMyBooks.Show();
+            this.Hide();
+        }
+
+        private void btn_Borrow_Click(object sender, EventArgs e)
+        {
+            Member_View_Borow_Books memberViewBorrowBooks = new Member_View_Borow_Books();
+            memberViewBorrowBooks.Show();
+            this.Hide();
+        }
+
+        private void btn_searchBook_Click(object sender, EventArgs e)
+        {
+            Member_View_Search_Book memberViewSearchBook = new Member_View_Search_Book();
+            memberViewSearchBook.Show();
+            this.Hide();
+        }
+
+        private void btn_Reservation_Click(object sender, EventArgs e)
+        {
+            Member_View_Reservation memberViewReservation = new Member_View_Reservation();
+            memberViewReservation.Show();
+            this.Hide();
+        }
+
+        private void btn_Inquiries_Click(object sender, EventArgs e)
+        {
+            Member_View_Inquiries memberViewInquiries = new Member_View_Inquiries();
+            memberViewInquiries.Show();
+            this.Hide();
+        }
     }
 }

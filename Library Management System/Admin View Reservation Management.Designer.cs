@@ -36,8 +36,10 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.btn_Refer = new System.Windows.Forms.Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView_recentReservations = new System.Windows.Forms.ListView();
+            this.bookID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.memebrID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.reservationDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,6 +67,18 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_showReservationDescription = new System.Windows.Forms.Label();
+            this.lbl_showReservationDate = new System.Windows.Forms.Label();
+            this.lbl_showMemberID = new System.Windows.Forms.Label();
+            this.lbl_showBookID = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -148,7 +162,7 @@
             this.guna2Panel1.BorderRadius = 6;
             this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.listView1);
+            this.guna2Panel1.Controls.Add(this.listView_recentReservations);
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.label3);
@@ -157,22 +171,36 @@
             this.guna2Panel1.Size = new System.Drawing.Size(531, 506);
             this.guna2Panel1.TabIndex = 7;
             // 
-            // listView1
+            // listView_recentReservations
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
-            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(21, 47);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(479, 441);
-            this.listView1.TabIndex = 7;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView_recentReservations.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.bookID,
+            this.memebrID,
+            this.reservationDescription});
+            this.listView_recentReservations.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView_recentReservations.HideSelection = false;
+            this.listView_recentReservations.Location = new System.Drawing.Point(21, 47);
+            this.listView_recentReservations.Name = "listView_recentReservations";
+            this.listView_recentReservations.Size = new System.Drawing.Size(479, 441);
+            this.listView_recentReservations.TabIndex = 7;
+            this.listView_recentReservations.UseCompatibleStateImageBehavior = false;
+            this.listView_recentReservations.View = System.Windows.Forms.View.Details;
+            this.listView_recentReservations.SelectedIndexChanged += new System.EventHandler(this.listView_recentReservations_SelectedIndexChanged);
             // 
-            // columnHeader1
+            // bookID
             // 
-            this.columnHeader1.Text = "Book ID";
+            this.bookID.Text = "Book ID";
+            this.bookID.Width = 74;
+            // 
+            // memebrID
+            // 
+            this.memebrID.Text = "MemberID";
+            this.memebrID.Width = 101;
+            // 
+            // reservationDescription
+            // 
+            this.reservationDescription.Text = "Reservation Description";
+            this.reservationDescription.Width = 163;
             // 
             // pictureBox1
             // 
@@ -463,7 +491,7 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(300, 662);
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(73, 662);
+            this.slidebar.Size = new System.Drawing.Size(114, 662);
             this.slidebar.TabIndex = 5;
             // 
             // panel9
@@ -489,6 +517,18 @@
             this.guna2Panel2.BorderRadius = 6;
             this.guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.label32);
+            this.guna2Panel2.Controls.Add(this.label18);
+            this.guna2Panel2.Controls.Add(this.label12);
+            this.guna2Panel2.Controls.Add(this.label8);
+            this.guna2Panel2.Controls.Add(this.lbl_showReservationDescription);
+            this.guna2Panel2.Controls.Add(this.lbl_showReservationDate);
+            this.guna2Panel2.Controls.Add(this.lbl_showMemberID);
+            this.guna2Panel2.Controls.Add(this.lbl_showBookID);
+            this.guna2Panel2.Controls.Add(this.label30);
+            this.guna2Panel2.Controls.Add(this.label16);
+            this.guna2Panel2.Controls.Add(this.label10);
+            this.guna2Panel2.Controls.Add(this.label6);
             this.guna2Panel2.Controls.Add(this.pictureBox2);
             this.guna2Panel2.Controls.Add(this.label4);
             this.guna2Panel2.Controls.Add(this.label5);
@@ -496,6 +536,126 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(411, 506);
             this.guna2Panel2.TabIndex = 8;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(179, 227);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(22, 23);
+            this.label32.TabIndex = 25;
+            this.label32.Text = ":";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(225, 138);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(22, 23);
+            this.label18.TabIndex = 27;
+            this.label18.Text = ":";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(180, 104);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(22, 23);
+            this.label12.TabIndex = 28;
+            this.label12.Text = ":";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(178, 65);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(22, 23);
+            this.label8.TabIndex = 29;
+            this.label8.Text = ":";
+            // 
+            // lbl_showReservationDescription
+            // 
+            this.lbl_showReservationDescription.AutoSize = true;
+            this.lbl_showReservationDescription.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showReservationDescription.Location = new System.Drawing.Point(40, 274);
+            this.lbl_showReservationDescription.Name = "lbl_showReservationDescription";
+            this.lbl_showReservationDescription.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showReservationDescription.TabIndex = 30;
+            this.lbl_showReservationDescription.Text = "Sample Data";
+            // 
+            // lbl_showReservationDate
+            // 
+            this.lbl_showReservationDate.AutoSize = true;
+            this.lbl_showReservationDate.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showReservationDate.Location = new System.Drawing.Point(182, 175);
+            this.lbl_showReservationDate.Name = "lbl_showReservationDate";
+            this.lbl_showReservationDate.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showReservationDate.TabIndex = 32;
+            this.lbl_showReservationDate.Text = "Sample Data";
+            // 
+            // lbl_showMemberID
+            // 
+            this.lbl_showMemberID.AutoSize = true;
+            this.lbl_showMemberID.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showMemberID.Location = new System.Drawing.Point(217, 104);
+            this.lbl_showMemberID.Name = "lbl_showMemberID";
+            this.lbl_showMemberID.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showMemberID.TabIndex = 33;
+            this.lbl_showMemberID.Text = "Sample Data";
+            // 
+            // lbl_showBookID
+            // 
+            this.lbl_showBookID.AutoSize = true;
+            this.lbl_showBookID.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showBookID.Location = new System.Drawing.Point(215, 65);
+            this.lbl_showBookID.Name = "lbl_showBookID";
+            this.lbl_showBookID.Size = new System.Drawing.Size(142, 22);
+            this.lbl_showBookID.TabIndex = 34;
+            this.lbl_showBookID.Text = "Sample Data";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(15, 227);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(142, 23);
+            this.label30.TabIndex = 35;
+            this.label30.Text = "Description";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(17, 138);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(202, 23);
+            this.label16.TabIndex = 37;
+            this.label16.Text = "Reservation Date";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(17, 104);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(118, 23);
+            this.label10.TabIndex = 38;
+            this.label10.Text = "Member ID";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(15, 65);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 23);
+            this.label6.TabIndex = 39;
+            this.label6.Text = "Book ID";
             // 
             // pictureBox2
             // 
@@ -576,8 +736,8 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btn_Refer;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ListView listView_recentReservations;
+        private System.Windows.Forms.ColumnHeader bookID;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -608,5 +768,19 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ColumnHeader memebrID;
+        private System.Windows.Forms.ColumnHeader reservationDescription;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbl_showReservationDescription;
+        private System.Windows.Forms.Label lbl_showReservationDate;
+        private System.Windows.Forms.Label lbl_showMemberID;
+        private System.Windows.Forms.Label lbl_showBookID;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label6;
     }
 }

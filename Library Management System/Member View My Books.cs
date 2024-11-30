@@ -92,7 +92,71 @@ namespace Library_Management_System
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+            LoadRecentlyBorrowedBooks();
         }
+
+
+        private void LoadRecentlyBorrowedBooks()
+        {
+            string memberID = lbl_showMemberID.Text.Trim(); // Get the Member ID
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+
+            if (string.IsNullOrEmpty(memberID))
+            {
+                MessageBox.Show("Member ID is missing.");
+                return;
+            }
+
+            string query = @"
+    SELECT b.bookID, bk.bookTitle, b.borrowedDate 
+    FROM borrowBook b
+    INNER JOIN Book bk ON b.bookID = bk.bookID
+    WHERE b.memberID = @memberID
+    ORDER BY b.borrowedDate DESC";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@memberID", memberID);
+
+                    connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    listView_recentlyBorrowedBooks.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        string bookID = reader["bookID"].ToString();
+                        string bookTitle = reader["bookTitle"].ToString();
+                        string borrowedDate = reader["borrowedDate"].ToString();
+
+                        ListViewItem item = new ListViewItem(bookID);
+                        item.SubItems.Add(bookTitle);
+                        item.SubItems.Add(borrowedDate);
+
+                        listView_recentlyBorrowedBooks.Items.Add(item);
+                    }
+
+                    reader.Close();
+
+                    if (listView_recentlyBorrowedBooks.Items.Count == 0)
+                    {
+                        MessageBox.Show("No recently borrowed books found.");
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
 
         private void btn_Dashboard_Click(object sender, EventArgs e)
         {
@@ -194,6 +258,13 @@ namespace Library_Management_System
         private void btn_Menu_Click(object sender, EventArgs e)
         {
             slidebarTimer.Start();
+        }
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            Member_View_Search_Book memberViewSearchBook = new Member_View_Search_Book();
+            memberViewSearchBook.Show();
+            this.Hide();
         }
     }
 }

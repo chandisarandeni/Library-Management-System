@@ -118,16 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_Inquiries.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAO9JREFUSEvt0z9KA0EcxfGVGIOFQioFT5AmRchVhFzAE9iJtbWVeAWxSu9JvECa
-        mCrEhPjv+4MZkOW9YpdZbHzwYWeHx84Ow1T/aZrzQmy2hdh8F2KjynUbMVdno8phjVtc4BgjvEB1g40q
-        hx2muMYNejiB242NKte94RSxk+ILvGKMPu7SnGKjytkXJjjCHJ9QvWCjylmcwyzZpznHRpWz2MFTEmPV
-        yWxUOVtiiDjg9zTn2KhyFn/9gMc0Vp3MRpXbsFHlNhonbu4VFvj9oXgfoFjO8IwPdLJA5BCXWKGTBXJi
-        N/eIm91ZDtLzr1JVPwLX9UjI7qDlAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="btn_Logout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -200,6 +190,16 @@
         eQ9ziql56lezmPPOmdM0rig39bF9skEX0dKwNQ7YY4UWorfD8n6ZvTIaGEG719EckTyu5xiihhI+ToPP
         uBpO0L0VBKWda4FvWJoBgt6kjgt8Q9Lo+KowG8M3IMQEZgv4FoeYwkxfiG9xiBnM8v+ADnTjN9r4XT3o
         lxCDTuGtLEfzqomiv8i5GzmwqrGHHnMrAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btn_Inquiries.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAO9JREFUSEvt0z9KA0EcxfGVGIOFQioFT5AmRchVhFzAE9iJtbWVeAWxSu9JvECa
+        mCrEhPjv+4MZkOW9YpdZbHzwYWeHx84Ow1T/aZrzQmy2hdh8F2KjynUbMVdno8phjVtc4BgjvEB1g40q
+        hx2muMYNejiB242NKte94RSxk+ILvGKMPu7SnGKjytkXJjjCHJ9QvWCjylmcwyzZpznHRpWz2MFTEmPV
+        yWxUOVtiiDjg9zTn2KhyFn/9gMc0Vp3MRpXbsFHlNhonbu4VFvj9oXgfoFjO8IwPdLJA5BCXWKGTBXJi
+        N/eIm91ZDtLzr1JVPwLX9UjI7qDlAAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="slidebarTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

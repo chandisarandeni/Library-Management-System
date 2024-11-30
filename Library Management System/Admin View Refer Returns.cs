@@ -248,5 +248,189 @@ namespace Library_Management_System
             adminViewInquiryManagement.Show();
             this.Hide();
         }
+
+        private void btn_returnBook_Click(object sender, EventArgs e)
+        {
+            string visitorNIC = txt_visitorNIC.Text.Trim();  // Get Visitor NIC from input
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+
+            if (string.IsNullOrEmpty(visitorNIC))
+            {
+                MessageBox.Show("Please provide a valid Visitor NIC.");
+                return;
+            }
+
+            // SQL query to update the isReturned field for the latest reference
+            string updateReferQuery = @"
+UPDATE referBook 
+SET isReturned = 'true', referedDate = GETDATE() 
+WHERE visitorNIC = @visitorNIC AND isReturned = 'false'";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    SqlCommand cmdUpdateRefer = new SqlCommand(updateReferQuery, connection);
+                    cmdUpdateRefer.Parameters.AddWithValue("@visitorNIC", visitorNIC);
+
+                    int rowsAffected = cmdUpdateRefer.ExecuteNonQuery();
+
+                    if (rowsAffected == 0)
+                    {
+                        MessageBox.Show("Return failed. No unreturned book found for this Visitor NIC.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Referred book returned successfully.");
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+        }
+
+        private void btn_searchMember_Click(object sender, EventArgs e)
+        {
+            string visitorNIC = txt_visitorNIC.Text.Trim();  // Get Visitor NIC from input
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+
+            if (string.IsNullOrEmpty(visitorNIC))
+            {
+                MessageBox.Show("Please provide a valid Visitor NIC.");
+                return;
+            }
+
+            // SQL queries to get visitor details and referred books
+            string queryVisitor = @"
+SELECT visitorNIC, visitorFullName 
+FROM referBook 
+WHERE visitorNIC = @visitorNIC";
+
+            string queryReferredBooks = @"
+SELECT bookID 
+FROM referBook 
+WHERE visitorNIC = @visitorNIC AND isReturned = 'false'";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Retrieve visitor details
+                    SqlCommand cmdVisitor = new SqlCommand(queryVisitor, connection);
+                    cmdVisitor.Parameters.AddWithValue("@visitorNIC", visitorNIC);
+                    SqlDataReader reader = cmdVisitor.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        lbl_showVisitorNIC.Text = reader["visitorNIC"].ToString();
+                        lbl_showVisitorFullName.Text = reader["visitorFullName"].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Visitor not found.");
+                        return;
+                    }
+
+                    reader.Close();  // Close the reader before the next query
+
+                    // Retrieve referred books
+                    SqlCommand cmdReferredBooks = new SqlCommand(queryReferredBooks, connection);
+                    cmdReferredBooks.Parameters.AddWithValue("@visitorNIC", visitorNIC);
+                    SqlDataReader booksReader = cmdReferredBooks.ExecuteReader();
+
+                    txt_refferedBooks.Items.Clear();  // Clear existing items
+
+                    while (booksReader.Read())
+                    {
+                        string bookID = booksReader["bookID"].ToString();
+                        txt_refferedBooks.Items.Add(bookID);  // Add book ID to the combo box
+                    }
+
+                    if (txt_refferedBooks.Items.Count > 0)
+                    {
+                        txt_refferedBooks.SelectedIndex = 0;  // Select the first item by default
+                    }
+                    else
+                    {
+                        MessageBox.Show("No referred books to return.");
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+        }
+
+        private void btn_searchBook_Click(object sender, EventArgs e)
+        {
+            string bookID = txt_refferedBooks.Text.Trim();  // Get Book ID from txt_refferedBooks input
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+
+            if (string.IsNullOrEmpty(bookID))
+            {
+                MessageBox.Show("Please provide a Book ID.");
+                return;
+            }
+
+            string queryBook = @"
+SELECT bookTitle, bookAuthor, bookType 
+FROM Book 
+WHERE bookID = @bookID";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    pnl_Instructions.Hide();
+                    pnl_bookDetails.Show();
+                    pnl_memberDetails.Show();
+
+                    SqlCommand cmdBook = new SqlCommand(queryBook, connection);
+                    cmdBook.Parameters.AddWithValue("@bookID", bookID);
+
+                    connection.Open();
+                    SqlDataReader reader = cmdBook.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        lbl_showBookTitle.Text = reader["bookTitle"].ToString();
+                        lbl_showBookAuthor.Text = reader["bookAuthor"].ToString();
+                        lbl_showBookType.Text = reader["bookType"].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Book not found.");
+                        lbl_showBookTitle.Text = string.Empty;
+                        lbl_showBookAuthor.Text = string.Empty;
+                        lbl_showBookType.Text = string.Empty;
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
     }
 }

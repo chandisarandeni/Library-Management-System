@@ -286,5 +286,160 @@ namespace Library_Management_System
             adminViewReferManagement.Show();
             this.Hide();
         }
+
+        private void btn_searchMember_Click(object sender, EventArgs e)
+        {
+            string visitorNIC = txt_searchVisitorNIC.Text.Trim();  // Get NIC from input
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+
+            if (string.IsNullOrEmpty(visitorNIC))
+            {
+                MessageBox.Show("Please enter Visitor NIC.");
+                return;
+            }
+
+            string query = @"
+        SELECT visitorFullName, visitorNIC 
+        FROM referBook 
+        WHERE visitorNIC = @visitorNIC";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@visitorNIC", visitorNIC);
+
+                    connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        // Display visitor data
+                        txt_visitorFullName.Text = reader["visitorFullName"].ToString();
+                        txt_visitorNIC.Text = reader["visitorNIC"].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Visitor not found.");
+                        txt_visitorFullName.Clear();
+                        txt_visitorNIC.Clear();
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void btn_searchBook_Click(object sender, EventArgs e)
+        {
+            string bookID = txt_bookID.Text.Trim();  // Get Book ID from input
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+
+            if (string.IsNullOrEmpty(bookID))
+            {
+                MessageBox.Show("Please enter a Book ID.");
+                return;
+            }
+
+            string query = @"
+        SELECT bookTitle, bookAuthor, bookType 
+        FROM Book 
+        WHERE bookID = @bookID";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    pnl_Instructions.Hide();
+                    pnl_bookDetails.Show();
+                    pnl_memberDetails.Show();
+
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@bookID", bookID);
+
+                    connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        // Display book details
+                        lbl_showBookTitle.Text = reader["bookTitle"].ToString();
+                        lbl_showBookAuthor.Text = reader["bookAuthor"].ToString();
+                        lbl_showBookType.Text = reader["bookType"].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Book not found.");
+                        lbl_showBookTitle.Text = "";
+                        lbl_showBookAuthor.Text = "";
+                        lbl_showBookType.Text = "";
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void btn_referBook_Click(object sender, EventArgs e)
+        {
+            string bookID = txt_bookID.Text.Trim();            // Get Book ID from input
+            string visitorNIC = txt_visitorNIC.Text.Trim();     // Get Visitor NIC from input
+            string visitorFullName = txt_visitorFullName.Text.Trim(); // Get Visitor Full Name from input
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+
+            if (string.IsNullOrEmpty(bookID) || string.IsNullOrEmpty(visitorNIC) || string.IsNullOrEmpty(visitorFullName))
+            {
+                MessageBox.Show("Please provide Book ID, Visitor NIC, and Visitor Full Name.");
+                return;
+            }
+
+            string insertQuery = @"
+INSERT INTO referBook (referID, bookID, visitorNIC, visitorFullName, referedDate, isReturned)
+VALUES (NEWID(), @bookID, @visitorNIC, @visitorFullName, GETDATE(), 'false')";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmdInsert = new SqlCommand(insertQuery, connection);
+                    cmdInsert.Parameters.AddWithValue("@bookID", bookID);
+                    cmdInsert.Parameters.AddWithValue("@visitorNIC", visitorNIC);
+                    cmdInsert.Parameters.AddWithValue("@visitorFullName", visitorFullName);
+
+                    connection.Open();
+                    int rowsAffected = cmdInsert.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Book referred successfully.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to refer the book.");
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
     }
 }

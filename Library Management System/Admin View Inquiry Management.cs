@@ -166,7 +166,50 @@ namespace Library_Management_System
             lbl_dot2.Hide();
             lbl_showAdminID.Hide();
             lbl_showAdminName.Hide();
+
+
+            LoadRecentInquiries();
         }
+
+        private void LoadRecentInquiries()
+        {
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string query = @"
+SELECT memberFullName, memberContact, memberDescription 
+FROM Inquires";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    listView_recentInquiries.Items.Clear();  // Clear existing items
+
+                    while (reader.Read())
+                    {
+                        ListViewItem item = new ListViewItem(reader["memberFullName"].ToString());
+                        item.SubItems.Add(reader["memberContact"].ToString());
+                        item.SubItems.Add(reader["memberDescription"].ToString());
+
+                        listView_recentInquiries.Items.Add(item);
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+
+
 
         private void slidebarTimer_Tick(object sender, EventArgs e)
         {
@@ -220,6 +263,19 @@ namespace Library_Management_System
                 {
                     slidebarTimer.Start(); // Start the timer to collapse the slidebar
                 }
+            }
+        }
+
+        private void listView_recentInquiries_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView_recentInquiries.SelectedItems.Count > 0)
+            {
+                ListViewItem selectedItem = listView_recentInquiries.SelectedItems[0];
+
+                // Retrieve data from the selected row
+                lbl_showMemberName.Text = selectedItem.SubItems[0].Text;      // Member Full Name
+                lbl_showMemberContact.Text = selectedItem.SubItems[1].Text;   // Member Contact
+                lbl_showMemberDescription.Text = selectedItem.SubItems[2].Text; // Member Description
             }
         }
     }

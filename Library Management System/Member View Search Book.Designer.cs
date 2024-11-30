@@ -56,26 +56,6 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.txt_bookLanguage = new System.Windows.Forms.ComboBox();
-            this.txt_bookCategory = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btn_filter = new System.Windows.Forms.Button();
-            this.btn_Search = new System.Windows.Forms.Button();
-            this.txt_detail = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.listView_BookDetails = new System.Windows.Forms.ListView();
-            this.bookID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.bookTitle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.bookAuthor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnl_bookDetails = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -104,6 +84,26 @@
             this.pnl_instructions = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label23 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txt_bookLanguage = new System.Windows.Forms.ComboBox();
+            this.txt_bookCategory = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btn_filter = new System.Windows.Forms.Button();
+            this.btn_Search = new System.Windows.Forms.Button();
+            this.txt_detail = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.listView_BookDetails = new System.Windows.Forms.ListView();
+            this.bookID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.bookTitle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.bookAuthor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -115,11 +115,11 @@
             this.slidebar.SuspendLayout();
             this.panel8.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.guna2Panel1.SuspendLayout();
             this.pnl_bookDetails.SuspendLayout();
             this.pnl_instructions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Inquiries
@@ -136,6 +136,7 @@
             this.btn_Inquiries.Text = "    Inquiries";
             this.btn_Inquiries.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inquiries.UseVisualStyleBackColor = false;
+            this.btn_Inquiries.Click += new System.EventHandler(this.btn_Inquiries_Click);
             // 
             // panel5
             // 
@@ -159,6 +160,7 @@
             this.btn_searchBook.Text = "    Search Book";
             this.btn_searchBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_searchBook.UseVisualStyleBackColor = false;
+            this.btn_searchBook.Click += new System.EventHandler(this.btn_searchBook_Click);
             // 
             // label1
             // 
@@ -193,6 +195,7 @@
             this.btn_Borrow.Text = "    Borrow";
             this.btn_Borrow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Borrow.UseVisualStyleBackColor = false;
+            this.btn_Borrow.Click += new System.EventHandler(this.btn_Borrow_Click);
             // 
             // panel3
             // 
@@ -216,6 +219,7 @@
             this.btn_myBooks.Text = "    My Books";
             this.btn_myBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_myBooks.UseVisualStyleBackColor = false;
+            this.btn_myBooks.Click += new System.EventHandler(this.btn_myBooks_Click);
             // 
             // panel2
             // 
@@ -239,6 +243,7 @@
             this.btn_Dashboard.Text = "    Dashboard";
             this.btn_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Dashboard.UseVisualStyleBackColor = false;
+            this.btn_Dashboard.Click += new System.EventHandler(this.btn_Dashboard_Click);
             // 
             // slidebarTimer
             // 
@@ -313,6 +318,7 @@
             this.btn_Menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Menu.TabIndex = 1;
             this.btn_Menu.TabStop = false;
+            this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click);
             // 
             // lbl_showMemberID
             // 
@@ -369,6 +375,7 @@
             this.btn_Reservation.Text = "    Reservation";
             this.btn_Reservation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reservation.UseVisualStyleBackColor = false;
+            this.btn_Reservation.Click += new System.EventHandler(this.btn_Reservation_Click);
             // 
             // slidebar
             // 
@@ -419,233 +426,6 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(411, 506);
             this.guna2Panel2.TabIndex = 14;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(9, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 22);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(40, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 20);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Book Details";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(5, 24);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(349, 20);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "__________________________________";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.Black;
-            this.guna2Panel1.BorderRadius = 6;
-            this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.txt_bookLanguage);
-            this.guna2Panel1.Controls.Add(this.txt_bookCategory);
-            this.guna2Panel1.Controls.Add(this.label10);
-            this.guna2Panel1.Controls.Add(this.label9);
-            this.guna2Panel1.Controls.Add(this.label8);
-            this.guna2Panel1.Controls.Add(this.btn_filter);
-            this.guna2Panel1.Controls.Add(this.btn_Search);
-            this.guna2Panel1.Controls.Add(this.txt_detail);
-            this.guna2Panel1.Controls.Add(this.label6);
-            this.guna2Panel1.Controls.Add(this.label7);
-            this.guna2Panel1.Controls.Add(this.listView_BookDetails);
-            this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.label3);
-            this.guna2Panel1.Location = new System.Drawing.Point(116, 107);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(531, 506);
-            this.guna2Panel1.TabIndex = 13;
-            // 
-            // txt_bookLanguage
-            // 
-            this.txt_bookLanguage.AutoCompleteCustomSource.AddRange(new string[] {
-            "Sinhala",
-            "Tamil",
-            "English"});
-            this.txt_bookLanguage.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_bookLanguage.FormattingEnabled = true;
-            this.txt_bookLanguage.Items.AddRange(new object[] {
-            "Sinhala",
-            "Tamil",
-            "English"});
-            this.txt_bookLanguage.Location = new System.Drawing.Point(374, 107);
-            this.txt_bookLanguage.Name = "txt_bookLanguage";
-            this.txt_bookLanguage.Size = new System.Drawing.Size(130, 28);
-            this.txt_bookLanguage.TabIndex = 39;
-            // 
-            // txt_bookCategory
-            // 
-            this.txt_bookCategory.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_bookCategory.FormattingEnabled = true;
-            this.txt_bookCategory.Items.AddRange(new object[] {
-            "Novel",
-            "Child Fliction",
-            "Story Book",
-            "Translation"});
-            this.txt_bookCategory.Location = new System.Drawing.Point(135, 107);
-            this.txt_bookCategory.Name = "txt_bookCategory";
-            this.txt_bookCategory.Size = new System.Drawing.Size(139, 28);
-            this.txt_bookCategory.TabIndex = 38;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(283, 112);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(89, 17);
-            this.label10.TabIndex = 37;
-            this.label10.Text = "Language:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(43, 112);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 17);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "Catogory:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(31, 85);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 17);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "Filter:";
-            // 
-            // btn_filter
-            // 
-            this.btn_filter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_filter.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_filter.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_filter.Location = new System.Drawing.Point(374, 142);
-            this.btn_filter.Name = "btn_filter";
-            this.btn_filter.Size = new System.Drawing.Size(120, 34);
-            this.btn_filter.TabIndex = 36;
-            this.btn_filter.Text = "Filter";
-            this.btn_filter.UseCompatibleTextRendering = true;
-            this.btn_filter.UseVisualStyleBackColor = false;
-            this.btn_filter.Click += new System.EventHandler(this.btn_filter_Click);
-            // 
-            // btn_Search
-            // 
-            this.btn_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_Search.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Search.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Search.Location = new System.Drawing.Point(374, 51);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(120, 34);
-            this.btn_Search.TabIndex = 36;
-            this.btn_Search.Text = "Search";
-            this.btn_Search.UseCompatibleTextRendering = true;
-            this.btn_Search.UseVisualStyleBackColor = false;
-            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
-            // 
-            // txt_detail
-            // 
-            this.txt_detail.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_detail.Location = new System.Drawing.Point(139, 52);
-            this.txt_detail.Name = "txt_detail";
-            this.txt_detail.Size = new System.Drawing.Size(229, 30);
-            this.txt_detail.TabIndex = 35;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(117, 59);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(17, 17);
-            this.label6.TabIndex = 34;
-            this.label6.Text = ":";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(27, 59);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 17);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "Book Name";
-            // 
-            // listView_BookDetails
-            // 
-            this.listView_BookDetails.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.bookID,
-            this.bookTitle,
-            this.bookAuthor});
-            this.listView_BookDetails.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView_BookDetails.HideSelection = false;
-            this.listView_BookDetails.Location = new System.Drawing.Point(21, 192);
-            this.listView_BookDetails.Name = "listView_BookDetails";
-            this.listView_BookDetails.Size = new System.Drawing.Size(483, 296);
-            this.listView_BookDetails.TabIndex = 7;
-            this.listView_BookDetails.UseCompatibleStateImageBehavior = false;
-            this.listView_BookDetails.View = System.Windows.Forms.View.Details;
-            this.listView_BookDetails.SelectedIndexChanged += new System.EventHandler(this.listView_BookDetails_SelectedIndexChanged);
-            // 
-            // bookID
-            // 
-            this.bookID.Text = "Book ID";
-            this.bookID.Width = 126;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(65, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(389, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Search Book Using Book Name or Book ID";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(5, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(499, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "_________________________________________________";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bookTitle
-            // 
-            this.bookTitle.Text = "Title";
-            this.bookTitle.Width = 162;
-            // 
-            // bookAuthor
-            // 
-            this.bookAuthor.Text = "Author";
-            this.bookAuthor.Width = 189;
             // 
             // pnl_bookDetails
             // 
@@ -949,6 +729,233 @@
             this.label23.Text = "Click on cell and view book details";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(9, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 22);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(40, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(129, 20);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Book Details";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(5, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(349, 20);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "__________________________________";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.Black;
+            this.guna2Panel1.BorderRadius = 6;
+            this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.txt_bookLanguage);
+            this.guna2Panel1.Controls.Add(this.txt_bookCategory);
+            this.guna2Panel1.Controls.Add(this.label10);
+            this.guna2Panel1.Controls.Add(this.label9);
+            this.guna2Panel1.Controls.Add(this.label8);
+            this.guna2Panel1.Controls.Add(this.btn_filter);
+            this.guna2Panel1.Controls.Add(this.btn_Search);
+            this.guna2Panel1.Controls.Add(this.txt_detail);
+            this.guna2Panel1.Controls.Add(this.label6);
+            this.guna2Panel1.Controls.Add(this.label7);
+            this.guna2Panel1.Controls.Add(this.listView_BookDetails);
+            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Controls.Add(this.label3);
+            this.guna2Panel1.Location = new System.Drawing.Point(116, 107);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(531, 506);
+            this.guna2Panel1.TabIndex = 13;
+            // 
+            // txt_bookLanguage
+            // 
+            this.txt_bookLanguage.AutoCompleteCustomSource.AddRange(new string[] {
+            "Sinhala",
+            "Tamil",
+            "English"});
+            this.txt_bookLanguage.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_bookLanguage.FormattingEnabled = true;
+            this.txt_bookLanguage.Items.AddRange(new object[] {
+            "Sinhala",
+            "Tamil",
+            "English"});
+            this.txt_bookLanguage.Location = new System.Drawing.Point(374, 107);
+            this.txt_bookLanguage.Name = "txt_bookLanguage";
+            this.txt_bookLanguage.Size = new System.Drawing.Size(130, 28);
+            this.txt_bookLanguage.TabIndex = 39;
+            // 
+            // txt_bookCategory
+            // 
+            this.txt_bookCategory.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_bookCategory.FormattingEnabled = true;
+            this.txt_bookCategory.Items.AddRange(new object[] {
+            "Novel",
+            "Child Fliction",
+            "Story Book",
+            "Translation"});
+            this.txt_bookCategory.Location = new System.Drawing.Point(135, 107);
+            this.txt_bookCategory.Name = "txt_bookCategory";
+            this.txt_bookCategory.Size = new System.Drawing.Size(139, 28);
+            this.txt_bookCategory.TabIndex = 38;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(283, 112);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(89, 17);
+            this.label10.TabIndex = 37;
+            this.label10.Text = "Language:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(43, 112);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(89, 17);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "Catogory:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(31, 85);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(71, 17);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Filter:";
+            // 
+            // btn_filter
+            // 
+            this.btn_filter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_filter.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_filter.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_filter.Location = new System.Drawing.Point(374, 142);
+            this.btn_filter.Name = "btn_filter";
+            this.btn_filter.Size = new System.Drawing.Size(120, 34);
+            this.btn_filter.TabIndex = 36;
+            this.btn_filter.Text = "Filter";
+            this.btn_filter.UseCompatibleTextRendering = true;
+            this.btn_filter.UseVisualStyleBackColor = false;
+            this.btn_filter.Click += new System.EventHandler(this.btn_filter_Click);
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Search.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Search.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Search.Location = new System.Drawing.Point(374, 51);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(120, 34);
+            this.btn_Search.TabIndex = 36;
+            this.btn_Search.Text = "Search";
+            this.btn_Search.UseCompatibleTextRendering = true;
+            this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
+            // 
+            // txt_detail
+            // 
+            this.txt_detail.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_detail.Location = new System.Drawing.Point(139, 52);
+            this.txt_detail.Name = "txt_detail";
+            this.txt_detail.Size = new System.Drawing.Size(229, 30);
+            this.txt_detail.TabIndex = 35;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(117, 59);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(17, 17);
+            this.label6.TabIndex = 34;
+            this.label6.Text = ":";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(27, 59);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 17);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Book Name";
+            // 
+            // listView_BookDetails
+            // 
+            this.listView_BookDetails.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.bookID,
+            this.bookTitle,
+            this.bookAuthor});
+            this.listView_BookDetails.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView_BookDetails.HideSelection = false;
+            this.listView_BookDetails.Location = new System.Drawing.Point(21, 192);
+            this.listView_BookDetails.Name = "listView_BookDetails";
+            this.listView_BookDetails.Size = new System.Drawing.Size(483, 296);
+            this.listView_BookDetails.TabIndex = 7;
+            this.listView_BookDetails.UseCompatibleStateImageBehavior = false;
+            this.listView_BookDetails.View = System.Windows.Forms.View.Details;
+            this.listView_BookDetails.SelectedIndexChanged += new System.EventHandler(this.listView_BookDetails_SelectedIndexChanged);
+            // 
+            // bookID
+            // 
+            this.bookID.Text = "Book ID";
+            this.bookID.Width = 126;
+            // 
+            // bookTitle
+            // 
+            this.bookTitle.Text = "Title";
+            this.bookTitle.Width = 162;
+            // 
+            // bookAuthor
+            // 
+            this.bookAuthor.Text = "Author";
+            this.bookAuthor.Width = 189;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(65, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(389, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Search Book Using Book Name or Book ID";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(5, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(499, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "_________________________________________________";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Member_View_Search_Book
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -977,14 +984,14 @@
             this.panel8.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
             this.pnl_bookDetails.ResumeLayout(false);
             this.pnl_bookDetails.PerformLayout();
             this.pnl_instructions.ResumeLayout(false);
             this.pnl_instructions.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

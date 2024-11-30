@@ -69,8 +69,6 @@
             this.txt_searchVisitorNIC = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pnl_memberDetails = new System.Windows.Forms.Panel();
-            this.txt_visitorNIC = new System.Windows.Forms.TextBox();
-            this.txt_visitorFullName = new System.Windows.Forms.TextBox();
             this.pnl_bookDetails = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.lbl_showBookType = new System.Windows.Forms.Label();
@@ -81,6 +79,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lbl_showBookTitle = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.txt_visitorNIC = new System.Windows.Forms.TextBox();
+            this.txt_visitorFullName = new System.Windows.Forms.TextBox();
             this.pnl_Instructions = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -516,6 +516,7 @@
             this.btn_searchMember.Text = "Search";
             this.btn_searchMember.UseCompatibleTextRendering = true;
             this.btn_searchMember.UseVisualStyleBackColor = false;
+            this.btn_searchMember.Click += new System.EventHandler(this.btn_searchMember_Click);
             // 
             // label23
             // 
@@ -587,22 +588,6 @@
             this.pnl_memberDetails.Name = "pnl_memberDetails";
             this.pnl_memberDetails.Size = new System.Drawing.Size(623, 336);
             this.pnl_memberDetails.TabIndex = 40;
-            // 
-            // txt_visitorNIC
-            // 
-            this.txt_visitorNIC.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_visitorNIC.Location = new System.Drawing.Point(205, 54);
-            this.txt_visitorNIC.Name = "txt_visitorNIC";
-            this.txt_visitorNIC.Size = new System.Drawing.Size(247, 30);
-            this.txt_visitorNIC.TabIndex = 49;
-            // 
-            // txt_visitorFullName
-            // 
-            this.txt_visitorFullName.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_visitorFullName.Location = new System.Drawing.Point(205, 12);
-            this.txt_visitorFullName.Name = "txt_visitorFullName";
-            this.txt_visitorFullName.Size = new System.Drawing.Size(247, 30);
-            this.txt_visitorFullName.TabIndex = 48;
             // 
             // pnl_bookDetails
             // 
@@ -710,6 +695,22 @@
             this.label9.TabIndex = 27;
             this.label9.Text = "Book Title";
             // 
+            // txt_visitorNIC
+            // 
+            this.txt_visitorNIC.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_visitorNIC.Location = new System.Drawing.Point(205, 54);
+            this.txt_visitorNIC.Name = "txt_visitorNIC";
+            this.txt_visitorNIC.Size = new System.Drawing.Size(247, 30);
+            this.txt_visitorNIC.TabIndex = 49;
+            // 
+            // txt_visitorFullName
+            // 
+            this.txt_visitorFullName.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_visitorFullName.Location = new System.Drawing.Point(205, 10);
+            this.txt_visitorFullName.Name = "txt_visitorFullName";
+            this.txt_visitorFullName.Size = new System.Drawing.Size(247, 30);
+            this.txt_visitorFullName.TabIndex = 48;
+            // 
             // pnl_Instructions
             // 
             this.pnl_Instructions.Controls.Add(this.pictureBox2);
@@ -752,6 +753,7 @@
             this.btn_searchBook.Text = "Search";
             this.btn_searchBook.UseCompatibleTextRendering = true;
             this.btn_searchBook.UseVisualStyleBackColor = false;
+            this.btn_searchBook.Click += new System.EventHandler(this.btn_searchBook_Click);
             // 
             // txt_bookID
             // 
@@ -797,9 +799,9 @@
             this.label13.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(25, 93);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(94, 23);
+            this.label13.Size = new System.Drawing.Size(193, 29);
             this.label13.TabIndex = 24;
-            this.label13.Text = "Address";
+            this.label13.Text = "Book Details";
             // 
             // label20
             // 
@@ -833,6 +835,7 @@
             this.btn_referBook.Text = "Refer";
             this.btn_referBook.UseCompatibleTextRendering = true;
             this.btn_referBook.UseVisualStyleBackColor = false;
+            this.btn_referBook.Click += new System.EventHandler(this.btn_referBook_Click);
             // 
             // btn_Cancel
             // 

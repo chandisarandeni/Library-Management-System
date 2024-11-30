@@ -126,7 +126,56 @@ namespace Library_Management_System
             lbl_dot2.Hide();
             lbl_showAdminID.Hide();
             lbl_showAdminName.Hide();
+
+
+            LoadRecentReservations();
         }
+
+        private void LoadRecentReservations()
+        {
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+
+            string queryRecentReservations = @"
+SELECT TOP 10 bookID, memberID, reservationDescription 
+FROM Reservations 
+ORDER BY reservationDate DESC";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(queryRecentReservations, connection);
+                    connection.Open();
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    listView_recentReservations.Items.Clear();  // Clear existing items
+
+                    while (reader.Read())
+                    {
+                        ListViewItem item = new ListViewItem(reader["bookID"].ToString());
+                        item.SubItems.Add(reader["memberID"].ToString());
+                        item.SubItems.Add(reader["reservationDescription"].ToString());
+
+                        listView_recentReservations.Items.Add(item);
+                    }
+                }
+
+                // Auto resize columns based on content
+                listView_recentReservations.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+
+
 
         private void slidebarTimer_Tick(object sender, EventArgs e)
         {
@@ -242,6 +291,62 @@ namespace Library_Management_System
             Admin_View_Inquiry_Management adminViewInquiryManagement = new Admin_View_Inquiry_Management();
             adminViewInquiryManagement.Show();
             this.Hide();
+        }
+
+        private void listView_recentReservations_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView_recentReservations.SelectedItems.Count > 0)
+            {
+                ListViewItem selectedItem = listView_recentReservations.SelectedItems[0];
+
+                // Retrieve data from the selected row
+                string bookID = selectedItem.SubItems[0].Text;
+                string memberID = selectedItem.SubItems[1].Text;
+                string reservationDescription = selectedItem.SubItems[2].Text;
+
+                // Query to get reservation date
+                string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+                string queryReservationDate = @"
+SELECT reservationDate 
+FROM Reservations 
+WHERE bookID = @bookID AND memberID = @memberID AND reservationDescription = @reservationDescription";
+
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        SqlCommand cmd = new SqlCommand(queryReservationDate, connection);
+                        cmd.Parameters.AddWithValue("@bookID", bookID);
+                        cmd.Parameters.AddWithValue("@memberID", memberID);
+                        cmd.Parameters.AddWithValue("@reservationDescription", reservationDescription);
+
+                        connection.Open();
+                        object reservationDateObj = cmd.ExecuteScalar();
+
+                        if (reservationDateObj != null)
+                        {
+                            lbl_showReservationDate.Text = Convert.ToDateTime(reservationDateObj).ToString("yyyy-MM-dd");
+                        }
+                        else
+                        {
+                            lbl_showReservationDate.Text = "N/A";
+                        }
+                    }
+
+                    // Display data in labels
+                    lbl_showBookID.Text = bookID;
+                    lbl_showMemberID.Text = memberID;
+                    lbl_showReservationDescription.Text = reservationDescription;
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("SQL Error: " + ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
         }
     }
 }

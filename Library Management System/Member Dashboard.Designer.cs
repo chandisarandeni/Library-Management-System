@@ -60,6 +60,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.listView_recentlyBorrowedBooks = new System.Windows.Forms.ListView();
+            this.bookID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.bookTitle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.borrowedDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -67,6 +71,11 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.listView_borrowedOverDueBooks = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lbl_overdue = new System.Windows.Forms.Label();
             this.slidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Logout)).BeginInit();
@@ -101,7 +110,7 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(281, 662);
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(281, 662);
+            this.slidebar.Size = new System.Drawing.Size(73, 662);
             this.slidebar.TabIndex = 1;
             // 
             // panel1
@@ -382,6 +391,8 @@
             this.guna2Panel1.BorderRadius = 6;
             this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.listView_borrowedOverDueBooks);
+            this.guna2Panel1.Controls.Add(this.lbl_overdue);
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.label3);
@@ -429,6 +440,7 @@
             this.guna2Panel2.BorderRadius = 6;
             this.guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.listView_recentlyBorrowedBooks);
             this.guna2Panel2.Controls.Add(this.pictureBox2);
             this.guna2Panel2.Controls.Add(this.label4);
             this.guna2Panel2.Controls.Add(this.label5);
@@ -436,6 +448,35 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(709, 250);
             this.guna2Panel2.TabIndex = 6;
+            // 
+            // listView_recentlyBorrowedBooks
+            // 
+            this.listView_recentlyBorrowedBooks.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.bookID,
+            this.bookTitle,
+            this.borrowedDate});
+            this.listView_recentlyBorrowedBooks.HideSelection = false;
+            this.listView_recentlyBorrowedBooks.Location = new System.Drawing.Point(11, 45);
+            this.listView_recentlyBorrowedBooks.Name = "listView_recentlyBorrowedBooks";
+            this.listView_recentlyBorrowedBooks.Size = new System.Drawing.Size(682, 184);
+            this.listView_recentlyBorrowedBooks.TabIndex = 8;
+            this.listView_recentlyBorrowedBooks.UseCompatibleStateImageBehavior = false;
+            this.listView_recentlyBorrowedBooks.View = System.Windows.Forms.View.Details;
+            // 
+            // bookID
+            // 
+            this.bookID.Text = "Book ID";
+            this.bookID.Width = 187;
+            // 
+            // bookTitle
+            // 
+            this.bookTitle.Text = "Title";
+            this.bookTitle.Width = 245;
+            // 
+            // borrowedDate
+            // 
+            this.borrowedDate.Text = "Borrowed Date";
+            this.borrowedDate.Width = 213;
             // 
             // pictureBox2
             // 
@@ -515,6 +556,46 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "_________________";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // listView_borrowedOverDueBooks
+            // 
+            this.listView_borrowedOverDueBooks.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listView_borrowedOverDueBooks.HideSelection = false;
+            this.listView_borrowedOverDueBooks.Location = new System.Drawing.Point(11, 50);
+            this.listView_borrowedOverDueBooks.Name = "listView_borrowedOverDueBooks";
+            this.listView_borrowedOverDueBooks.Size = new System.Drawing.Size(674, 186);
+            this.listView_borrowedOverDueBooks.TabIndex = 9;
+            this.listView_borrowedOverDueBooks.UseCompatibleStateImageBehavior = false;
+            this.listView_borrowedOverDueBooks.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Book ID";
+            this.columnHeader1.Width = 187;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Title";
+            this.columnHeader2.Width = 245;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Borrowed Date";
+            this.columnHeader3.Width = 213;
+            // 
+            // lbl_overdue
+            // 
+            this.lbl_overdue.AutoSize = true;
+            this.lbl_overdue.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_overdue.Location = new System.Drawing.Point(220, 115);
+            this.lbl_overdue.Name = "lbl_overdue";
+            this.lbl_overdue.Size = new System.Drawing.Size(269, 20);
+            this.lbl_overdue.TabIndex = 10;
+            this.lbl_overdue.Text = "There are no overdue books";
+            this.lbl_overdue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Member_Dashboard
             // 
@@ -598,5 +679,14 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ListView listView_recentlyBorrowedBooks;
+        private System.Windows.Forms.ColumnHeader bookID;
+        private System.Windows.Forms.ColumnHeader bookTitle;
+        private System.Windows.Forms.ColumnHeader borrowedDate;
+        private System.Windows.Forms.ListView listView_borrowedOverDueBooks;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Label lbl_overdue;
     }
 }

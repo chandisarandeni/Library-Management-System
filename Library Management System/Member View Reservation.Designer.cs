@@ -128,6 +128,7 @@
             this.btn_Inquiries.Text = "    Inquiries";
             this.btn_Inquiries.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inquiries.UseVisualStyleBackColor = false;
+            this.btn_Inquiries.Click += new System.EventHandler(this.btn_Inquiries_Click);
             // 
             // panel5
             // 
@@ -151,6 +152,7 @@
             this.btn_searchBook.Text = "    Search Book";
             this.btn_searchBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_searchBook.UseVisualStyleBackColor = false;
+            this.btn_searchBook.Click += new System.EventHandler(this.btn_searchBook_Click);
             // 
             // label1
             // 
@@ -185,6 +187,7 @@
             this.btn_Borrow.Text = "    Borrow";
             this.btn_Borrow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Borrow.UseVisualStyleBackColor = false;
+            this.btn_Borrow.Click += new System.EventHandler(this.btn_Borrow_Click);
             // 
             // panel3
             // 
@@ -208,6 +211,7 @@
             this.btn_myBooks.Text = "    My Books";
             this.btn_myBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_myBooks.UseVisualStyleBackColor = false;
+            this.btn_myBooks.Click += new System.EventHandler(this.btn_myBooks_Click);
             // 
             // panel2
             // 
@@ -231,6 +235,7 @@
             this.btn_Dashboard.Text = "    Dashboard";
             this.btn_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Dashboard.UseVisualStyleBackColor = false;
+            this.btn_Dashboard.Click += new System.EventHandler(this.btn_Dashboard_Click);
             // 
             // slidebarTimer
             // 
@@ -409,6 +414,7 @@
             this.btn_Reservation.Text = "    Reservation";
             this.btn_Reservation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reservation.UseVisualStyleBackColor = false;
+            this.btn_Reservation.Click += new System.EventHandler(this.btn_Reservation_Click);
             // 
             // slidebar
             // 
@@ -426,7 +432,7 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(281, 662);
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(281, 662);
+            this.slidebar.Size = new System.Drawing.Size(73, 662);
             this.slidebar.TabIndex = 8;
             // 
             // panel8
