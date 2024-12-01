@@ -32,7 +32,7 @@ namespace Library_Management_System
         private void btn_checkoutBook_Click(object sender, EventArgs e)
         {
             int numberOfBooks = 0;
-            if (int.TryParse(lbl_showNumberOfBooks.Text, out numberOfBooks) && numberOfBooks <= 5)
+            if (int.TryParse(lbl_showNumberOfBooks.Text, out numberOfBooks) && numberOfBooks < 3)
             {
                 Admin_View_Borrow_Assign_Book adminViewBorrowAssignBook = new Admin_View_Borrow_Assign_Book(txt_memberNIC.Text);
                 adminViewBorrowAssignBook.Show();
