@@ -46,6 +46,9 @@ namespace Library_Management_System
 
         private void Admin_View_Borrow_Management_Load(object sender, EventArgs e)
         {
+            lbl_checkoutBookHover.Text = "";
+            lbl_returnBookHover.Text = "";
+
             // Load the login state from the JSON file
             LoginState loginState = LoginStateManager.LoadLoginState();
 
@@ -352,6 +355,9 @@ namespace Library_Management_System
                     }
                     else
                     {
+                        pnl_memberDetails.Hide();
+                        pnl_instructions.Show();
+
                         MessageBox.Show("Member not found.");
                     }
                 }
@@ -411,5 +417,58 @@ namespace Library_Management_System
             }
         }
 
+
+        Timer textTimer = new Timer { Interval = 30 };
+        int textPosition = 0;
+        string hoverText = "";
+        private void btn_checkoutBook_MouseHover(object sender, EventArgs e)
+        {
+            textTimer.Tick += (s, args) =>
+            {
+                if (textPosition < hoverText.Length)
+                {
+                    lbl_checkoutBookHover.Text += hoverText[textPosition];
+                    textPosition++;
+                }
+                else
+                {
+                    textTimer.Stop();
+                }
+            };
+            textPosition = 0;
+            lbl_checkoutBookHover.Text = "Checkout";
+            textTimer.Start();
+        }
+
+        private void btn_checkoutBook_MouseLeave(object sender, EventArgs e)
+        {
+            lbl_checkoutBookHover.Text = "";
+            textTimer.Stop(); // Stop if the cursor leaves
+        }
+
+        private void btn_returnBook_MouseHover(object sender, EventArgs e)
+        {
+            textTimer.Tick += (s, args) =>
+            {
+                if (textPosition < hoverText.Length)
+                {
+                    lbl_returnBookHover.Text += hoverText[textPosition];
+                    textPosition++;
+                }
+                else
+                {
+                    textTimer.Stop();
+                }
+            };
+            textPosition = 0;
+            lbl_returnBookHover.Text = "Checkout";
+            textTimer.Start();
+        }
+
+        private void btn_returnBook_MouseLeave(object sender, EventArgs e)
+        {
+            lbl_returnBookHover.Text = "";
+            textTimer.Stop(); // Stop if the cursor leaves
+        }
     }
 }

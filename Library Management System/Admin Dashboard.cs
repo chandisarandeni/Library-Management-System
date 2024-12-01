@@ -104,7 +104,88 @@ namespace Library_Management_System
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+
+            LoadRecentlyBorrowedBooks();
+            LoadBookData();
         }
+
+        private void LoadBookData()
+        {
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string query = "SELECT bookID, bookTitle, bookAuthor FROM Book";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    //pnl_instructions.Hide();
+
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    listView_loadBookData.Items.Clear();  // Clear existing items
+
+                    while (reader.Read())
+                    {
+                        ListViewItem item = new ListViewItem(reader["bookID"].ToString());
+                        item.SubItems.Add(reader["bookTitle"].ToString());
+                        item.SubItems.Add(reader["bookAuthor"].ToString());
+
+                        listView_loadBookData.Items.Add(item);
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void LoadRecentlyBorrowedBooks()
+        {
+            string connectionString = "Server=CHANDISA; Database=LibraryManagementSystem; Integrated Security=True;";
+            string query = @"
+SELECT bookID, memberID, borrowedDate
+FROM borrowBook  -- Ensure table name matches
+ORDER BY borrowedDate DESC";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    listView_recentlyBorrowedBooks.Items.Clear(); // Clear previous data
+
+                    while (reader.Read())
+                    {
+                        // Create a new ListViewItem for each record
+                        ListViewItem item = new ListViewItem(reader["bookID"].ToString());
+                        item.SubItems.Add(reader["memberID"].ToString());
+                        item.SubItems.Add(Convert.ToDateTime(reader["borrowedDate"]).ToString("yyyy-MM-dd")); // Customize date format if needed
+
+                        listView_recentlyBorrowedBooks.Items.Add(item);
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+
 
         private void sliderbarTimber_Tick(object sender, EventArgs e)
         {

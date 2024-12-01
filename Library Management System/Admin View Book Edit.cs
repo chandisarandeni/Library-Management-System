@@ -339,10 +339,18 @@ namespace Library_Management_System
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Book details updated successfully.");
+
+                        Admin_View_Book_Management adminViewBookManagement = new Admin_View_Book_Management();
+                        adminViewBookManagement.Show();
+                        this.Hide();
                     }
                     else
                     {
                         MessageBox.Show("Failed to update book details.");
+
+                        Admin_View_Book_Management adminViewBookManagement = new Admin_View_Book_Management();
+                        adminViewBookManagement.Show();
+                        this.Hide();
                     }
                 }
             }

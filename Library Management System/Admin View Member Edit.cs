@@ -323,10 +323,18 @@ namespace Library_Management_System
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Member details updated successfully.");
+
+                        Admin_View_Member_Management adminViewMemberManagement = new Admin_View_Member_Management();
+                        adminViewMemberManagement.Show();
+                        this.Hide();
                     }
                     else
                     {
                         MessageBox.Show("Update failed.");
+
+                        Admin_View_Member_Management adminViewMemberManagement = new Admin_View_Member_Management();
+                        adminViewMemberManagement.Show();
+                        this.Hide();
                     }
                 }
             }

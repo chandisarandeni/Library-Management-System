@@ -59,6 +59,8 @@
             this.slidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.listView_recentlyBorrowedBooks = new System.Windows.Forms.ListView();
+            this.bookID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,8 +72,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.memberID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.borrowedDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView_loadBookData = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.bookTitle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.bookAuthor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.slidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Logout)).BeginInit();
@@ -109,7 +115,7 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(300, 662);
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(73, 653);
+            this.slidebar.Size = new System.Drawing.Size(300, 653);
             this.slidebar.TabIndex = 0;
             // 
             // panel1
@@ -431,7 +437,7 @@
             this.guna2Panel1.BorderRadius = 6;
             this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.listView1);
+            this.guna2Panel1.Controls.Add(this.listView_recentlyBorrowedBooks);
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.label3);
@@ -439,6 +445,25 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(709, 250);
             this.guna2Panel1.TabIndex = 3;
+            // 
+            // listView_recentlyBorrowedBooks
+            // 
+            this.listView_recentlyBorrowedBooks.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.bookID,
+            this.memberID,
+            this.borrowedDate});
+            this.listView_recentlyBorrowedBooks.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView_recentlyBorrowedBooks.HideSelection = false;
+            this.listView_recentlyBorrowedBooks.Location = new System.Drawing.Point(25, 51);
+            this.listView_recentlyBorrowedBooks.Name = "listView_recentlyBorrowedBooks";
+            this.listView_recentlyBorrowedBooks.Size = new System.Drawing.Size(657, 183);
+            this.listView_recentlyBorrowedBooks.TabIndex = 7;
+            this.listView_recentlyBorrowedBooks.UseCompatibleStateImageBehavior = false;
+            this.listView_recentlyBorrowedBooks.View = System.Windows.Forms.View.Details;
+            // 
+            // bookID
+            // 
+            this.bookID.Text = "Book ID";
             // 
             // pictureBox1
             // 
@@ -479,12 +504,13 @@
             this.guna2Panel2.BorderRadius = 6;
             this.guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.listView_loadBookData);
             this.guna2Panel2.Controls.Add(this.pictureBox2);
             this.guna2Panel2.Controls.Add(this.label4);
             this.guna2Panel2.Controls.Add(this.label5);
-            this.guna2Panel2.Location = new System.Drawing.Point(115, 380);
+            this.guna2Panel2.Location = new System.Drawing.Point(115, 124);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(709, 250);
+            this.guna2Panel2.Size = new System.Drawing.Size(709, 506);
             this.guna2Panel2.TabIndex = 4;
             // 
             // pictureBox2
@@ -503,9 +529,9 @@
             this.label4.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(40, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(179, 20);
+            this.label4.Size = new System.Drawing.Size(99, 20);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Recently Borrowed";
+            this.label4.Text = "Book List";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
@@ -566,22 +592,43 @@
             this.label7.Text = "_________________";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // memberID
+            // 
+            this.memberID.Text = "Member ID";
+            // 
+            // borrowedDate
+            // 
+            this.borrowedDate.Text = "Borrowed Date";
+            // 
+            // listView_loadBookData
+            // 
+            this.listView_loadBookData.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.bookTitle,
+            this.bookAuthor});
+            this.listView_loadBookData.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView_loadBookData.HideSelection = false;
+            this.listView_loadBookData.Location = new System.Drawing.Point(25, 45);
+            this.listView_loadBookData.Name = "listView_loadBookData";
+            this.listView_loadBookData.Size = new System.Drawing.Size(657, 441);
+            this.listView_loadBookData.TabIndex = 10;
+            this.listView_loadBookData.UseCompatibleStateImageBehavior = false;
+            this.listView_loadBookData.View = System.Windows.Forms.View.Details;
+            // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Book ID";
+            this.columnHeader1.Width = 128;
             // 
-            // listView1
+            // bookTitle
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
-            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(25, 51);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(657, 183);
-            this.listView1.TabIndex = 7;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.bookTitle.Text = "Title";
+            this.bookTitle.Width = 104;
+            // 
+            // bookAuthor
+            // 
+            this.bookAuthor.Text = "Author";
+            this.bookAuthor.Width = 65;
             // 
             // Admin_Dashboard
             // 
@@ -589,9 +636,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1102, 653);
             this.Controls.Add(this.slidebar);
+            this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -670,7 +717,13 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listView_recentlyBorrowedBooks;
+        private System.Windows.Forms.ColumnHeader bookID;
+        private System.Windows.Forms.ColumnHeader memberID;
+        private System.Windows.Forms.ColumnHeader borrowedDate;
+        private System.Windows.Forms.ListView listView_loadBookData;
         private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader bookTitle;
+        private System.Windows.Forms.ColumnHeader bookAuthor;
     }
 }

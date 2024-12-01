@@ -57,9 +57,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbl_editBookHover = new System.Windows.Forms.Label();
+            this.lbl_returnBookHover = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lbl_addBookHover = new System.Windows.Forms.Label();
+            this.lbl_checkoutBookHover = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_returnBook = new System.Windows.Forms.PictureBox();
             this.btn_checkoutBook = new System.Windows.Forms.PictureBox();
@@ -149,9 +149,9 @@
             this.guna2Panel1.Controls.Add(this.label5);
             this.guna2Panel1.Controls.Add(this.label4);
             this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.lbl_editBookHover);
+            this.guna2Panel1.Controls.Add(this.lbl_returnBookHover);
             this.guna2Panel1.Controls.Add(this.label3);
-            this.guna2Panel1.Controls.Add(this.lbl_addBookHover);
+            this.guna2Panel1.Controls.Add(this.lbl_checkoutBookHover);
             this.guna2Panel1.Location = new System.Drawing.Point(159, 106);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(871, 496);
@@ -375,7 +375,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(122, 73);
+            this.label4.Location = new System.Drawing.Point(107, 73);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 23);
             this.label4.TabIndex = 24;
@@ -392,16 +392,16 @@
             this.label2.Text = "Search Member Details";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_editBookHover
+            // lbl_returnBookHover
             // 
-            this.lbl_editBookHover.AutoSize = true;
-            this.lbl_editBookHover.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_editBookHover.Location = new System.Drawing.Point(796, 76);
-            this.lbl_editBookHover.Name = "lbl_editBookHover";
-            this.lbl_editBookHover.Size = new System.Drawing.Size(69, 20);
-            this.lbl_editBookHover.TabIndex = 5;
-            this.lbl_editBookHover.Text = "Return";
-            this.lbl_editBookHover.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_returnBookHover.AutoSize = true;
+            this.lbl_returnBookHover.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_returnBookHover.Location = new System.Drawing.Point(796, 76);
+            this.lbl_returnBookHover.Name = "lbl_returnBookHover";
+            this.lbl_returnBookHover.Size = new System.Drawing.Size(69, 20);
+            this.lbl_returnBookHover.TabIndex = 5;
+            this.lbl_returnBookHover.Text = "Return";
+            this.lbl_returnBookHover.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
@@ -414,16 +414,16 @@
             this.label3.Text = "_____________________________________________________________";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_addBookHover
+            // lbl_checkoutBookHover
             // 
-            this.lbl_addBookHover.AutoSize = true;
-            this.lbl_addBookHover.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_addBookHover.Location = new System.Drawing.Point(775, 18);
-            this.lbl_addBookHover.Name = "lbl_addBookHover";
-            this.lbl_addBookHover.Size = new System.Drawing.Size(89, 20);
-            this.lbl_addBookHover.TabIndex = 5;
-            this.lbl_addBookHover.Text = "Checkout";
-            this.lbl_addBookHover.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_checkoutBookHover.AutoSize = true;
+            this.lbl_checkoutBookHover.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_checkoutBookHover.Location = new System.Drawing.Point(775, 18);
+            this.lbl_checkoutBookHover.Name = "lbl_checkoutBookHover";
+            this.lbl_checkoutBookHover.Size = new System.Drawing.Size(89, 20);
+            this.lbl_checkoutBookHover.TabIndex = 5;
+            this.lbl_checkoutBookHover.Text = "Checkout";
+            this.lbl_checkoutBookHover.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
@@ -446,6 +446,8 @@
             this.btn_returnBook.TabIndex = 10;
             this.btn_returnBook.TabStop = false;
             this.btn_returnBook.Click += new System.EventHandler(this.btn_returnBook_Click);
+            this.btn_returnBook.MouseLeave += new System.EventHandler(this.btn_returnBook_MouseLeave);
+            this.btn_returnBook.MouseHover += new System.EventHandler(this.btn_returnBook_MouseHover);
             // 
             // btn_checkoutBook
             // 
@@ -457,6 +459,8 @@
             this.btn_checkoutBook.TabIndex = 11;
             this.btn_checkoutBook.TabStop = false;
             this.btn_checkoutBook.Click += new System.EventHandler(this.btn_checkoutBook_Click);
+            this.btn_checkoutBook.MouseLeave += new System.EventHandler(this.btn_checkoutBook_MouseLeave);
+            this.btn_checkoutBook.MouseHover += new System.EventHandler(this.btn_checkoutBook_MouseHover);
             // 
             // btn_Books
             // 
@@ -535,7 +539,7 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(300, 662);
             this.slidebar.MinimumSize = new System.Drawing.Size(73, 653);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(300, 653);
+            this.slidebar.Size = new System.Drawing.Size(73, 662);
             this.slidebar.TabIndex = 7;
             // 
             // panel1
@@ -754,7 +758,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 653);
+            this.ClientSize = new System.Drawing.Size(1105, 662);
             this.Controls.Add(this.slidebar);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label1);
@@ -816,9 +820,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbl_editBookHover;
+        private System.Windows.Forms.Label lbl_returnBookHover;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lbl_addBookHover;
+        private System.Windows.Forms.Label lbl_checkoutBookHover;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox btn_returnBook;
         private System.Windows.Forms.PictureBox btn_checkoutBook;

@@ -471,6 +471,7 @@
             // 
             // txt_bookAdditional
             // 
+            this.txt_bookAdditional.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_bookAdditional.Location = new System.Drawing.Point(216, 327);
             this.txt_bookAdditional.Name = "txt_bookAdditional";
             this.txt_bookAdditional.Size = new System.Drawing.Size(319, 69);

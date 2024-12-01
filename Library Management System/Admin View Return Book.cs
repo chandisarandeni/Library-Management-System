@@ -43,6 +43,8 @@ namespace Library_Management_System
 
         private void Admin_View_Return_Book_Load(object sender, EventArgs e)
         {
+            pnl_bookDetails.Hide();
+
             // Load the login state from the JSON file
             LoginState loginState = LoginStateManager.LoadLoginState();
 
@@ -429,6 +431,10 @@ namespace Library_Management_System
                         // Commit transaction
                         transaction.Commit();
                         MessageBox.Show("Book returned successfully.");
+
+                        Admin_View_Borrow_Management adminViewBorrowManagement = new Admin_View_Borrow_Management();
+                        adminViewBorrowManagement.Show();
+                        this.Hide();
                     }
                     catch (Exception ex)
                     {
@@ -464,6 +470,8 @@ namespace Library_Management_System
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
+                    pnl_bookDetails.Show();
+
                     SqlCommand cmd = new SqlCommand(query, connection);
                     cmd.Parameters.AddWithValue("@bookID", bookID);
 

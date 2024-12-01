@@ -417,6 +417,10 @@ namespace Library_Management_System
 
                         transaction.Commit();
                         MessageBox.Show("Book borrowed successfully.");
+
+                        Admin_View_Borrow_Management adminViewBorrowManagement = new Admin_View_Borrow_Management();
+                        adminViewBorrowManagement.Show();
+                        this.Hide();
                     }
                     catch (Exception ex)
                     {
