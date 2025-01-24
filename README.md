@@ -42,6 +42,8 @@ This **Library Management System** is a desktop application developed in **C#** 
 2. Open the solution in Visual Studio.
 
       <img src="https://github.com/user-attachments/assets/bf8d712a-b160-4f28-8285-3d8435177e63" alt="Visual Studio Solution" width="45px">
+      <img src="https://github.com/user-attachments/assets/e1776900-30b7-487a-b85a-2a501322d959" alt="Microsoft Sql Server Image" width="45px">
+
 
 4. Update the ```connectionString``` in the code with your database server details.
    ```bash
