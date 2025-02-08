@@ -1,6 +1,8 @@
 # Library Management System
-
-This **Library Management System** is a desktop application developed in **C#** with a **SQL Server** backend. It allows administrators to manage library functions such as borrowing, reserving, and referring books efficiently.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1f4831e9-803c-4333-8eeb-b08771767c60" width="700px"/>
+</p>
+This Library Management System is a desktop application developed in C# with a SQL Server backend. It allows administrators to manage library functions such as borrowing, reserving, and referring books efficiently.
 
 ## Features
 
